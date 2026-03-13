@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../images/Favicon%20-%20Pharmacy.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placements | SNS College of Pharmacy and Health Sciences - Design Thinking Pharmacy Coimbatore</title>
+    <meta name="description"
+        content="SNS College of Pharmacy and Health Sciences (SNSCPHS) - India's first Design Thinking Pharmacy college in Coimbatore. B.Pharm, D.Pharm with world-class labs.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#058D7A',
+                            50: '#f0f9f8',
+                            100: '#d1f0ec',
+                            200: '#a3e1d9',
+                            300: '#6ecec1',
+                            400: '#41b6a7',
+                            500: '#058D7A',
+                            600: '#047a69',
+                            700: '#036154',
+                            800: '#02483f',
+                            900: '#01302b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        html,
+        body {
+            overscroll-behavior-y: none;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(-45deg, #058D7A, #047a69, #036154, #41b6a7);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        /* Gradient Text Effect */
+        .gradient-text {
+            background: linear-gradient(135deg, #058D7A 0%, #047a69 50%, #6ecec1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-text-blue {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Softer Hero Gradients */
+        .hero-gradient-warm {
+            background: linear-gradient(135deg, #f0f9f8 0%, #d1f0ec 25%, #a3e1d9 50%, #6ecec1 75%, #058D7A 100%);
+        }
+
+        .hero-gradient-cool {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 25%, #bfdbfe 50%, #93c5fd 75%, #60a5fa 100%);
+        }
+
+        /* Better Card Shadows */
+        .card-shadow-sm {
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .card-shadow-lg {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-shadow-xl {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(5, 141, 122, 0.25);
+        }
+
+        .pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes swing {
+
+            0%,
+            100% {
+                transform: rotate(-3deg);
+            }
+
+            50% {
+                transform: rotate(3deg);
+            }
+        }
+
+        .swing {
+            animation: swing 2s ease-in-out infinite;
+            transform-origin: top center;
+        }
+
+        /* Badge/Tag Styles */
+        .badge-glow {
+            box-shadow: 0 0 20px rgba(5, 141, 122, 0.5);
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(5, 141, 122, 0.5);
+            }
+
+            50% {
+                box-shadow: 0 0 30px rgba(5, 141, 122, 0.8);
+            }
+        }
+
+        /* Smooth Transitions */
+        .transition-smooth {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Better Line Heights */
+        body {
+            line-height: 1.6;
+        }
+
+        h1 {
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            line-height: 1.3;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            line-height: 1.4;
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 32px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: pulse-whatsapp 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) translateY(-5px);
+            background-color: #128c7e;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            color: white;
+        }
+
+        /* Instagram Floating Button */
+        .instagram-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 110px;
+            right: 40px;
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: #FFF;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 32px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: pulse-instagram 2s infinite;
+        }
+
+        .instagram-float:hover {
+            transform: scale(1.1) translateY(-5px);
+            background: linear-gradient(45deg, #e6683c 0%, #dc2743 25%, #cc2366 50%, #bc1888 75%, #f09433 100%);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            color: white;
+        }
+
+        @keyframes pulse-whatsapp {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        @keyframes pulse-instagram {
+            0% {
+                box-shadow: 0 0 0 0 rgba(225, 48, 108, 0.5);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(225, 48, 108, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(225, 48, 108, 0);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 25px;
+                right: 25px;
+                font-size: 28px;
+            }
+
+            .instagram-float {
+                width: 50px;
+                height: 50px;
+                bottom: 85px;
+                right: 25px;
+                font-size: 28px;
+            }
+        }
+
+        html,
+        body {
+            overscroll-behavior-y: none;
+        }
+    </style>
+</head>
+
+<body class="antialiased bg-gray-50">
+
+    <!-- Hanging Tag 1: PCI -->
+    <div class="fixed top-[22%] right-0 z-50 swing">
+        <div class="bg-gradient-to-br from-primary-600 to-primary-700 text-white px-4 py-6 rounded-l-2xl shadow-2xl">
+            <span class="font-extrabold text-sm uppercase tracking-widest"
+                style="writing-mode: vertical-rl; text-orientation: mixed; letter-spacing: 0.2em;">PCI APPROVED</span>
+        </div>
+    </div>
+
+    <!-- Hanging Tag 2: Brochure -->
+    <div class="fixed top-[36%] right-0 z-50 swing" style="animation-delay: 0.3s;">
+        <a href="https://snscphs.org/brochure/" target="_blank"
+            class="bg-gradient-to-br from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white px-4 py-8 rounded-l-2xl shadow-2xl flex flex-col items-center space-y-3 group transition-all">
+            <i class="fas fa-file-pdf text-2xl group-hover:scale-110 transition-transform duration-300"></i>
+            <span class="font-extrabold text-sm uppercase tracking-widest"
+                style="writing-mode: vertical-rl; text-orientation: mixed; letter-spacing: 0.2em;">BROCHURE</span>
+        </a>
+    </div>
+
+    <!-- Floating CTA Button (Mobile) -->
+    <div class="fixed bottom-6 left-6 z-50 lg:hidden">
+        <a href="/apply-now"
+            class="bg-primary-500 hover:bg-primary-600 text-white px-6 py-4 rounded-full shadow-2xl flex items-center space-x-2 pulse-slow">
+            <i class="fas fa-pen-to-square"></i>
+            <span class="font-bold">Apply Now</span>
+        </a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="/" class="flex items-center space-x-3">
+                    <img src="https://cdn.bitrix24.com/b11752903/landing/b31/b31cec6857f938bf2d1a7b4f140588c0/sdsd_1x.png"
+                        alt="SNS Pharmacy Logo" class="h-16 w-auto">
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-900 leading-tight">SNS College of Pharmacy <br /><span
+                                class="text-sm font-semibold text-primary-600">& Health Sciences</span></h1>
+                    </div>
+                </a>
+
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="/" class="text-gray-700 hover:text-primary-600 font-medium">Home</a>
+
+                    <!-- Academics Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-primary-600 font-medium flex items-center">
+                            Programs <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div
+                            class="absolute hidden group-hover:block bg-white shadow-xl rounded-lg py-2 w-64 mt-0 z-50">
+                            <a href="/academics/b-pharm" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">B.
+                                Pharm (Pharmacy)</a>
+                            <a href="/academics/d-pharm" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">D.
+                                Pharm (Pharmacy)</a>
+                            <a href="/academics/m-pharm" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">M.
+                                Pharm (Pharmaceutics)</a>
+                            <a href="/academics/pharm-d"
+                                class="block px-4 py-2 hover:bg-primary-50 text-gray-700">Pharm. D (Doctor of
+                                Pharmacy)</a>
+                        </div>
+                    </div>
+
+                    <!-- Infrastructure Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-primary-600 font-medium flex items-center">
+                            Infrastructure <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div
+                            class="absolute hidden group-hover:block bg-white shadow-xl rounded-lg py-2 w-48 mt-0 z-50">
+                            <a href="/facilities"
+                                class="block px-4 py-2 hover:bg-primary-50 text-gray-700">Facilities</a>
+                            <a href="/gallery" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">Campus
+                                Gallery</a>
+                            <a href="/transport" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">Transport</a>
+                        </div>
+                    </div>
+
+                    <!-- Beyond Academics Dropdown -->
+                    <div class="relative group">
+                        <button class="text-primary-600 font-bold font-medium flex items-center">
+                            Beyond Academics <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div
+                            class="absolute hidden group-hover:block bg-white shadow-xl rounded-lg py-2 w-56 mt-0 z-50">
+                            <a href="/sports-clubs" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">Sports
+                                &amp; Clubs</a>
+                            <a href="/innovation" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">Innovation
+                                Hub (iHub)</a>
+                            <a href="/events" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">Events &amp;
+                                Celebrations</a>
+                            <a href="/success-stories" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">Success
+                                Stories</a>
+                        </div>
+                    </div>
+
+                    <!-- Meet Us Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-primary-600 font-medium flex items-center">
+                            Meet Us <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div
+                            class="absolute hidden group-hover:block bg-white shadow-xl rounded-lg py-2 w-56 mt-0 z-50">
+                            <a href="/about" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">About Us</a>
+                            <a href="/contact" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">Contact Us</a>
+                            <a href="/mandatory-disclosure"
+                                class="block px-4 py-2 hover:bg-primary-50 text-gray-700">Mandatory Disclosure</a>
+                        </div>
+                    </div>
+
+                    <a href="/apply-now"
+                        class="bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-bold transition">
+                        Apply Now <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-4 space-y-3">
+                <a href="/" class="block text-gray-700 hover:text-primary-600 font-medium py-2">Home</a>
+
+                <!-- Academics -->
+                <div>
+                    <button
+                        class="w-full text-left text-gray-700 hover:text-primary-600 font-medium py-2 flex justify-between items-center"
+                        onclick="document.getElementById('mobile-academics').classList.toggle('hidden')">
+                        Programs <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="mobile-academics" class="hidden pl-4 space-y-2 mt-2">
+                        <a href="/academics/b-pharm" class="block text-gray-600 hover:text-primary-600 py-1">B. Pharm
+                            (Pharmacy)</a>
+                        <a href="/academics/d-pharm" class="block text-gray-600 hover:text-primary-600 py-1">D. Pharm
+                            (Pharmacy)</a>
+                        <a href="/academics/m-pharm" class="block text-gray-600 hover:text-primary-600 py-1">M. Pharm
+                            (Pharmaceutics)</a>
+                        <a href="/academics/pharm-d" class="block text-gray-600 hover:text-primary-600 py-1">Pharm. D
+                            (Doctor of Pharmacy)</a>
+                    </div>
+                </div>
+
+                <!-- Infrastructure -->
+                <div>
+                    <button
+                        class="w-full text-left text-gray-700 hover:text-primary-600 font-medium py-2 flex justify-between items-center"
+                        onclick="document.getElementById('mobile-infrastructure').classList.toggle('hidden')">
+                        Infrastructure <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="mobile-infrastructure" class="hidden pl-4 space-y-2 mt-2">
+                        <a href="/facilities" class="block text-gray-600 hover:text-primary-600 py-1">Facilities</a>
+                        <a href="/gallery" class="block text-gray-600 hover:text-primary-600 py-1">Gallery</a>
+                        <a href="/transport" class="block text-gray-600 hover:text-primary-600 py-1">Transport</a>
+                    </div>
+                </div>
+
+                <!-- Beyond Academics -->
+                <div>
+                    <button
+                        class="w-full text-left text-gray-700 hover:text-primary-600 font-medium py-2 flex justify-between items-center"
+                        onclick="document.getElementById('mobile-beyond').classList.toggle('hidden')">
+                        Beyond Academics <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="mobile-beyond" class="hidden pl-4 space-y-2 mt-2">
+                        <a href="/sports-clubs" class="block text-gray-600 hover:text-primary-600 py-1">Sports &amp;
+                            Clubs</a>
+                        <a href="/innovation" class="block text-gray-600 hover:text-primary-600 py-1">Innovation Hub</a>
+                        <a href="/events" class="block text-gray-600 hover:text-primary-600 py-1">Events &amp;
+                            Celebrations</a>
+                        <a href="/success-stories" class="block text-gray-600 hover:text-primary-600 py-1">Success
+                            Stories</a>
+                    </div>
+                </div>
+
+                <!-- Meet Us -->
+                <div>
+                    <button
+                        class="w-full text-left text-gray-700 hover:text-primary-600 font-medium py-2 flex justify-between items-center"
+                        onclick="document.getElementById('mobile-meetus').classList.toggle('hidden')">
+                        Meet Us <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="mobile-meetus" class="hidden pl-4 space-y-2 mt-2">
+                        <a href="/about" class="block text-gray-600 hover:text-primary-600 py-1">About Us</a>
+                        <a href="/contact" class="block text-gray-600 hover:text-primary-600 py-1">Contact Us</a>
+                        <a href="/mandatory-disclosure"
+                            class="block text-gray-600 hover:text-primary-600 py-1">Mandatory Disclosure</a>
+                    </div>
+                </div>
+
+                <a href="/apply-now" class="block bg-primary-600 text-white text-center px-6 py-3 rounded-lg font-bold">
+                    Apply Now <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+
+
+    <section class="relative h-[40vh] min-h-[400px] flex items-center justify-center text-white overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="/static/images/success/success-bg.png" alt="Success Stories" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+            <nav class="mb-6">
+                <div class="flex items-center justify-center space-x-2 text-sm text-white/80">
+                    <a href="/" class="hover:text-white transition">Home</a>
+                    <i class="fas fa-chevron-right text-xs"></i>
+                    <span class="text-white">Success Stories</span>
+                </div>
+            </nav>
+
+
+            <h1 class="text-4xl lg:text-6xl font-extrabold mb-6 leading-tight">Success Stories</h1>
+            <p class="text-xl lg:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed">Celebrating the professional
+                breakthroughs of SNSCPHS graduates</p>
+
+            <!-- Decorative Element -->
+            <div class="mt-8 flex justify-center">
+                <div class="w-24 h-1 bg-primary rounded-full"></div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-white/60 text-2xl"></i>
+        </div>
+    </section>
+
+
+    <!-- Filter Pills -->
+    <section class="bg-white pb-8 pt-12 text-center border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-wrap justify-center gap-3 md:gap-4" id="story-filters">
+                <button data-filter="all"
+                    class="filter-btn bg-primary-600 text-white font-semibold py-2.5 px-6 rounded-full shadow-md text-sm transition">All
+                    Stories</button>
+                <button data-filter="academic"
+                    class="filter-btn bg-white border border-gray-200 text-gray-700 hover:text-primary-600 hover:border-primary-300 font-semibold py-2.5 px-6 rounded-full shadow-sm text-sm transition">Academic
+                    Excellence</button>
+                <button data-filter="sports"
+                    class="filter-btn bg-white border border-gray-200 text-gray-700 hover:text-primary-600 hover:border-primary-300 font-semibold py-2.5 px-6 rounded-full shadow-sm text-sm transition">Sports
+                    Champions</button>
+                <button data-filter="innovation"
+                    class="filter-btn bg-white border border-gray-200 text-gray-700 hover:text-primary-600 hover:border-primary-300 font-semibold py-2.5 px-6 rounded-full shadow-sm text-sm transition">Innovation
+                    Leaders</button>
+                <button data-filter="community"
+                    class="filter-btn bg-white border border-gray-200 text-gray-700 hover:text-primary-600 hover:border-primary-300 font-semibold py-2.5 px-6 rounded-full shadow-sm text-sm transition">Community
+                    Impact</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Grid -->
+    <section class="pb-24 pt-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="stories-grid">
+
+                <!-- Card 1: Indo–US International Conference (Academic / Innovation) -->
+                <div class="story-card bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden transform hover:-translate-y-1 hover:shadow-xl transition duration-300 flex flex-col group"
+                    data-category="academic">
+                    <div class="h-64 relative overflow-hidden">
+                        <img src="/static/images/success/indo-us-conference.png"
+                            alt="Indo–US International Conference at SNSCPHS"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+                        <span
+                            class="absolute top-5 left-5 bg-blue-500 text-white text-xs font-bold px-3 py-1.5 rounded-full z-10 shadow-sm uppercase tracking-wide">
+                            Academic
+                        </span>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col">
+                        <h3
+                            class="text-xl font-bold text-gray-900 mb-4 leading-snug hover:text-primary-600 transition cursor-pointer">
+                            Indo–US International Conference 2026
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-6 leading-relaxed flex-grow">
+                            SNS College of Pharmacy and Health Sciences successfully hosted an Indo–US International
+                            Conference on “Global Trends and Challenges in Pharmaceutical Sciences and Nanotechnology”
+                            on 5 February 2026, in collaboration with APP – bringing global experts and researchers onto
+                            our campus.
+                        </p>
+                        <div class="mt-auto">
+                            <div class="flex items-center text-xs text-gray-500 font-medium mb-4">
+                                <i class="far fa-calendar-alt mr-2 text-gray-400 text-sm"></i> February 2026
+                            </div>
+                            <span class="text-primary-600 font-bold inline-flex items-center text-sm">
+                                Conference Highlight
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Intramurals’22 Sports Prize Distribution (Sports) -->
+                <div class="story-card bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden transform hover:-translate-y-1 hover:shadow-xl transition duration-300 flex flex-col group"
+                    data-category="sports">
+                    <div class="h-64 relative overflow-hidden">
+                        <img src="/static/images/success/intramurals-sports.png"
+                            alt="Intramurals’22 Sports Prize Distribution at SNSCPHS"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+                        <span
+                            class="absolute top-5 left-5 bg-green-500 text-white text-xs font-bold px-3 py-1.5 rounded-full z-10 shadow-sm uppercase tracking-wide">
+                            Sports
+                        </span>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col">
+                        <h3
+                            class="text-xl font-bold text-gray-900 mb-4 leading-snug hover:text-primary-600 transition cursor-pointer">
+                            Intramurals’22 – Sports Prize Distribution
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-6 leading-relaxed flex-grow">
+                            Glimpses into SNSCPHS Intramurals’22, where our students were honoured for their outstanding
+                            performance and team spirit during the campus sports events and athletics competitions.
+                        </p>
+                        <div class="mt-auto">
+                            <div class="flex items-center text-xs text-gray-500 font-medium mb-4">
+                                <i class="far fa-calendar-alt mr-2 text-gray-400 text-sm"></i> 2022–23
+                            </div>
+                            <span class="text-primary-600 font-bold inline-flex items-center text-sm">
+                                Campus Sports Success
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: National Pharmacy Education Day – ANVESHAN 2024 (Academic) -->
+                <div class="story-card bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden transform hover:-translate-y-1 hover:shadow-xl transition duration-300 flex flex-col group"
+                    data-category="academic">
+                    <div class="h-64 relative overflow-hidden">
+                        <img src="/static/images/success/national-pharmacy-education-day.png"
+                            alt="National Pharmacy Education Day ANVESHAN 2024 at SNSCPHS"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+                        <span
+                            class="absolute top-5 left-5 bg-purple-500 text-white text-xs font-bold px-3 py-1.5 rounded-full z-10 shadow-sm uppercase tracking-wide">
+                            Academic
+                        </span>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col">
+                        <h3
+                            class="text-xl font-bold text-gray-900 mb-4 leading-snug hover:text-primary-600 transition cursor-pointer">
+                            National Pharmacy Education Day – ANVESHAN 2024
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-6 leading-relaxed flex-grow">
+                            SNS College of Pharmacy and Health Sciences celebrated National Pharmacy Education Day
+                            “ANVESHAN 2024”, commemorating the birth anniversary of the father of Pharmacy. Dr. K.
+                            Manisenthilkumar, COO of Royal Care Super Specialty Hospital, addressed our students with an
+                            inspiring session on emerging opportunities in pharmacy.
+                        </p>
+                        <div class="mt-auto">
+                            <div class="flex items-center text-xs text-gray-500 font-medium mb-4">
+                                <i class="far fa-calendar-alt mr-2 text-gray-400 text-sm"></i> 2024
+                            </div>
+                            <span class="text-primary-600 font-bold inline-flex items-center text-sm">
+                                Academic Milestone
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Kho-Kho Runner-Up Achievement (Sports) -->
+                <div class="story-card bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden transform hover:-translate-y-1 hover:shadow-xl transition duration-300 flex flex-col group"
+                    data-category="sports">
+                    <div class="h-64 relative overflow-hidden">
+                        <img src="/static/images/success/kho-kho-runner-up.png" alt="Kho-Kho Runner-Up team of SNSCPHS"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+                        <span
+                            class="absolute top-5 left-5 bg-emerald-600 text-white text-xs font-bold px-3 py-1.5 rounded-full z-10 shadow-sm uppercase tracking-wide">
+                            Sports
+                        </span>
+                    </div>
+                    <div class="p-8 flex-grow flex flex-col">
+                        <h3
+                            class="text-xl font-bold text-gray-900 mb-4 leading-snug hover:text-primary-600 transition cursor-pointer">
+                            Kho-Kho Runner-Up – State-Level Meet
+                        </h3>
+                        <p class="text-gray-600 text-sm mb-6 leading-relaxed flex-grow">
+                            We are proud to announce that the SNSCPHS girls’ Kho-Kho team secured the Runner-Up position
+                            at the 3rd State-Level Inter-Collegiate Sports Meet hosted by The United College of
+                            Pharmacy, Periyanaickenpalayam, Coimbatore.
+                        </p>
+                        <div class="mt-auto">
+                            <div class="flex items-center text-xs text-gray-500 font-medium mb-4">
+                                <i class="far fa-calendar-alt mr-2 text-gray-400 text-sm"></i> Recent Achievement
+                            </div>
+                            <span class="text-primary-600 font-bold inline-flex items-center text-sm">
+                                Sports Achievement
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Parental Review Example -->
+    <section class="py-24 bg-red-50" style="background-color: #fdf5f3;"> <!-- Subtle peach match from screenshot -->
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-2">What Parents Say About Us</h2>
+            <p class="text-gray-600 mb-12">Hear from the parents who trust SNS Academy with their children's future</p>
+
+            <div class="bg-white rounded-3xl p-10 md:p-14 shadow-xl border border-gray-100 relative">
+                <div class="flex flex-col items-center">
+                    <div
+                        class="w-16 h-16 bg-red-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4 shadow-md">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-gray-900">Dr. Vijay Narayan</h3>
+                    <p class="text-gray-500 text-sm mb-5">Parent of Grade XII Student</p>
+
+                    <div class="flex text-yellow-500 mb-6 text-sm">
+                        <i class="fas fa-star mx-0.5"></i>
+                        <i class="fas fa-star mx-0.5"></i>
+                        <i class="fas fa-star mx-0.5"></i>
+                        <i class="fas fa-star mx-0.5"></i>
+                        <i class="fas fa-star mx-0.5"></i>
+                    </div>
+
+                    <p class="text-gray-600 italic leading-relaxed text-center mb-6 max-w-2xl mx-auto text-[15px]">
+                        "SNS Academy's Stanford pathway program is phenomenal! My son secured admission to IIT thanks to
+                        the rigorous preparation and design thinking mindset developed here. The focus on innovation,
+                        leadership, and academic excellence truly prepares students for elite universities. Worth every
+                        investment!"
+                    </p>
+
+                    <div class="inline-flex items-center text-red-500 font-semibold text-sm">
+                        <i class="fas fa-check-circle mr-2"></i> Verified Parent Review
+                    </div>
+                </div>
+
+                <!-- Navigation Arrows (visual placeholders for design parity) -->
+                <button
+                    class="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-white w-12 h-12 rounded-full shadow-lg border border-gray-100 flex items-center justify-center text-gray-400 hover:text-gray-800 transition md:flex hidden hover:scale-105 active:scale-95">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button
+                    class="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 bg-white w-12 h-12 rounded-full shadow-lg border border-gray-100 flex items-center justify-center text-gray-400 hover:text-gray-800 transition md:flex hidden hover:scale-105 active:scale-95">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <!-- Carousel Dots -->
+            <div class="flex justify-center mt-8 gap-2">
+                <div class="w-2.5 h-2.5 rounded-full bg-gray-300"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-gray-300"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-gray-300"></div>
+                <div class="w-2.5 h-2.5 rounded-full bg-orange-500"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Write Your Own Success Story Link / CTA -->
+    <section class="py-24 bg-white text-center">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Write Your Own Success Story</h2>
+            <p class="text-lg text-gray-600 mb-10">
+                Join SNS College of Pharmacy and Health Sciences and become part of our legacy of excellence,
+                innovation, and impact!
+            </p>
+            <a href="/apply-now"
+                class="inline-flex items-center justify-center px-10 py-4 bg-[#f97316] text-white font-bold rounded-xl hover:bg-orange-600 transition shadow-lg text-lg transform hover:-translate-y-1">
+                <i class="fas fa-edit mr-3"></i> Start Your Journey
+            </a>
+        </div>
+    </section>
+
+    <!-- Filtering Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const storyCards = document.querySelectorAll('.story-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const activeStateClasses = ['bg-primary-600', 'text-white'];
+                    const inactiveStateClasses = ['bg-white', 'border', 'border-gray-200', 'text-gray-700', 'hover:text-primary-600', 'hover:border-primary-300'];
+
+                    // Reset all buttons to inactive state
+                    filterBtns.forEach(b => {
+                        b.classList.remove(...activeStateClasses);
+                        b.classList.add(...inactiveStateClasses);
+                    });
+
+                    // Set current button to active state
+                    btn.classList.add(...activeStateClasses);
+                    btn.classList.remove(...inactiveStateClasses);
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    storyCards.forEach(card => {
+                        if (filterValue === 'all') {
+                            card.style.display = 'flex';
+                        } else if (card.getAttribute('data-category') === filterValue) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="https://cdn.bitrix24.com/b11752903/landing/b31/b31cec6857f938bf2d1a7b4f140588c0/sdsd_1x.png"
+                            alt="SNS Pharmacy Logo" class="h-12 w-auto bg-white rounded p-1">
+                        <div>
+                            <h3 class="text-white font-bold">SNS College of Pharmacy</h3>
+                            <p class="text-xs">& Health Sciences</p>
+                        </div>
+                    </div>
+                    <p class="text-sm leading-relaxed">
+                        Affiliated to The Tamil Nadu Dr. M.G.R. Medical University, Chennai
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/" class="hover:text-white transition">Home</a></li>
+                        <li><a href="/about" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="/facilities" class="hover:text-white transition">Facilities</a></li>
+                        <li><a href="/gallery" class="hover:text-white transition">Gallery</a></li>
+                        <li><a href="/sports-clubs" class="hover:text-white transition">Sports & Clubs</a></li>
+                        <li><a href="/events" class="hover:text-white transition">Events & Celebrations</a></li>
+                        <li><a href="/success-stories" class="hover:text-white transition">Success Stories</a></li>
+                        <li><a href="/transport" class="hover:text-white transition">Transport</a></li>
+                        <li><a href="/innovation" class="hover:text-white transition">Innovation Hub</a></li>
+                        <li><a href="/brochure" class="hover:text-white transition">Download Brochure</a></li>
+                        <li><a href="/apply-now" class="hover:text-white transition">Admissions</a></li>
+                        <li><a href="/contact" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">Programs</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/academics/b-pharm" class="hover:text-white transition">B. Pharm</a></li>
+                        <li><a href="/academics/d-pharm" class="hover:text-white transition">D. Pharm</a></li>
+                        <li><a href="/academics/m-pharm" class="hover:text-white transition">M. Pharm</a></li>
+                        <li><a href="/academics/pharm-d" class="hover:text-white transition">Pharm. D</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">Connect</h4>
+                    <ul class="space-y-2 text-sm mb-4">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>SNS Kalvi Nagar, Sathy Main Road
+                            (NH-209),<br />Vazhiyampalayam, Saravanampatti,<br />Coimbatore - 641035.</li>
+                        <li><a href="tel:+919940956789" class="hover:text-white transition"><i
+                                    class="fas fa-phone mr-2"></i>Admission Helpline: +91 99409 56789</a></li>
+                        <li><a href="mailto:office@snscphs.org" class="hover:text-white transition"><i
+                                    class="fas fa-envelope mr-2"></i>Email: office@snscphs.org</a></li>
+                        <li><a href="mailto:job@snsgroups.com" class="hover:text-white transition"><i
+                                    class="fas fa-briefcase mr-2"></i>job@snsgroups.com</a></li>
+                        <li><a href="tel:+919940956789" class="hover:text-white transition"><i
+                                    class="fas fa-phone mr-2"></i>Admission Enquiry: +91 99409 56789</a></li>
+                    </ul>
+                    <div class="flex space-x-3">
+                        <a href="https://www.facebook.com/snsinstitutions" target="_blank"
+                            class="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/snsinstitutions/" target="_blank"
+                            class="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@snsinstitutions" target="_blank"
+                            class="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/school/snsinstitutions/" target="_blank"
+                            class="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                <p>&copy; 2026 SNS College of Pharmacy and Health Sciences. All rights reserved.</p>
+                <p class="mt-2 text-primary-400 font-semibold">We trigger the curiosity in the young minds to explore
+                    the world needs.</p>
+                <p class="mt-1 text-xs">SNS Institutions: Sincerity, Nobility, Service</p>
+                <p class="mt-3 text-primary-400 font-bold"><i class="fas fa-headset mr-2"></i>Admission Enquiry: +91
+                    99409 56789</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.0/dist/axios.min.js"></script>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+    <!-- Instagram Floating Icon -->
+    <a href="https://www.instagram.com/snsinstitutions/" class="instagram-float" target="_blank" rel="noopener noreferrer"
+        title="Follow us on Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <!-- WhatsApp Floating Icon -->
+    <a href="https://wa.me/919940956789" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+        title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+
+</html>

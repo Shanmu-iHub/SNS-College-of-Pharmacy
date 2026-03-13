@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="../images/Favicon%20-%20Pharmacy.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transport Services | SNS College of Pharmacy and Health Sciences - Design Thinking Pharmacy Coimbatore
+    </title>
+    <meta name="description"
+        content="SNS College of Pharmacy and Health Sciences (SNSCPHS) - India's first Design Thinking Pharmacy college in Coimbatore. B.Pharm, D.Pharm with world-class labs.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#058D7A',
+                            50: '#f0f9f8',
+                            100: '#d1f0ec',
+                            200: '#a3e1d9',
+                            300: '#6ecec1',
+                            400: '#41b6a7',
+                            500: '#058D7A',
+                            600: '#047a69',
+                            700: '#036154',
+                            800: '#02483f',
+                            900: '#01302b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        html,
+        body {
+            overscroll-behavior-y: none;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(-45deg, #058D7A, #047a69, #036154, #41b6a7);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        /* Gradient Text Effect */
+        .gradient-text {
+            background: linear-gradient(135deg, #058D7A 0%, #047a69 50%, #6ecec1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-text-blue {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Softer Hero Gradients */
+        .hero-gradient-warm {
+            background: linear-gradient(135deg, #f0f9f8 0%, #d1f0ec 25%, #a3e1d9 50%, #6ecec1 75%, #058D7A 100%);
+        }
+
+        .hero-gradient-cool {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 25%, #bfdbfe 50%, #93c5fd 75%, #60a5fa 100%);
+        }
+
+        /* Better Card Shadows */
+        .card-shadow-sm {
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .card-shadow-lg {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-shadow-xl {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(5, 141, 122, 0.25);
+        }
+
+        .pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes swing {
+
+            0%,
+            100% {
+                transform: rotate(-3deg);
+            }
+
+            50% {
+                transform: rotate(3deg);
+            }
+        }
+
+        .swing {
+            animation: swing 2s ease-in-out infinite;
+            transform-origin: top center;
+        }
+
+        /* Badge/Tag Styles */
+        .badge-glow {
+            box-shadow: 0 0 20px rgba(5, 141, 122, 0.5);
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(5, 141, 122, 0.5);
+            }
+
+            50% {
+                box-shadow: 0 0 30px rgba(5, 141, 122, 0.8);
+            }
+        }
+
+        /* Smooth Transitions */
+        .transition-smooth {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Better Line Heights */
+        body {
+            line-height: 1.6;
+        }
+
+        h1 {
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            line-height: 1.3;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            line-height: 1.4;
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 32px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: pulse-whatsapp 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) translateY(-5px);
+            background-color: #128c7e;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            color: white;
+        }
+
+        /* Instagram Floating Button */
+        .instagram-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 110px;
+            right: 40px;
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: #FFF;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 32px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: pulse-instagram 2s infinite;
+        }
+
+        .instagram-float:hover {
+            transform: scale(1.1) translateY(-5px);
+            background: linear-gradient(45deg, #e6683c 0%, #dc2743 25%, #cc2366 50%, #bc1888 75%, #f09433 100%);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            color: white;
+        }
+
+        @keyframes pulse-whatsapp {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        @keyframes pulse-instagram {
+            0% {
+                box-shadow: 0 0 0 0 rgba(225, 48, 108, 0.5);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(225, 48, 108, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(225, 48, 108, 0);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 25px;
+                right: 25px;
+                font-size: 28px;
+            }
+
+            .instagram-float {
+                width: 50px;
+                height: 50px;
+                bottom: 85px;
+                right: 25px;
+                font-size: 28px;
+            }
+        }
+
+        html,
+        body {
+            overscroll-behavior-y: none;
+        }
+    </style>
+</head>
+
+<body class="antialiased bg-gray-50">
+
+    <!-- Hanging Tag 1: PCI -->
+    <div class="fixed top-[22%] right-0 z-50 swing">
+        <div class="bg-gradient-to-br from-primary-600 to-primary-700 text-white px-4 py-6 rounded-l-2xl shadow-2xl">
+            <span class="font-extrabold text-sm uppercase tracking-widest"
+                style="writing-mode: vertical-rl; text-orientation: mixed; letter-spacing: 0.2em;">PCI APPROVED</span>
+        </div>
+    </div>
+
+    <!-- Hanging Tag 2: Brochure -->
+    <div class="fixed top-[36%] right-0 z-50 swing" style="animation-delay: 0.3s;">
+        <a href="https://snscphs.org/brochure/" target="_blank"
+            class="bg-gradient-to-br from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white px-4 py-8 rounded-l-2xl shadow-2xl flex flex-col items-center space-y-3 group transition-all">
+            <i class="fas fa-file-pdf text-2xl group-hover:scale-110 transition-transform duration-300"></i>
+            <span class="font-extrabold text-sm uppercase tracking-widest"
+                style="writing-mode: vertical-rl; text-orientation: mixed; letter-spacing: 0.2em;">BROCHURE</span>
+        </a>
+    </div>
+
+    <!-- Floating CTA Button (Mobile) -->
+    <div class="fixed bottom-6 left-6 z-50 lg:hidden">
+        <a href="/apply-now"
+            class="bg-primary-500 hover:bg-primary-600 text-white px-6 py-4 rounded-full shadow-2xl flex items-center space-x-2 pulse-slow">
+            <i class="fas fa-pen-to-square"></i>
+            <span class="font-bold">Apply Now</span>
+        </a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="/" class="flex items-center space-x-3">
+                    <img src="https://cdn.bitrix24.com/b11752903/landing/b31/b31cec6857f938bf2d1a7b4f140588c0/sdsd_1x.png"
+                        alt="SNS Pharmacy Logo" class="h-16 w-auto">
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-900 leading-tight">SNS College of Pharmacy <br /><span
+                                class="text-sm font-semibold text-primary-600">& Health Sciences</span></h1>
+                    </div>
+                </a>
+
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="/" class="text-gray-700 hover:text-primary-600 font-medium">Home</a>
+
+                    <!-- Academics Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-primary-600 font-medium flex items-center">
+                            Programs <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div
+                            class="absolute hidden group-hover:block bg-white shadow-xl rounded-lg py-2 w-64 mt-0 z-50">
+                            <a href="/academics/b-pharm" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">B.
+                                Pharm (Pharmacy)</a>
+                            <a href="/academics/d-pharm" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">D.
+                                Pharm (Pharmacy)</a>
+                            <a href="/academics/m-pharm" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">M.
+                                Pharm (Pharmaceutics)</a>
+                            <a href="/academics/pharm-d"
+                                class="block px-4 py-2 hover:bg-primary-50 text-gray-700">Pharm. D (Doctor of
+                                Pharmacy)</a>
+                        </div>
+                    </div>
+
+                    <!-- Infrastructure Dropdown -->
+                    <div class="relative group">
+                        <button class="text-primary-600 font-bold font-medium flex items-center">
+                            Infrastructure <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div
+                            class="absolute hidden group-hover:block bg-white shadow-xl rounded-lg py-2 w-48 mt-0 z-50">
+                            <a href="/facilities"
+                                class="block px-4 py-2 hover:bg-primary-50 text-gray-700">Facilities</a>
+                            <a href="/gallery" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">Campus
+                                Gallery</a>
+                            <a href="/transport" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">Transport</a>
+                        </div>
+                    </div>
+
+                    <!-- Beyond Academics Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-primary-600 font-medium flex items-center">
+                            Beyond Academics <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div
+                            class="absolute hidden group-hover:block bg-white shadow-xl rounded-lg py-2 w-56 mt-0 z-50">
+                            <a href="/sports-clubs" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">Sports
+                                &amp; Clubs</a>
+                            <a href="/innovation" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">Innovation
+                                Hub (iHub)</a>
+                            <a href="/events" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">Events &amp;
+                                Celebrations</a>
+                            <a href="/success-stories" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">Success
+                                Stories</a>
+                        </div>
+                    </div>
+
+                    <!-- Meet Us Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-primary-600 font-medium flex items-center">
+                            Meet Us <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div
+                            class="absolute hidden group-hover:block bg-white shadow-xl rounded-lg py-2 w-56 mt-0 z-50">
+                            <a href="/about" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">About Us</a>
+                            <a href="/contact" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">Contact Us</a>
+                            <a href="/mandatory-disclosure"
+                                class="block px-4 py-2 hover:bg-primary-50 text-gray-700">Mandatory Disclosure</a>
+                        </div>
+                    </div>
+
+                    <a href="/apply-now"
+                        class="bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-bold transition">
+                        Apply Now <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-4 space-y-3">
+                <a href="/" class="block text-gray-700 hover:text-primary-600 font-medium py-2">Home</a>
+
+                <!-- Academics -->
+                <div>
+                    <button
+                        class="w-full text-left text-gray-700 hover:text-primary-600 font-medium py-2 flex justify-between items-center"
+                        onclick="document.getElementById('mobile-academics').classList.toggle('hidden')">
+                        Programs <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="mobile-academics" class="hidden pl-4 space-y-2 mt-2">
+                        <a href="/academics/b-pharm" class="block text-gray-600 hover:text-primary-600 py-1">B. Pharm
+                            (Pharmacy)</a>
+                        <a href="/academics/d-pharm" class="block text-gray-600 hover:text-primary-600 py-1">D. Pharm
+                            (Pharmacy)</a>
+                        <a href="/academics/m-pharm" class="block text-gray-600 hover:text-primary-600 py-1">M. Pharm
+                            (Pharmaceutics)</a>
+                        <a href="/academics/pharm-d" class="block text-gray-600 hover:text-primary-600 py-1">Pharm. D
+                            (Doctor of Pharmacy)</a>
+                    </div>
+                </div>
+
+                <!-- Infrastructure -->
+                <div>
+                    <button
+                        class="w-full text-left text-gray-700 hover:text-primary-600 font-medium py-2 flex justify-between items-center"
+                        onclick="document.getElementById('mobile-infrastructure').classList.toggle('hidden')">
+                        Infrastructure <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="mobile-infrastructure" class="hidden pl-4 space-y-2 mt-2">
+                        <a href="/facilities" class="block text-gray-600 hover:text-primary-600 py-1">Facilities</a>
+                        <a href="/gallery" class="block text-gray-600 hover:text-primary-600 py-1">Gallery</a>
+                        <a href="/transport" class="block text-gray-600 hover:text-primary-600 py-1">Transport</a>
+                    </div>
+                </div>
+
+                <!-- Beyond Academics -->
+                <div>
+                    <button
+                        class="w-full text-left text-gray-700 hover:text-primary-600 font-medium py-2 flex justify-between items-center"
+                        onclick="document.getElementById('mobile-beyond').classList.toggle('hidden')">
+                        Beyond Academics <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="mobile-beyond" class="hidden pl-4 space-y-2 mt-2">
+                        <a href="/sports-clubs" class="block text-gray-600 hover:text-primary-600 py-1">Sports &amp;
+                            Clubs</a>
+                        <a href="/innovation" class="block text-gray-600 hover:text-primary-600 py-1">Innovation Hub</a>
+                        <a href="/events" class="block text-gray-600 hover:text-primary-600 py-1">Events &amp;
+                            Celebrations</a>
+                        <a href="/success-stories" class="block text-gray-600 hover:text-primary-600 py-1">Success
+                            Stories</a>
+                    </div>
+                </div>
+
+                <!-- Meet Us -->
+                <div>
+                    <button
+                        class="w-full text-left text-gray-700 hover:text-primary-600 font-medium py-2 flex justify-between items-center"
+                        onclick="document.getElementById('mobile-meetus').classList.toggle('hidden')">
+                        Meet Us <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="mobile-meetus" class="hidden pl-4 space-y-2 mt-2">
+                        <a href="/about" class="block text-gray-600 hover:text-primary-600 py-1">About Us</a>
+                        <a href="/contact" class="block text-gray-600 hover:text-primary-600 py-1">Contact Us</a>
+                        <a href="/mandatory-disclosure"
+                            class="block text-gray-600 hover:text-primary-600 py-1">Mandatory Disclosure</a>
+                    </div>
+                </div>
+
+                <a href="/apply-now" class="block bg-primary-600 text-white text-center px-6 py-3 rounded-lg font-bold">
+                    Apply Now <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+
+
+    <section class="relative h-[40vh] min-h-[400px] flex items-center justify-center text-white overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="/static/images/SNS_BUS.jpg" alt="Transport Services" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+            <nav class="mb-6">
+                <div class="flex items-center justify-center space-x-2 text-sm text-white/80">
+                    <a href="/" class="hover:text-white transition">Home</a>
+                    <i class="fas fa-chevron-right text-xs"></i>
+                    <span class="text-white">Transport</span>
+                </div>
+            </nav>
+
+
+            <h1 class="text-4xl lg:text-6xl font-extrabold mb-6 leading-tight">Transport Services</h1>
+            <p class="text-xl lg:text-2xl text-white/90 max-w-4xl mx-auto leading-relaxed">Why Parents Trust Our
+                Transport — Safe, Reliable & GPS-Tracked Connectivity Across Coimbatore</p>
+
+            <!-- Decorative Element -->
+            <div class="mt-8 flex justify-center">
+                <div class="w-24 h-1 bg-primary rounded-full"></div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-white/60 text-2xl"></i>
+        </div>
+    </section>
+
+
+
+    <!-- Bus Route Coverage Areas -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-3">Bus Route Coverage Areas</h2>
+                <p class="text-xl text-gray-600">We cover major areas across Coimbatore</p>
+                <div
+                    class="mt-4 inline-flex items-center gap-2 bg-red-50 border border-red-200 text-red-700 px-5 py-3 rounded-full font-semibold text-sm">
+                    <i class="fas fa-exclamation-circle"></i>
+                    Check if your area is covered before admission!
+                </div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-2xl p-7 shadow-sm border-l-4 border-primary-500">
+                    <h4 class="font-bold text-lg text-gray-900 mb-4 flex items-center gap-2">
+                        <i class="fas fa-map-pin text-primary-500"></i> Central Coimbatore
+                    </h4>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li class="flex items-center gap-2"><i class="fas fa-circle text-primary-400"
+                                style="font-size:6px"></i>RS Puram</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-circle text-primary-400"
+                                style="font-size:6px"></i>Race Course</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-circle text-primary-400"
+                                style="font-size:6px"></i>Town Hall</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-circle text-primary-400"
+                                style="font-size:6px"></i>Gandhipuram</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-circle text-primary-400"
+                                style="font-size:6px"></i>Saibaba Colony</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-2xl p-7 shadow-sm border-l-4 border-blue-500">
+                    <h4 class="font-bold text-lg text-gray-900 mb-4 flex items-center gap-2">
+                        <i class="fas fa-map-pin text-blue-500"></i> East Coimbatore
+                    </h4>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li class="flex items-center gap-2"><i class="fas fa-circle text-blue-400"
+                                style="font-size:6px"></i>Peelamedu</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-circle text-blue-400"
+                                style="font-size:6px"></i>Hopes College</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-circle text-blue-400"
+                                style="font-size:6px"></i>Singanallur</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-circle text-blue-400"
+                                style="font-size:6px"></i>Ramanathapuram</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-circle text-blue-400"
+                                style="font-size:6px"></i>Ganapathy</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-2xl p-7 shadow-sm border-l-4 border-green-500">
+                    <h4 class="font-bold text-lg text-gray-900 mb-4 flex items-center gap-2">
+                        <i class="fas fa-map-pin text-green-500"></i> West & South
+                    </h4>
+                    <ul class="space-y-2 text-gray-600 text-sm">
+                        <li class="flex items-center gap-2"><i class="fas fa-circle text-green-400"
+                                style="font-size:6px"></i>Vadavalli</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-circle text-green-400"
+                                style="font-size:6px"></i>Thudiyalur</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-circle text-green-400"
+                                style="font-size:6px"></i>Podanur</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-circle text-green-400"
+                                style="font-size:6px"></i>Ukkadam</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-circle text-green-400"
+                                style="font-size:6px"></i>Kuniyamuthur</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Not sure about area -->
+            <div class="mt-10 bg-white rounded-2xl p-8 shadow-sm text-center">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">Not Sure If Your Area Is Covered?</h3>
+                <p class="text-gray-600 mb-6">Contact our transport coordinator to check route availability for your
+                    specific location</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="tel:+919629937861"
+                        class="inline-flex items-center gap-2 bg-primary-600 text-white px-7 py-3 rounded-full font-bold hover:bg-primary-700 transition shadow-md">
+                        <i class="fas fa-phone"></i> Call: +91 96299 37861
+                    </a>
+                    <a href="/contact"
+                        class="inline-flex items-center gap-2 border-2 border-primary-600 text-primary-600 px-7 py-3 rounded-full font-bold hover:bg-primary-50 transition">
+                        <i class="fas fa-paper-plane"></i> Send Inquiry
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety Features -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-primary-600 font-bold tracking-wider uppercase text-sm mb-2 block">Our
+                    Commitment</span>
+                <h2 class="text-4xl font-bold text-gray-900 mb-3">Safety Features</h2>
+                <p class="text-xl text-gray-600">Every bus is equipped with industry-leading safety measures</p>
+            </div>
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+                <div
+                    class="bg-red-50 rounded-2xl p-7 hover:-translate-y-1 transition duration-300 shadow-sm hover:shadow-md">
+                    <div class="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center mb-5">
+                        <i class="fas fa-tachometer-alt text-2xl text-red-600"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-2">Speed Governor</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">All buses fitted with speed limiters for safety.
+                    </p>
+                </div>
+                <div
+                    class="bg-blue-50 rounded-2xl p-7 hover:-translate-y-1 transition duration-300 shadow-sm hover:shadow-md">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-5">
+                        <i class="fas fa-satellite text-2xl text-blue-600"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-2">GPS Tracking</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">Real-time location monitoring system.</p>
+                </div>
+                <div
+                    class="bg-purple-50 rounded-2xl p-7 hover:-translate-y-1 transition duration-300 shadow-sm hover:shadow-md">
+                    <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-5">
+                        <i class="fas fa-id-badge text-2xl text-purple-600"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-2">RFID System</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">Smart cards for secure boarding.</p>
+                </div>
+                <div
+                    class="bg-green-50 rounded-2xl p-7 hover:-translate-y-1 transition duration-300 shadow-sm hover:shadow-md">
+                    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-5">
+                        <i class="fas fa-first-aid text-2xl text-green-600"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-2">First Aid Box</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">Fully equipped medical kit in every bus.</p>
+                </div>
+                <div
+                    class="bg-yellow-50 rounded-2xl p-7 hover:-translate-y-1 transition duration-300 shadow-sm hover:shadow-md">
+                    <div class="w-14 h-14 bg-yellow-100 rounded-xl flex items-center justify-center mb-5">
+                        <i class="fas fa-user-shield text-2xl text-yellow-600"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-2">Trained Staff</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">Caretakers on every bus for student safety.</p>
+                </div>
+                <div
+                    class="bg-gray-50 rounded-2xl p-7 hover:-translate-y-1 transition duration-300 shadow-sm hover:shadow-md">
+                    <div class="w-14 h-14 bg-gray-200 rounded-xl flex items-center justify-center mb-5">
+                        <i class="fas fa-video text-2xl text-gray-700"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-2">CCTV Cameras</h4>
+                    <p class="text-gray-600 text-sm leading-relaxed">Video surveillance for complete security.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transport Guidelines -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-3">Transport Guidelines</h2>
+                <p class="text-xl text-gray-600">Important information for parents and students</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- For Parents -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border-t-4 border-primary-500">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                        <span class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-users text-primary-600"></i>
+                        </span>
+                        For Parents
+                    </h3>
+                    <ul class="space-y-4">
+
+                        <li class="flex gap-3">
+                            <i class="fas fa-check-circle text-primary-500 mt-1 flex-shrink-0"></i>
+                            <span class="text-gray-700 text-sm"><strong>Punctuality:</strong> Students must report 5
+                                minutes before bus arrival</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <i class="fas fa-check-circle text-primary-500 mt-1 flex-shrink-0"></i>
+                            <span class="text-gray-700 text-sm"><strong>Pick-up:</strong> Parents must receive the child
+                                at the bus stop</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <i class="fas fa-check-circle text-primary-500 mt-1 flex-shrink-0"></i>
+                            <span class="text-gray-700 text-sm"><strong>Changes:</strong> Route/stop changes require 1
+                                month advance notice</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <i class="fas fa-check-circle text-primary-500 mt-1 flex-shrink-0"></i>
+                            <span class="text-gray-700 text-sm"><strong>Communication:</strong> All requests via
+                                official email only</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- For Students -->
+                <div class="bg-white rounded-2xl p-8 shadow-sm border-t-4 border-blue-500">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
+                        <span class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user-graduate text-blue-600"></i>
+                        </span>
+                        For Students
+                    </h3>
+                    <ul class="space-y-4">
+
+                        <li class="flex gap-3">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 flex-shrink-0"></i>
+                            <span class="text-gray-700 text-sm"><strong>Uniform:</strong> Proper college uniform
+                                mandatory while travelling</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 flex-shrink-0"></i>
+                            <span class="text-gray-700 text-sm"><strong>ID Card:</strong> College ID with bus number
+                                required at all times</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 flex-shrink-0"></i>
+                            <span class="text-gray-700 text-sm"><strong>Prohibited:</strong> Eating, drinking, or games
+                                in bus are not allowed</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 flex-shrink-0"></i>
+                            <span class="text-gray-700 text-sm"><strong>Behavior:</strong> Maintain discipline;
+                                misbehavior may cancel bus service</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- College Timings note -->
+            <div class="mt-8 bg-primary-50 border border-primary-100 rounded-2xl p-7 text-center">
+                <h3 class="text-xl font-bold text-primary-800 mb-2">College Timings</h3>
+                <p class="text-primary-700 text-sm mb-1">Buses are scheduled to ensure students arrive by <strong>8:45
+                        AM</strong> daily.</p>
+                <p class="text-primary-600 text-sm">Routes are designed to minimise transit time and provide comfortable
+                    journeys.</p>
+                <a href="/contact"
+                    class="inline-flex items-center gap-2 mt-4 bg-primary-600 text-white px-7 py-3 rounded-full font-bold hover:bg-primary-700 transition shadow-md text-sm">
+                    <i class="fas fa-route"></i> Get Route Schedule
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Colored CTA Box (SNS Academy style) -->
+    <section class="py-16" style="background: linear-gradient(135deg, #1a6b3a 0%, #22c55e 100%);">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold text-white mb-4">Safe Travel, Every Day</h2>
+            <p class="text-lg text-green-100 mb-8 max-w-2xl mx-auto">
+                Join SNS College of Pharmacy and enjoy a safe, reliable and comfortable commute with our dedicated
+                transport fleet.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:+919629937861"
+                    class="inline-flex items-center justify-center px-8 py-4 bg-white text-green-700 font-bold rounded-full hover:bg-green-50 transition-colors duration-300 shadow-lg">
+                    <i class="fas fa-phone mr-2"></i> Call Transport Office
+                </a>
+                <a href="/contact"
+                    class="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-green-700 transition-colors duration-300">
+                    Send Inquiry
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="https://cdn.bitrix24.com/b11752903/landing/b31/b31cec6857f938bf2d1a7b4f140588c0/sdsd_1x.png"
+                            alt="SNS Pharmacy Logo" class="h-12 w-auto bg-white rounded p-1">
+                        <div>
+                            <h3 class="text-white font-bold">SNS College of Pharmacy</h3>
+                            <p class="text-xs">& Health Sciences</p>
+                        </div>
+                    </div>
+                    <p class="text-sm leading-relaxed">
+                        Affiliated to The Tamil Nadu Dr. M.G.R. Medical University, Chennai
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/" class="hover:text-white transition">Home</a></li>
+                        <li><a href="/about" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="/facilities" class="hover:text-white transition">Facilities</a></li>
+                        <li><a href="/gallery" class="hover:text-white transition">Gallery</a></li>
+                        <li><a href="/sports-clubs" class="hover:text-white transition">Sports & Clubs</a></li>
+                        <li><a href="/events" class="hover:text-white transition">Events & Celebrations</a></li>
+                        <li><a href="/success-stories" class="hover:text-white transition">Success Stories</a></li>
+                        <li><a href="/transport" class="hover:text-white transition">Transport</a></li>
+                        <li><a href="/innovation" class="hover:text-white transition">Innovation Hub</a></li>
+                        <li><a href="/brochure" class="hover:text-white transition">Download Brochure</a></li>
+                        <li><a href="/apply-now" class="hover:text-white transition">Admissions</a></li>
+                        <li><a href="/contact" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">Programs</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/academics/b-pharm" class="hover:text-white transition">B. Pharm</a></li>
+                        <li><a href="/academics/d-pharm" class="hover:text-white transition">D. Pharm</a></li>
+                        <li><a href="/academics/m-pharm" class="hover:text-white transition">M. Pharm</a></li>
+                        <li><a href="/academics/pharm-d" class="hover:text-white transition">Pharm. D</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">Connect</h4>
+                    <ul class="space-y-2 text-sm mb-4">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>SNS Kalvi Nagar, Sathy Main Road
+                            (NH-209),<br />Vazhiyampalayam, Saravanampatti,<br />Coimbatore - 641035.</li>
+                        <li><a href="tel:+919940956789" class="hover:text-white transition"><i
+                                    class="fas fa-phone mr-2"></i>Admission Helpline: +91 99409 56789</a></li>
+                        <li><a href="mailto:office@snscphs.org" class="hover:text-white transition"><i
+                                    class="fas fa-envelope mr-2"></i>Email: office@snscphs.org</a></li>
+                        <li><a href="mailto:job@snsgroups.com" class="hover:text-white transition"><i
+                                    class="fas fa-briefcase mr-2"></i>job@snsgroups.com</a></li>
+                        <li><a href="tel:+919940956789" class="hover:text-white transition"><i
+                                    class="fas fa-phone mr-2"></i>Admission Enquiry: +91 99409 56789</a></li>
+                    </ul>
+                    <div class="flex space-x-3">
+                        <a href="https://www.facebook.com/snsinstitutions" target="_blank"
+                            class="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/snsinstitutions/" target="_blank"
+                            class="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@snsinstitutions" target="_blank"
+                            class="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/school/snsinstitutions/" target="_blank"
+                            class="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                <p>&copy; 2026 SNS College of Pharmacy and Health Sciences. All rights reserved.</p>
+                <p class="mt-2 text-primary-400 font-semibold">We trigger the curiosity in the young minds to explore
+                    the world needs.</p>
+                <p class="mt-1 text-xs">SNS Institutions: Sincerity, Nobility, Service</p>
+                <p class="mt-3 text-primary-400 font-bold"><i class="fas fa-headset mr-2"></i>Admission Enquiry: +91
+                    99409 56789</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.0/dist/axios.min.js"></script>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+    <!-- Instagram Floating Icon -->
+    <a href="https://www.instagram.com/snsinstitutions/" class="instagram-float" target="_blank" rel="noopener noreferrer"
+        title="Follow us on Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <!-- WhatsApp Floating Icon -->
+    <a href="https://wa.me/919940956789" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+        title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+
+</html>

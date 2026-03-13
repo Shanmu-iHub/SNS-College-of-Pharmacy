@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="images/Favicon%20-%20Pharmacy.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | SNS College of Pharmacy and Health Sciences - Design Thinking Pharmacy Coimbatore</title>
+    <meta name="description"
+        content="SNS College of Pharmacy and Health Sciences (SNSCPHS) - India's first Design Thinking Pharmacy college in Coimbatore. B.Pharm, D.Pharm with world-class labs.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#058D7A',
+                            50: '#f0f9f8',
+                            100: '#d1f0ec',
+                            200: '#a3e1d9',
+                            300: '#6ecec1',
+                            400: '#41b6a7',
+                            500: '#058D7A',
+                            600: '#047a69',
+                            700: '#036154',
+                            800: '#02483f',
+                            900: '#01302b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        html,
+        body {
+            overscroll-behavior-y: none;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(-45deg, #058D7A, #047a69, #036154, #41b6a7);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        /* Gradient Text Effect */
+        .gradient-text {
+            background: linear-gradient(135deg, #058D7A 0%, #047a69 50%, #6ecec1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-text-blue {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Softer Hero Gradients */
+        .hero-gradient-warm {
+            background: linear-gradient(135deg, #f0f9f8 0%, #d1f0ec 25%, #a3e1d9 50%, #6ecec1 75%, #058D7A 100%);
+        }
+
+        .hero-gradient-cool {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 25%, #bfdbfe 50%, #93c5fd 75%, #60a5fa 100%);
+        }
+
+        /* Better Card Shadows */
+        .card-shadow-sm {
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        }
+
+        .card-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .card-shadow-lg {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-shadow-xl {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(5, 141, 122, 0.25);
+        }
+
+        .pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes swing {
+
+            0%,
+            100% {
+                transform: rotate(-3deg);
+            }
+
+            50% {
+                transform: rotate(3deg);
+            }
+        }
+
+        .swing {
+            animation: swing 2s ease-in-out infinite;
+            transform-origin: top center;
+        }
+
+        /* Badge/Tag Styles */
+        .badge-glow {
+            box-shadow: 0 0 20px rgba(5, 141, 122, 0.5);
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(5, 141, 122, 0.5);
+            }
+
+            50% {
+                box-shadow: 0 0 30px rgba(5, 141, 122, 0.8);
+            }
+        }
+
+        /* Smooth Transitions */
+        .transition-smooth {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Better Line Heights */
+        body {
+            line-height: 1.6;
+        }
+
+        h1 {
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            line-height: 1.3;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            line-height: 1.4;
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 32px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: pulse-whatsapp 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) translateY(-5px);
+            background-color: #128c7e;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            color: white;
+        }
+
+        /* Instagram Floating Button */
+        .instagram-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 110px;
+            right: 40px;
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: #FFF;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 32px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: pulse-instagram 2s infinite;
+        }
+
+        .instagram-float:hover {
+            transform: scale(1.1) translateY(-5px);
+            background: linear-gradient(45deg, #e6683c 0%, #dc2743 25%, #cc2366 50%, #bc1888 75%, #f09433 100%);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            color: white;
+        }
+
+        @keyframes pulse-whatsapp {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        @keyframes pulse-instagram {
+            0% {
+                box-shadow: 0 0 0 0 rgba(225, 48, 108, 0.5);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(225, 48, 108, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(225, 48, 108, 0);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 25px;
+                right: 25px;
+                font-size: 28px;
+            }
+
+            .instagram-float {
+                width: 50px;
+                height: 50px;
+                bottom: 85px;
+                right: 25px;
+                font-size: 28px;
+            }
+        }
+
+        html,
+        body {
+            overscroll-behavior-y: none;
+        }
+    </style>
+</head>
+
+<body class="antialiased bg-gray-50">
+
+    <!-- Hanging Tag 1: PCI -->
+    <div class="fixed z-50 swing" style="bottom: 430px; right: 0;">
+        <div class="bg-gradient-to-br from-primary-600 to-primary-700 text-white px-3 py-5 rounded-l-xl shadow-2xl cursor-pointer hover:px-5 transition-all duration-300">
+            <span class="font-extrabold text-xs uppercase tracking-widest"
+                style="writing-mode: vertical-rl; text-orientation: mixed; letter-spacing: 0.2em;">PCI APPROVED</span>
+        </div>
+    </div>
+
+    <!-- Hanging Tag 2: Brochure -->
+    <div class="fixed z-50 swing" style="bottom: 230px; right: 0; animation-delay: 0.3s;">
+        <a href="https://snscphs.org/brochure/" target="_blank"
+            class="bg-gradient-to-br from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white px-3 py-6 rounded-l-xl shadow-2xl flex flex-col items-center space-y-2 group transition-all duration-300 hover:px-5">
+            <i class="fas fa-file-pdf text-xl group-hover:scale-110 transition-transform duration-300"></i>
+            <span class="font-extrabold text-xs uppercase tracking-widest"
+                style="writing-mode: vertical-rl; text-orientation: mixed; letter-spacing: 0.2em;">BROCHURE</span>
+        </a>
+    </div>
+
+    <!-- Floating CTA Button (Mobile) -->
+    <div class="fixed bottom-6 left-6 z-50 lg:hidden">
+        <a href="/apply-now"
+            class="bg-primary-500 hover:bg-primary-600 text-white px-6 py-4 rounded-full shadow-2xl flex items-center space-x-2 pulse-slow">
+            <i class="fas fa-pen-to-square"></i>
+            <span class="font-bold">Apply Now</span>
+        </a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="/" class="flex items-center space-x-3">
+                    <img src="https://cdn.bitrix24.com/b11752903/landing/b31/b31cec6857f938bf2d1a7b4f140588c0/sdsd_1x.png"
+                        alt="SNS Pharmacy Logo" class="h-16 w-auto">
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-900 leading-tight">SNS College of Pharmacy <br /><span
+                                class="text-sm font-semibold text-primary-600">& Health Sciences</span></h1>
+                    </div>
+                </a>
+
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="/" class="text-primary-600 font-bold font-medium">Home</a>
+
+                    <!-- Academics Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-primary-600 font-medium flex items-center">
+                            Programs <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div
+                            class="absolute hidden group-hover:block bg-white shadow-xl rounded-lg py-2 w-64 mt-0 z-50">
+                            <a href="/academics/b-pharm" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">B.
+                                Pharm (Pharmacy)</a>
+                            <a href="/academics/d-pharm" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">D.
+                                Pharm (Pharmacy)</a>
+                            <a href="/academics/m-pharm" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">M.
+                                Pharm (Pharmaceutics)</a>
+                            <a href="/academics/pharm-d"
+                                class="block px-4 py-2 hover:bg-primary-50 text-gray-700">Pharm. D (Doctor of
+                                Pharmacy)</a>
+                        </div>
+                    </div>
+
+                    <!-- Infrastructure Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-primary-600 font-medium flex items-center">
+                            Infrastructure <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div
+                            class="absolute hidden group-hover:block bg-white shadow-xl rounded-lg py-2 w-48 mt-0 z-50">
+                            <a href="/facilities"
+                                class="block px-4 py-2 hover:bg-primary-50 text-gray-700">Facilities</a>
+                            <a href="/gallery" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">Campus
+                                Gallery</a>
+                            <a href="/transport" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">Transport</a>
+                        </div>
+                    </div>
+
+                    <!-- Beyond Academics Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-primary-600 font-medium flex items-center">
+                            Beyond Academics <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div
+                            class="absolute hidden group-hover:block bg-white shadow-xl rounded-lg py-2 w-56 mt-0 z-50">
+                            <a href="/sports-clubs" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">Sports
+                                &amp; Clubs</a>
+                            <a href="/innovation" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">Innovation
+                                Hub (iHub)</a>
+                            <a href="/events" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">Events &amp;
+                                Celebrations</a>
+                            <a href="/success-stories" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">Success
+                                Stories</a>
+                        </div>
+                    </div>
+
+                    <!-- Meet Us Dropdown -->
+                    <div class="relative group">
+                        <button class="text-gray-700 hover:text-primary-600 font-medium flex items-center">
+                            Meet Us <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div
+                            class="absolute hidden group-hover:block bg-white shadow-xl rounded-lg py-2 w-56 mt-0 z-50">
+                            <a href="/about" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">About Us</a>
+                            <a href="/contact" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">Contact Us</a>
+                            <a href="/mandatory-disclosure"
+                                class="block px-4 py-2 hover:bg-primary-50 text-gray-700">Mandatory Disclosure</a>
+                        </div>
+                    </div>
+
+                    <a href="/apply-now"
+                        class="bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-bold transition">
+                        Apply Now <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-4 space-y-3">
+                <a href="/" class="block text-gray-700 hover:text-primary-600 font-medium py-2">Home</a>
+
+                <!-- Academics -->
+                <div>
+                    <button
+                        class="w-full text-left text-gray-700 hover:text-primary-600 font-medium py-2 flex justify-between items-center"
+                        onclick="document.getElementById('mobile-academics').classList.toggle('hidden')">
+                        Programs <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="mobile-academics" class="hidden pl-4 space-y-2 mt-2">
+                        <a href="/academics/b-pharm" class="block text-gray-600 hover:text-primary-600 py-1">B. Pharm
+                            (Pharmacy)</a>
+                        <a href="/academics/d-pharm" class="block text-gray-600 hover:text-primary-600 py-1">D. Pharm
+                            (Pharmacy)</a>
+                        <a href="/academics/m-pharm" class="block text-gray-600 hover:text-primary-600 py-1">M. Pharm
+                            (Pharmaceutics)</a>
+                        <a href="/academics/pharm-d" class="block text-gray-600 hover:text-primary-600 py-1">Pharm. D
+                            (Doctor of Pharmacy)</a>
+                    </div>
+                </div>
+
+                <!-- Infrastructure -->
+                <div>
+                    <button
+                        class="w-full text-left text-gray-700 hover:text-primary-600 font-medium py-2 flex justify-between items-center"
+                        onclick="document.getElementById('mobile-infrastructure').classList.toggle('hidden')">
+                        Infrastructure <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="mobile-infrastructure" class="hidden pl-4 space-y-2 mt-2">
+                        <a href="/facilities" class="block text-gray-600 hover:text-primary-600 py-1">Facilities</a>
+                        <a href="/gallery" class="block text-gray-600 hover:text-primary-600 py-1">Gallery</a>
+                        <a href="/transport" class="block text-gray-600 hover:text-primary-600 py-1">Transport</a>
+                    </div>
+                </div>
+
+                <!-- Beyond Academics -->
+                <div>
+                    <button
+                        class="w-full text-left text-gray-700 hover:text-primary-600 font-medium py-2 flex justify-between items-center"
+                        onclick="document.getElementById('mobile-beyond').classList.toggle('hidden')">
+                        Beyond Academics <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="mobile-beyond" class="hidden pl-4 space-y-2 mt-2">
+                        <a href="/sports-clubs" class="block text-gray-600 hover:text-primary-600 py-1">Sports &amp;
+                            Clubs</a>
+                        <a href="/innovation" class="block text-gray-600 hover:text-primary-600 py-1">Innovation Hub</a>
+                        <a href="/events" class="block text-gray-600 hover:text-primary-600 py-1">Events &amp;
+                            Celebrations</a>
+                        <a href="/success-stories" class="block text-gray-600 hover:text-primary-600 py-1">Success
+                            Stories</a>
+                    </div>
+                </div>
+
+                <!-- Meet Us -->
+                <div>
+                    <button
+                        class="w-full text-left text-gray-700 hover:text-primary-600 font-medium py-2 flex justify-between items-center"
+                        onclick="document.getElementById('mobile-meetus').classList.toggle('hidden')">
+                        Meet Us <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="mobile-meetus" class="hidden pl-4 space-y-2 mt-2">
+                        <a href="/about" class="block text-gray-600 hover:text-primary-600 py-1">About Us</a>
+                        <a href="/contact" class="block text-gray-600 hover:text-primary-600 py-1">Contact Us</a>
+                        <a href="/mandatory-disclosure"
+                            class="block text-gray-600 hover:text-primary-600 py-1">Mandatory Disclosure</a>
+                    </div>
+                </div>
+
+                <a href="/apply-now" class="block bg-primary-600 text-white text-center px-6 py-3 rounded-lg font-bold">
+                    Apply Now <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+
+    <!-- Hero Section with Real SNS Content -->
+    <section class="relative text-white py-24 lg:py-32 overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="/static/images/pharm-building-home.png" alt="SNS College of Pharmacy & Health Sciences"
+                class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div
+                        class="inline-flex items-center bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 mb-6">
+                        <i class="fas fa-trophy text-yellow-400 mr-2"></i>
+                        <span class="text-sm font-semibold tracking-wide">India's First Design Thinking Pharmacy
+                            College</span>
+                    </div>
+
+                    <h1 class="text-5xl lg:text-7xl font-extrabold mb-6 leading-tight font-display">
+                        <a href="/academics/b-pharm" class="hover:text-primary-400 transition duration-300">
+                            Triggering Curiosity <br />
+                            <span class="text-primary-500">to Explore Needs</span>
+                        </a>
+                    </h1>
+
+                    <div class="h-1 w-24 bg-primary-500 mb-8 rounded-full"></div>
+
+                    <p class="text-xl lg:text-2xl mb-6 text-gray-200 leading-relaxed max-w-xl">
+                        India's first <strong class="text-white">Design Thinking Pharmacy College</strong>. Shaping
+                        future-ready pharmacists through innovation and advanced research.
+                    </p>
+
+                    <p class="text-sm lg:text-base mb-8 text-gray-200 leading-relaxed max-w-xl">
+                        Empowering students with clinical expertise and pharmaceutical innovation at Coimbatore's
+                        premier healthcare institution.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 mb-10">
+                        <a href="/apply-now"
+                            class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-primary-500/30 transition transform hover:-translate-y-1 flex items-center justify-center">
+                            Apply for 2026-27
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                        <a href="/about"
+                            class="bg-white/10 hover:bg-white/20 backdrop-blur border border-white/30 text-white px-8 py-4 rounded-xl font-bold text-lg transition flex items-center justify-center">
+                            About us
+                        </a>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 text-xs text-gray-200">
+                        <div class="inline-flex items-center">
+                            <i class="fas fa-circle-check text-green-400 mr-2"></i>
+                            PCI Approved
+                        </div>
+                        <div class="inline-flex items-center">
+                            <i class="fas fa-shield-halved text-green-400 mr-2"></i>
+                            TN.Dr.MGR Medical University Affiliated
+                        </div>
+                        <div class="inline-flex items-center">
+                            <i class="fas fa-calendar text-green-400 mr-2"></i>
+                            Pharmacy Excellence since 2019
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hidden lg:block relative">
+                    <!-- Optional: Add a floated refined card or keep clean to show the background image -->
+                    <!-- Keeping it clean to showcase the 'Real' image -->
+                    <div class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 shadow-2xl">
+                        <div class="grid grid-cols-2 gap-4">
+                            <div
+                                class="bg-white/10 border border-white/10 rounded-xl p-5 text-center transition-all duration-300 ease-out hover:scale-105 hover:bg-white/20 hover:shadow-xl hover:border-white/30 cursor-pointer">
+                                <div
+                                    class="text-4xl font-extrabold text-white transition-transform duration-300 hover:scale-110">
+                                    92%</div>
+                                <div class="text-xs text-gray-200 mt-1">Placement Success</div>
+                            </div>
+                            <div
+                                class="bg-white/10 border border-white/10 rounded-xl p-5 text-center transition-all duration-300 ease-out hover:scale-105 hover:bg-white/20 hover:shadow-xl hover:border-white/30 cursor-pointer">
+                                <div
+                                    class="text-4xl font-extrabold text-white transition-transform duration-300 hover:scale-110">
+                                    160+</div>
+                                <div class="text-xs text-gray-200 mt-1">B.Pharm &amp; D.Pharm Intake</div>
+                            </div>
+                            <div
+                                class="bg-white/10 border border-white/10 rounded-xl p-5 text-center transition-all duration-300 ease-out hover:scale-105 hover:bg-white/20 hover:shadow-xl hover:border-white/30 cursor-pointer">
+                                <div
+                                    class="text-3xl font-extrabold text-white transition-transform duration-300 hover:scale-110">
+                                    50+</div>
+                                <div class="text-xs text-gray-200 mt-1">Pharm.D &amp; M.Pharm Intake</div>
+                            </div>
+                            <div
+                                class="bg-white/10 border border-white/10 rounded-xl p-5 text-center transition-all duration-300 ease-out hover:scale-105 hover:bg-white/20 hover:shadow-xl hover:border-white/30 cursor-pointer">
+                                <div
+                                    class="text-4xl font-extrabold text-white transition-transform duration-300 hover:scale-110">
+                                    2019</div>
+                                <div class="text-xs text-gray-200 mt-1">Year Established</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="py-10 bg-white border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center text-center divide-x divide-gray-100">
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-gray-900 mb-2">2019</div>
+                    <div class="text-sm text-gray-500 font-medium uppercase tracking-wide">Established</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-gray-900 mb-2">PCI</div>
+                    <div class="text-sm text-gray-500 font-medium uppercase tracking-wide">Approved</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-gray-900 mb-2">92%</div>
+                    <div class="text-sm text-gray-500 font-medium uppercase tracking-wide">Placement Success</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-gray-900 mb-2">Industry</div>
+                    <div class="text-sm text-gray-500 font-medium uppercase tracking-wide">tie-ups</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why SNSCPHS -->
+    <section class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-6 text-primary-600">Why to choose Pharmacy@SNS?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                    We don't just teach pharmacy—we develop Design Thinkers who can solve healthcare challenges through
+                    research and innovation.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition duration-300 border border-gray-100 group">
+                    <div
+                        class="w-16 h-16 bg-primary-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                        <i class="fas fa-brain text-3xl text-primary-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Design Thinking Education</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        India's first pharmacy college with <strong>GenAI-Powered Design Thinking Framework</strong>
+                        (Patented). Built on Empathy, every student learns to solve problems creatively using
+                        AI-enhanced methodologies from an early age.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition duration-300 border border-gray-100 group">
+                    <div
+                        class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                        <i class="fas fa-users-gear text-3xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">3P Culture Framework</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        <strong>Purpose, Process, People</strong>—our holistic approach ensures every student develops
+                        academically, socially, emotionally, and ethically.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition duration-300 border border-gray-100 group">
+                    <div
+                        class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                        <i class="fas fa-user-graduate text-3xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">10:1 Personalized Care</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Ultra-low student-teacher ratio ensures every student receives individual attention. <strong>60%
+                            of our faculty</strong> have 10+ years of experience.
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition duration-300 border border-gray-100 group">
+                    <div
+                        class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                        <i class="fas fa-rocket text-3xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">SNS Innovation Hub</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Access to <strong>SNS iHub</strong>—India's Y-Combinator equivalent. Students work with AI, IoT,
+                        Robotics, AR/VR labs preparing them for future careers.
+                    </p>
+                </div>
+
+                <!-- Card 5 -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition duration-300 border border-gray-100 group">
+                    <div
+                        class="w-16 h-16 bg-pink-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                        <i class="fas fa-building-columns text-3xl text-pink-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">World-Class SPINE Center</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        5-level activity center with <strong>swimming pool, indoor cricket, gym, music studio, dance
+                            studio, theater</strong>, and more—everything under one roof.
+                    </p>
+                </div>
+
+                <!-- Card 6 -->
+                <div
+                    class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition duration-300 border border-gray-100 group">
+                    <div
+                        class="w-16 h-16 bg-indigo-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                        <i class="fas fa-layer-group text-3xl text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">5 Pillars Development</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        <strong>Learning, Upskilling, Innovation, Networking, Character Building</strong>—comprehensive
+                        development for future leaders.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Programs Overview -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold mb-6 text-gray-900">
+                    <span class="text-primary-600">Pharmaceutical Excellence at Every Level</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Comprehensive pharmaceutical education integrated with Design Thinking across undergraduate and
+                    diploma programs.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Program 1 -->
+                <a href="/academics/b-pharm"
+                    class="group rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500">
+                    <div class="h-56 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition z-10"></div>
+                        <img src="/static/images/7.JPG" alt="B. Pharm"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-6 bg-white relative z-20">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-1">B. Pharm</h3>
+                        <p class="text-primary-600 font-semibold text-sm mb-3">4 Year Undergraduate Degree</p>
+                        <p class="text-gray-600 text-sm line-clamp-3">
+                            A comprehensive study of pharmaceutical sciences, drug discovery, and healthcare management.
+                        </p>
+                        <div class="mt-4 text-primary-600 font-bold text-sm flex items-center">
+                            Explore <i
+                                class="fas fa-arrow-right ml-2 opacity-0 group-hover:opacity-100 transition-opacity transform -translate-x-2 group-hover:translate-x-0"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Program 2 -->
+                <a href="/academics/d-pharm"
+                    class="group rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500">
+                    <div class="h-56 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition z-10"></div>
+                        <img src="/static/images/10.JPG" alt="D. Pharm"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-6 bg-white relative z-20">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-1">D. Pharm</h3>
+                        <p class="text-blue-600 font-semibold text-sm mb-3">2 Year Diploma Course</p>
+                        <p class="text-gray-600 text-sm line-clamp-3">
+                            Practical training for hospital and community pharmacy with focus on dosage forms and
+                            patient care.
+                        </p>
+                        <div class="mt-4 text-blue-600 font-bold text-sm flex items-center">
+                            Explore <i
+                                class="fas fa-arrow-right ml-2 opacity-0 group-hover:opacity-100 transition-opacity transform -translate-x-2 group-hover:translate-x-0"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Program 3 -->
+                <a href="/academics/m-pharm"
+                    class="group rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500">
+                    <div class="h-56 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition z-10"></div>
+                        <img src="/static/images/5.JPG" alt="M. Pharm"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-6 bg-white relative z-20">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-1">M. Pharm</h3>
+                        <p class="text-purple-600 font-semibold text-sm mb-3">Pharmaceutics</p>
+                        <p class="text-gray-600 text-sm line-clamp-3">
+                            Advanced postgraduate program focusing on drug formulation, development and quality control. <strong>Intake: 18</strong>
+                        </p>
+                        <div class="mt-4 text-purple-600 font-bold text-sm flex items-center">
+                            Explore <i
+                                class="fas fa-arrow-right ml-2 opacity-0 group-hover:opacity-100 transition-opacity transform -translate-x-2 group-hover:translate-x-0"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Program 4 -->
+                <a href="/academics/pharm-d"
+                    class="group rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500">
+                    <div class="h-56 overflow-hidden relative">
+                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition z-10"></div>
+                        <img src="/static/images/8.JPG" alt="Pharm. D"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-6 bg-white relative z-20">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-1">Pharm. D</h3>
+                        <p class="text-green-600 font-semibold text-sm mb-3">6 Year Doctoral Program</p>
+                        <p class="text-gray-600 text-sm line-clamp-3">
+                            Clinical professional program focused on pharmacotherapy and direct patient care. <strong>Intake: 30</strong>
+                        </p>
+                        <div class="mt-4 text-green-600 font-bold text-sm flex items-center">
+                            Explore <i
+                                class="fas fa-arrow-right ml-2 opacity-0 group-hover:opacity-100 transition-opacity transform -translate-x-2 group-hover:translate-x-0"></i>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-16 bg-gradient-to-br from-primary-50 to-primary-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Voice of SNSCPHS</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Hear from our students and partners about their experience with India's first Design Thinking
+                    Pharmacy college.
+                </p>
+            </div>
+
+            <div class="relative flex items-center">
+                <!-- Prev Arrow -->
+                <button id="testimonial-prev"
+                    class="flex-shrink-0 w-10 h-10 rounded-full bg-white shadow-md border border-gray-200 flex items-center justify-center text-gray-500 hover:text-primary-600 hover:border-primary-400 hover:shadow-lg transition-all z-10 mr-3">
+                    <i class="fas fa-chevron-left text-sm"></i>
+                </button>
+
+                <div id="testimonials-carousel" class="overflow-hidden flex-1">
+                    <div class="flex transition-transform duration-500 ease-in-out" id="testimonials-track">
+
+                        <!-- Testimonial 1 -->
+                        <div class="w-full flex-shrink-0 px-4">
+                            <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12 max-w-4xl mx-auto">
+                                <div class="flex items-center mb-6">
+                                    <div
+                                        class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mr-4">
+                                        <svg aria-hidden="true" viewBox="0 0 24 24" class="w-9 h-9 text-white/95">
+                                            <path fill="currentColor"
+                                                d="M12 12c2.761 0 5-2.239 5-5S14.761 2 12 2 7 4.239 7 7s2.239 5 5 5Zm0 2c-3.866 0-7 3.134-7 7v1h14v-1c0-3.866-3.134-7-7-7Z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xl font-bold text-gray-900">Arun Kumar</h4>
+                                        <p class="text-primary-600 font-medium">B.Pharm Student (Final Year)</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-700 text-lg leading-relaxed mb-6 italic">
+                                    "The Design Thinking framework at SNSCPHS has completely changed my perspective on
+                                    pharmacy. Instead of just learning formulas, we focus on patient empathy. My project
+                                    on 'User-friendly Insulin Delivery' was featured in our iHub pitch session. It's
+                                    truly a professional environment."
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 2 -->
+                        <div class="w-full flex-shrink-0 px-4">
+                            <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12 max-w-4xl mx-auto">
+                                <div class="flex items-center mb-6">
+                                    <div
+                                        class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mr-4">
+                                        <svg aria-hidden="true" viewBox="0 0 24 24" class="w-9 h-9 text-white/95">
+                                            <path fill="currentColor"
+                                                d="M12 12c2.761 0 5-2.239 5-5S14.761 2 12 2 7 4.239 7 7s2.239 5 5 5Zm0 2c-3.866 0-7 3.134-7 7v1h14v-1c0-3.866-3.134-7-7-7Z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xl font-bold text-gray-900">Dr. S. Meenakshi</h4>
+                                        <p class="text-primary-600 font-medium">Industry Partner (R&D Head)</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-700 text-lg leading-relaxed mb-6 italic">
+                                    "We have recruited several students from SNSCPHS. What stands out is their ability
+                                    to think beyond traditional limits. Their exposure to advanced labs and
+                                    industry-interface programs makes them 'day-one' productive. The institution is
+                                    bridging the gap between academia and industry beautifully."
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 3 -->
+                        <div class="w-full flex-shrink-0 px-4">
+                            <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12 max-w-4xl mx-auto">
+                                <div class="flex items-center mb-6">
+                                    <div
+                                        class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mr-4">
+                                        <svg aria-hidden="true" viewBox="0 0 24 24" class="w-9 h-9 text-white/95">
+                                            <path fill="currentColor"
+                                                d="M12 12c2.761 0 5-2.239 5-5S14.761 2 12 2 7 4.239 7 7s2.239 5 5 5Zm0 2c-3.866 0-7 3.134-7 7v1h14v-1c0-3.866-3.134-7-7-7Z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xl font-bold text-gray-900">Priya Lakshmi</h4>
+                                        <p class="text-primary-600 font-medium">Pharm.D Student (3rd Year)</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-700 text-lg leading-relaxed mb-6 italic">
+                                    "The clinical exposure I received at SNSCPHS has been phenomenal. The Pharm.D
+                                    program connects us with real patients early on. The faculty mentorship and
+                                    hospital rotations have shaped my clinical thinking tremendously."
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Testimonial 4 -->
+                        <div class="w-full flex-shrink-0 px-4">
+                            <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12 max-w-4xl mx-auto">
+                                <div class="flex items-center mb-6">
+                                    <div
+                                        class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mr-4">
+                                        <svg aria-hidden="true" viewBox="0 0 24 24" class="w-9 h-9 text-white/95">
+                                            <path fill="currentColor"
+                                                d="M12 12c2.761 0 5-2.239 5-5S14.761 2 12 2 7 4.239 7 7s2.239 5 5 5Zm0 2c-3.866 0-7 3.134-7 7v1h14v-1c0-3.866-3.134-7-7-7Z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-xl font-bold text-gray-900">Mr. Karthik Rajan</h4>
+                                        <p class="text-primary-600 font-medium">Alumni &ndash; M.Pharm, Now Research Scientist</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-700 text-lg leading-relaxed mb-6 italic">
+                                    "SNSCPHS gave me more than a degree&mdash;it gave me a research mindset. The M.Pharm
+                                    program's focus on innovation and the iHub ecosystem prepared me for a career in
+                                    pharmaceutical research. I am proud to call this institution my alma mater."
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Next Arrow -->
+                <button id="testimonial-next"
+                    class="flex-shrink-0 w-10 h-10 rounded-full bg-white shadow-md border border-gray-200 flex items-center justify-center text-gray-500 hover:text-primary-600 hover:border-primary-400 hover:shadow-lg transition-all z-10 ml-3">
+                    <i class="fas fa-chevron-right text-sm"></i>
+                </button>
+            </div>
+
+            <div class="flex justify-center mt-8 space-x-2">
+                <button class="testimonial-dot w-3 h-3 rounded-full bg-primary-600 transition-all"
+                    data-index="0"></button>
+                <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-primary-400 transition-all"
+                    data-index="1"></button>
+                <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-primary-400 transition-all"
+                    data-index="2"></button>
+                <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300 hover:bg-primary-400 transition-all"
+                    data-index="3"></button>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+            (function () {
+                let currentIndex = 0;
+                const track = document.getElementById('testimonials-track');
+                const dots = document.querySelectorAll('.testimonial-dot');
+                const totalSlides = 4;
+
+                function updateCarousel() {
+                    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                    dots.forEach((dot, index) => {
+                        dot.classList.toggle('bg-primary-600', index === currentIndex);
+                        dot.classList.toggle('bg-gray-300', index !== currentIndex);
+                    });
+                }
+
+                dots.forEach(dot => {
+                    dot.addEventListener('click', () => {
+                        currentIndex = parseInt(dot.dataset.index);
+                        updateCarousel();
+                    });
+                });
+
+                document.getElementById('testimonial-prev').addEventListener('click', () => {
+                    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                    updateCarousel();
+                });
+
+                document.getElementById('testimonial-next').addEventListener('click', () => {
+                    currentIndex = (currentIndex + 1) % totalSlides;
+                    updateCarousel();
+                });
+
+                setInterval(() => {
+                    currentIndex = (currentIndex + 1) % totalSlides;
+                    updateCarousel();
+                }, 6000);
+            })();
+    </script>
+
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl lg:text-5xl font-bold mb-4">
+                Ready to Join the Future of Healthcare?
+            </h2>
+            <p class="text-xl opacity-90 mb-8">
+                Admissions open for Academic Year 2026-27. Secure your future in Pharmacy.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/apply-now"
+                    class="bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 rounded-xl font-bold text-lg transition shadow-xl">
+                    <i class="fas fa-pen-to-square mr-2"></i>
+                    Apply for B.Pharm/D.Pharm
+                </a>
+                <a href="/contact"
+                    class="bg-white/20 backdrop-blur-lg hover:bg-white/30 text-white px-8 py-4 rounded-xl font-bold text-lg transition">
+                    <i class="fas fa-phone mr-2"></i>
+                    Connect with Admissions
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="https://cdn.bitrix24.com/b11752903/landing/b31/b31cec6857f938bf2d1a7b4f140588c0/sdsd_1x.png"
+                            alt="SNS Pharmacy Logo" class="h-12 w-auto bg-white rounded p-1">
+                        <div>
+                            <h3 class="text-white font-bold">SNS College of Pharmacy and Health Sciences</h3>
+                        </div>
+                    </div>
+                    <p class="text-sm leading-relaxed">
+                        Affiliated to The Tamil Nadu Dr. M.G.R. Medical University, Chennai
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/" class="hover:text-white transition">Home</a></li>
+                        <li><a href="/about" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="/facilities" class="hover:text-white transition">Facilities</a></li>
+                        <li><a href="/gallery" class="hover:text-white transition">Gallery</a></li>
+                        <li><a href="/sports-clubs" class="hover:text-white transition">Sports & Clubs</a></li>
+                        <li><a href="/events" class="hover:text-white transition">Events & Celebrations</a></li>
+                        <li><a href="/success-stories" class="hover:text-white transition">Success Stories</a></li>
+                        <li><a href="/transport" class="hover:text-white transition">Transport</a></li>
+                        <li><a href="/innovation" class="hover:text-white transition">Innovation Hub</a></li>
+                        <li><a href="/brochure" class="hover:text-white transition">Download Brochure</a></li>
+                        <li><a href="/apply-now" class="hover:text-white transition">Admissions</a></li>
+                        <li><a href="/contact" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">Programs</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/academics/b-pharm" class="hover:text-white transition">B. Pharm</a></li>
+                        <li><a href="/academics/d-pharm" class="hover:text-white transition">D. Pharm</a></li>
+                        <li><a href="/academics/m-pharm" class="hover:text-white transition">M. Pharm</a></li>
+                        <li><a href="/academics/pharm-d" class="hover:text-white transition">Pharm. D</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">Connect</h4>
+                    <ul class="space-y-2 text-sm mb-4">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>SNS Kalvi Nagar, Sathy Main Road
+                            (NH-209),<br />Vazhiyampalayam, Saravanampatti,<br />Coimbatore - 641035.</li>
+                        <li><a href="tel:+919940956789" class="hover:text-white transition"><i
+                                    class="fas fa-phone mr-2"></i>Admission Helpline: +91 99409 56789</a></li>
+                        <li><a href="mailto:office@snscphs.org" class="hover:text-white transition"><i
+                                    class="fas fa-envelope mr-2"></i>Email: office@snscphs.org</a></li>
+                        <li><a href="mailto:job@snsgroups.com" class="hover:text-white transition"><i
+                                    class="fas fa-briefcase mr-2"></i>job@snsgroups.com</a></li>
+                        <li><a href="tel:+919940956789" class="hover:text-white transition"><i
+                                    class="fas fa-phone mr-2"></i>Admission Enquiry: +91 99409 56789</a></li>
+                    </ul>
+                    <div class="flex space-x-3">
+                        <a href="https://www.facebook.com/snsinstitutions" target="_blank"
+                            class="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/snsinstitutions/" target="_blank"
+                            class="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@snsinstitutions" target="_blank"
+                            class="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/school/snsinstitutions/" target="_blank"
+                            class="w-10 h-10 bg-gray-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                <p>&copy; 2026 SNS College of Pharmacy and Health Sciences. All rights reserved.</p>
+                <p class="mt-2 text-primary-400 font-semibold">We trigger the curiosity in the young minds to explore
+                    the world needs.</p>
+                <p class="mt-1 text-xs">SNS Institutions: Sincerity, Nobility, Service</p>
+                <p class="mt-3 text-primary-400 font-bold"><i class="fas fa-headset mr-2"></i>Admission Enquiry: +91
+                    99409 56789</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.0/dist/axios.min.js"></script>
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Aggressive MutationObserver for immediate removal
+        const observer = new MutationObserver((mutations) => {
+            document.querySelectorAll('.b24-form-field, .b24-form-control-pill-item, .b24-form-control-select-choice, span, div, p').forEach(el => {
+                if (el.innerText && (el.innerText.includes('SNSACD') || el.innerText.includes('fingerprint school'))) {
+                    el.style.setProperty('display', 'none', 'important');
+                    el.remove();
+                }
+            });
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+    </script>
+    <!-- Instagram Floating Icon -->
+    <a href="https://www.instagram.com/snsinstitutions/" class="instagram-float" target="_blank" rel="noopener noreferrer"
+        title="Follow us on Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <!-- WhatsApp Floating Icon -->
+    <a href="https://wa.me/919940956789" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+        title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+
+</html>
