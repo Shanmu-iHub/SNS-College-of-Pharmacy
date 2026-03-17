@@ -180,5 +180,23 @@ setTimeout(function () {
 }, 500);
 </script>
 
+    <script>
+        document.querySelectorAll(".group button").forEach(button => {
+            button.addEventListener("click", (e) => {
+                e.stopPropagation();
+                const dropdown = button.nextElementSibling;
+                if (dropdown && dropdown.classList.contains("absolute")) {
+                    dropdown.classList.toggle("hidden");
+                    document.querySelectorAll(".group div.absolute").forEach(d => {
+                        if (d !== dropdown) d.classList.add("hidden");
+                    });
+                }
+            });
+        });
+        document.addEventListener("click", () => {
+            document.querySelectorAll(".group div.absolute").forEach(d => d.classList.add("hidden"));
+        });
+    </script>
+
 </body>
 </html>

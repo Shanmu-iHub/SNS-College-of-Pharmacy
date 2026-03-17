@@ -642,9 +642,9 @@
                 <p class="text-gray-600 mb-6">Contact our transport coordinator to check route availability for your
                     specific location</p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <a href="tel:+919629937861"
+                    <a href="tel:+917550316701"
                         class="inline-flex items-center gap-2 bg-primary-600 text-white px-7 py-3 rounded-full font-bold hover:bg-primary-700 transition shadow-md">
-                        <i class="fas fa-phone"></i> Call: +91 96299 37861
+                        <i class="fas fa-phone"></i> Call: +91 75503 16701
                     </a>
                     <a href="/contact"
                         class="inline-flex items-center gap-2 border-2 border-primary-600 text-primary-600 px-7 py-3 rounded-full font-bold hover:bg-primary-50 transition">
@@ -817,7 +817,7 @@
                 transport fleet.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="tel:+919629937861"
+                <a href="tel:+917550316701"
                     class="inline-flex items-center justify-center px-8 py-4 bg-white text-green-700 font-bold rounded-full hover:bg-green-50 transition-colors duration-300 shadow-lg">
                     <i class="fas fa-phone mr-2"></i> Call Transport Office
                 </a>
@@ -881,14 +881,14 @@
                     <ul class="space-y-2 text-sm mb-4">
                         <li><i class="fas fa-map-marker-alt mr-2"></i>SNS Kalvi Nagar, Sathy Main Road
                             (NH-209),<br />Vazhiyampalayam, Saravanampatti,<br />Coimbatore - 641035.</li>
-                        <li><a href="tel:+919940956789" class="hover:text-white transition"><i
-                                    class="fas fa-phone mr-2"></i>Admission Helpline: +91 99409 56789</a></li>
+                        <li><a href="tel:+917550316701" class="hover:text-white transition"><i
+                                    class="fas fa-phone mr-2"></i>Admission Helpline: +91 75503 16701</a></li>
                         <li><a href="mailto:office@snscphs.org" class="hover:text-white transition"><i
                                     class="fas fa-envelope mr-2"></i>Email: office@snscphs.org</a></li>
                         <li><a href="mailto:job@snsgroups.com" class="hover:text-white transition"><i
                                     class="fas fa-briefcase mr-2"></i>job@snsgroups.com</a></li>
-                        <li><a href="tel:+919940956789" class="hover:text-white transition"><i
-                                    class="fas fa-phone mr-2"></i>Admission Enquiry: +91 99409 56789</a></li>
+                        <li><a href="tel:+917550316701" class="hover:text-white transition"><i
+                                    class="fas fa-phone mr-2"></i>Admission Enquiry: +91 75503 16701</a></li>
                     </ul>
                     <div class="flex space-x-3">
                         <a href="https://www.facebook.com/snsinstitutions" target="_blank"
@@ -917,7 +917,7 @@
                     the world needs.</p>
                 <p class="mt-1 text-xs">SNS Institutions: Sincerity, Nobility, Service</p>
                 <p class="mt-3 text-primary-400 font-bold"><i class="fas fa-headset mr-2"></i>Admission Enquiry: +91
-                    99409 56789</p>
+                    75503 16701</p>
             </div>
         </div>
     </footer>
@@ -948,10 +948,28 @@
         <i class="fab fa-instagram"></i>
     </a>
     <!-- WhatsApp Floating Icon -->
-    <a href="https://wa.me/919940956789" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+    <a href="https://wa.me/917550316701" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
         title="Chat with us on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
+    <script>
+        document.querySelectorAll(".group button").forEach(button => {
+            button.addEventListener("click", (e) => {
+                e.stopPropagation();
+                const dropdown = button.nextElementSibling;
+                if (dropdown && dropdown.classList.contains("absolute")) {
+                    dropdown.classList.toggle("hidden");
+                    document.querySelectorAll(".group div.absolute").forEach(d => {
+                        if (d !== dropdown) d.classList.add("hidden");
+                    });
+                }
+            });
+        });
+        document.addEventListener("click", () => {
+            document.querySelectorAll(".group div.absolute").forEach(d => d.classList.add("hidden"));
+        });
+    </script>
+
 </body>
 
 </html>

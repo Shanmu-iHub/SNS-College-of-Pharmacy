@@ -613,7 +613,7 @@
                         </tr>
                         <tr>
                             <td class="px-6 py-4 font-semibold text-gray-700">CONTACT DETAILS</td>
-                            <td class="px-6 py-4 font-bold text-gray-900">+91 99409 56789 / 02</td>
+                            <td class="px-6 py-4 font-bold text-gray-900">+91 75503 16701 / 02</td>
                         </tr>
                     </tbody>
                 </table>
@@ -750,10 +750,10 @@
                     <ul class="space-y-2 text-sm mb-4">
                         <li><i class="fas fa-map-marker-alt mr-2"></i>SNS Kalvi Nagar, Sathy Main Road
                             (NH-209),<br />Vazhiyampalayam, Saravanampatti,<br />Coimbatore - 641035.</li>
-                        <li><a href="tel:+919940956789" class="hover:text-white transition"><i
-                                    class="fas fa-phone mr-2"></i>Admission Helpline: +91 99409 56789</a></li>
-                        <li><a href="tel:+919940956789" class="hover:text-white transition"><i
-                                    class="fas fa-phone mr-2"></i>Admission Enquiry: +91 99409 56789</a></li>
+                        <li><a href="tel:+917550316701" class="hover:text-white transition"><i
+                                    class="fas fa-phone mr-2"></i>Admission Helpline: +91 75503 16701</a></li>
+                        <li><a href="tel:+917550316701" class="hover:text-white transition"><i
+                                    class="fas fa-phone mr-2"></i>Admission Enquiry: +91 75503 16701</a></li>
                         <li><a href="mailto:office@snscphs.org" class="hover:text-white transition"><i
                                     class="fas fa-envelope mr-2"></i>office@snscphs.org</a></li>
                         <li><a href="mailto:job@snsgroups.com" class="hover:text-white transition"><i
@@ -817,10 +817,28 @@
         <i class="fab fa-instagram"></i>
     </a>
     <!-- WhatsApp Floating Icon -->
-    <a href="https://wa.me/919940956789" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+    <a href="https://wa.me/917550316701" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
         title="Chat with us on WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
+    <script>
+        document.querySelectorAll(".group button").forEach(button => {
+            button.addEventListener("click", (e) => {
+                e.stopPropagation();
+                const dropdown = button.nextElementSibling;
+                if (dropdown && dropdown.classList.contains("absolute")) {
+                    dropdown.classList.toggle("hidden");
+                    document.querySelectorAll(".group div.absolute").forEach(d => {
+                        if (d !== dropdown) d.classList.add("hidden");
+                    });
+                }
+            });
+        });
+        document.addEventListener("click", () => {
+            document.querySelectorAll(".group div.absolute").forEach(d => d.classList.add("hidden"));
+        });
+    </script>
+
 </body>
 
 </html>
