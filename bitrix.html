@@ -465,27 +465,30 @@
                     }
 
                     // 2. Replace Academy field with "Choose College" Dropdown
-                    if (text.includes('SNSACD') || text.includes('SNS Academy') || text.includes('CBSE SCHOOL')) {
+                    if (text.includes('SNSACD') || text.includes('SNS College of Pharmacy') || text.includes('CBSE SCHOOL')) {
                         label.textContent = "Choose College *";
 
-                        // If it's not already a select, swap it
+                        // Safer approach: Hide the original input and use a proxy select
                         if (input && input.tagName !== 'SELECT' && !input.dataset.replaced) {
+                            input.style.display = 'none';
                             const select = document.createElement('select');
                             select.className = input.className;
-                            select.name = input.name;
-                            select.required = true;
+                            select.required = input.required || true;
                             select.dataset.replaced = "true";
-
                             select.innerHTML = '<option value="">Choose College *</option>' +
                                 snsColleges.map(c => `<option value="${c}">${c}</option>`).join('');
 
-                            input.parentNode.replaceChild(select, input);
+                            input.parentNode.insertBefore(select, input.nextSibling);
 
-                            // Handle Bitrix dynamic value binding if needed
-                            select.addEventListener('change', (e) => {
-                                const event = new Event('input', { bubbles: true });
-                                select.dispatchEvent(event);
+                            select.addEventListener('change', () => {
+                                input.value = select.value;
+                                // Dispatch multiple events to ensure Bitrix notices the change
+                                ['input', 'change', 'blur'].forEach(evtName => {
+                                    const event = new Event(evtName, { bubbles: true });
+                                    input.dispatchEvent(event);
+                                });
                             });
+                            if (input.value) select.value = input.value;
                         }
                         return;
                     }
