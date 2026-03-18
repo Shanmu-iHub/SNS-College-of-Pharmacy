@@ -438,7 +438,7 @@ export const Layout = (content: string, title: string, activePage: string = 'hom
                             </div>
                         </div>
                         <p class="text-sm leading-relaxed">
-                            PCI Approved | Affiliated to MGR Medical Univ<br>
+                            PCI Approved | Affiliated to MGR Medical University<br>
                             Established: 2019<br>
                             Coimbatore, Tamil Nadu
                         </p>

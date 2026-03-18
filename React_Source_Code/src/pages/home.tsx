@@ -52,7 +52,7 @@ export const HomePage = () => {
                         </div>
                         <div class="inline-flex items-center">
                             <i class="fas fa-shield-halved text-green-400 mr-2"></i>
-                            MGR Univ Affiliated
+                            MGR University Affiliated
                         </div>
                         <div class="inline-flex items-center">
                             <i class="fas fa-calendar text-green-400 mr-2"></i>
