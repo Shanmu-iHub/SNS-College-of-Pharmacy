@@ -1,7 +1,7 @@
-# SNS College of Pharmacy and Health Sciences (SNSCPHS) - Website
+# SNS College of Pharmacy and Health Science (SNSCPHS) - Website
 
 ## Project Overview
-- **Name**: SNS College of Pharmacy and Health Sciences Website
+- **Name**: SNS College of Pharmacy and Health Science Website
 - **Goal**: Rebranding and comprehensive update of the website to reflect SNSCPHS's identity as **India's First Design Thinking Pharmacy College**.
 - **Status**: ✅ **PHARMACY TRANSITION COMPLETE**
 - **Tech Stack**: Hono + TypeScript + Vite + TailwindCSS + Font Awesome

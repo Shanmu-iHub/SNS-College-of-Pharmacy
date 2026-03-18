@@ -6,7 +6,7 @@ export const HomePage = () => {
     <section class="relative text-white py-24 lg:py-32 overflow-hidden">
         <!-- Background Image with Overlay -->
         <div class="absolute inset-0 z-0">
-            <img src="/static/images/pharm-building-home.png" alt="SNS College of Pharmacy & Health Sciences" class="w-full h-full object-cover">
+            <img src="/static/images/pharm-building-home.png" alt="SNS College of Pharmacy & Health Science" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
         </div>
         

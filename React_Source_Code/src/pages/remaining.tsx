@@ -282,7 +282,7 @@ export const AboutPage = () => {
                         Pioneering <span class="text-primary-600">Design Thinking</span> in Pharmaceutical Sciences
                     </h2>
                     <p class="text-lg text-gray-600 leading-relaxed mb-6">
-                        SNS College of Pharmacy and Health Sciences (SNSCPHS), established in 2019, is a premier institution dedicated to excellence in pharmaceutical education. We are approved by PCI, New Delhi, and affiliated to The Tamil Nadu Dr. M.G.R. Medical University.
+                        SNS College of Pharmacy and Health Science (SNSCPHS), established in 2019, is a premier institution dedicated to excellence in pharmaceutical education. We are approved by PCI, New Delhi, and affiliated to The Tamil Nadu Dr. M.G.R. Medical University.
                     </p>
                     <p class="text-lg text-gray-600 leading-relaxed mb-8">
                         Our mission is to nurture common minds into exceptional pharmaceutical professionals through our unique Design Thinking framework, fostering an entrepreneurial mindset in every student.

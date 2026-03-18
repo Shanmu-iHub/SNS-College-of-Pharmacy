@@ -8,8 +8,8 @@ export const Layout = (content: string, title: string, activePage: string = 'hom
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>${title} | SNS College of Pharmacy and Health Sciences - Design Thinking Pharmacy Coimbatore</title>
-        <meta name="description" content="SNS College of Pharmacy and Health Sciences (SNSCPHS) - India's first Design Thinking Pharmacy college in Coimbatore. B.Pharm, D.Pharm with world-class labs.">
+        <title>${title} | SNS College of Pharmacy and Health Science - Design Thinking Pharmacy Coimbatore</title>
+        <meta name="description" content="SNS College of Pharmacy and Health Science (SNSCPHS) - India's first Design Thinking Pharmacy college in Coimbatore. B.Pharm, D.Pharm with world-class labs.">
         
         <!-- Tailwind CSS -->
         <script src="https://cdn.tailwindcss.com"></script>
@@ -292,7 +292,7 @@ export const Layout = (content: string, title: string, activePage: string = 'hom
                     <a href="/" class="flex items-center space-x-3">
                         <img src="https://cdn.bitrix24.com/b11752903/landing/b31/b31cec6857f938bf2d1a7b4f140588c0/sdsd_1x.png" alt="SNS Pharmacy Logo" class="h-16 w-auto">
                         <div>
-                            <h1 class="text-xl font-bold text-gray-900 leading-tight">SNS College of Pharmacy <br/><span class="text-sm font-semibold text-primary-600">& Health Sciences</span></h1>
+                            <h1 class="text-xl font-bold text-gray-900 leading-tight">SNS College of Pharmacy <br/><span class="text-sm font-semibold text-primary-600">& Health Science</span></h1>
                         </div>
                     </a>
                     
@@ -434,7 +434,7 @@ export const Layout = (content: string, title: string, activePage: string = 'hom
                             <img src="https://cdn.bitrix24.com/b11752903/landing/b31/b31cec6857f938bf2d1a7b4f140588c0/sdsd_1x.png" alt="SNS Pharmacy Logo" class="h-12 w-auto bg-white rounded p-1">
                             <div>
                                 <h3 class="text-white font-bold">SNS College of Pharmacy</h3>
-                                <p class="text-xs">& Health Sciences</p>
+                                <p class="text-xs">& Health Science</p>
                             </div>
                         </div>
                         <p class="text-sm leading-relaxed">
@@ -500,7 +500,7 @@ export const Layout = (content: string, title: string, activePage: string = 'hom
                 </div>
                 
                 <div class="border-t border-gray-800 pt-8 text-center text-sm">
-                    <p>&copy; 2026 SNS College of Pharmacy and Health Sciences. All rights reserved.</p>
+                    <p>&copy; 2026 SNS College of Pharmacy and Health Science. All rights reserved.</p>
                     <p class="mt-2 text-primary-400 font-semibold">We trigger the curiosity in the young minds to explore the world needs.</p>
                     <p class="mt-1 text-xs">SNS Institutions: Sincerity, Nobility, Service</p>
                     <p class="mt-3 text-primary-400 font-bold"><i class="fas fa-headset mr-2"></i>Admission Enquiry: 75503 16701</p>
