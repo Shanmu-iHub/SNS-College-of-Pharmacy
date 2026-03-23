@@ -42,7 +42,7 @@ export const SuccessStoriesPage = () => {
                             Indo–US International Conference 2025
                         </h3>
                         <p class="text-gray-600 text-sm mb-6 leading-relaxed flex-grow">
-                            SNS College of Pharmacy and Health Science successfully hosted an Indo–US International Conference on “Global Trends and Challenges in Pharmaceutical Sciences and Nanotechnology” on 5 February 2025, in collaboration with APP – bringing global experts and researchers onto our campus.
+                            SNS College of Pharmacy and Health Sciences successfully hosted an Indo–US International Conference on “Global Trends and Challenges in Pharmaceutical Sciences and Nanotechnology” on 5 February 2025, in collaboration with APP – bringing global experts and researchers onto our campus.
                         </p>
                         <div class="mt-auto">
                             <div class="flex items-center text-xs text-gray-500 font-medium mb-4">
@@ -96,7 +96,7 @@ export const SuccessStoriesPage = () => {
                             National Pharmacy Education Day – ANVESHAN 2024
                         </h3>
                         <p class="text-gray-600 text-sm mb-6 leading-relaxed flex-grow">
-                            SNS College of Pharmacy and Health Science celebrated National Pharmacy Education Day “ANVESHAN 2024”, commemorating the birth anniversary of the father of Pharmacy. Dr. K. Manisenthilkumar, COO of Royal Care Super Specialty Hospital, addressed our students with an inspiring session on emerging opportunities in pharmacy.
+                            SNS College of Pharmacy and Health Sciences celebrated National Pharmacy Education Day “ANVESHAN 2024”, commemorating the birth anniversary of the father of Pharmacy. Dr. K. Manisenthilkumar, COO of Royal Care Super Specialty Hospital, addressed our students with an inspiring session on emerging opportunities in pharmacy.
                         </p>
                         <div class="mt-auto">
                             <div class="flex items-center text-xs text-gray-500 font-medium mb-4">
@@ -195,7 +195,7 @@ export const SuccessStoriesPage = () => {
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Write Your Own Success Story</h2>
             <p class="text-lg text-gray-600 mb-10">
-                Join SNS College of Pharmacy and Health Science and become part of our legacy of excellence, innovation, and impact!
+                Join SNS College of Pharmacy and Health Sciences and become part of our legacy of excellence, innovation, and impact!
             </p>
             <a href="/admissions" class="inline-flex items-center justify-center px-10 py-4 bg-[#f97316] text-white font-bold rounded-xl hover:bg-orange-600 transition shadow-lg text-lg transform hover:-translate-y-1">
                 <i class="fas fa-edit mr-3"></i> Start Your Journey

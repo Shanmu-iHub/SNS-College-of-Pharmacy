@@ -26,7 +26,7 @@ export const MandatoryDisclosurePage = () => {
                     <tbody class="divide-y divide-gray-200">
                         <tr>
                             <td class="px-6 py-4 font-semibold text-gray-700">NAME OF THE INSTITUTION</td>
-                            <td class="px-6 py-4 text-gray-900 font-bold">SNS COLLEGE OF PHARMACY AND HEALTH SCIENCE</td>
+                            <td class="px-6 py-4 text-gray-900 font-bold">SNS COLLEGE OF PHARMACY AND HEALTH SCIENCEs</td>
                         </tr>
                         <tr>
                             <td class="px-6 py-4 font-semibold text-gray-700">YEAR OF ESTABLISHMENT</td>
