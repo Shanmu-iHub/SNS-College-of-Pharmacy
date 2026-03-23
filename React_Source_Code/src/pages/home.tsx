@@ -36,7 +36,7 @@ export const HomePage = () => {
                     </p>
                     
                     <div class="flex flex-col sm:flex-row gap-4 mb-10">
-                        <a href="/admissions" class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-primary-500/30 transition transform hover:-translate-y-1 flex items-center justify-center">
+                        <a href="/admissions" class="hidden md:flex bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-primary-500/30 transition transform hover:-translate-y-1 items-center justify-center">
                             Apply for 2025-26
                             <i class="fas fa-arrow-right ml-2 text-sm"></i>
                         </a>

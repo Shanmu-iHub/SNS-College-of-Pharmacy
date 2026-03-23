@@ -281,12 +281,7 @@
         </div>
         
         <!-- Floating CTA Button (Mobile) -->
-        <div class="fixed bottom-6 left-6 z-50 lg:hidden">
-            <a href="/admissions" class="bg-primary-500 hover:bg-primary-600 text-white px-6 py-4 rounded-full shadow-2xl flex items-center space-x-2 pulse-slow">
-                <i class="fas fa-pen-to-square"></i>
-                <span class="font-bold">Apply Now</span>
-            </a>
-        </div>
+        
 
         <!-- Navigation -->
         <nav class="bg-white shadow-md sticky top-0 z-40">
@@ -702,6 +697,57 @@
         });
     </script>
 
-    </body>
+    
+    <!-- Mobile Bottom Navigation -->
+    <div id="mobile-bottom-nav" class="fixed bottom-0 left-0 w-full bg-white shadow-[0_-4px_15px_rgba(0,0,0,0.08)] z-[9999] md:hidden transition-all pointer-events-auto">
+        <div class="flex justify-around items-center h-[70px] px-1 pb-1">
+            <a href="/" class="flex flex-col items-center justify-center w-full h-full text-gray-400 transition-colors" id="nav-home">
+                <i class="fas fa-home text-[22px] mb-1"></i>
+                <span class="text-[10px] font-semibold">Home</span>
+            </a>
+            <a href="https://iipc.snsgroups.com" target="_blank" class="flex flex-col items-center justify-center w-full h-full text-gray-400 transition-colors" id="nav-placements">
+                <i class="fas fa-chart-line text-[22px] mb-1"></i>
+                <span class="text-[10px] font-semibold">Placements</span>
+            </a>
+            <a href="/academics/" class="flex flex-col items-center justify-center w-full h-full text-gray-400 transition-colors" id="nav-programs">
+                <i class="fas fa-graduation-cap text-[22px] mb-1"></i>
+                <span class="text-[10px] font-semibold">Programs</span>
+            </a>
+            <a href="/about/" class="flex flex-col items-center justify-center w-full h-full text-gray-400 transition-colors" id="nav-about">
+                <i class="fas fa-info-circle text-[22px] mb-1"></i>
+                <span class="text-[10px] font-semibold">About Us</span>
+            </a>
+            <a href="/apply-now/" class="flex flex-col items-center justify-center w-full h-full text-gray-400 transition-colors" id="nav-apply">
+                <i class="fas fa-pen-to-square text-[22px] mb-1"></i>
+                <span class="text-[10px] font-semibold">Apply</span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Highlighting active tab in mobile bottom nav
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPath = window.location.pathname;
+            const navItems = {
+                'home': '/',
+                'placements': 'https://iipc.snsgroups.com',
+                'programs': '/academics/',
+                'about': '/about/',
+                'apply': '/apply-now/'
+            };
+            
+            for (const [id, path] of Object.entries(navItems)) {
+                const element = document.getElementById('nav-' + id);
+                if (element) {
+                    if (currentPath === path || (path !== '/' && currentPath.startsWith(path))) {
+                        element.classList.add('text-primary-600');
+                        element.classList.remove('text-gray-400');
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
     </html>
   

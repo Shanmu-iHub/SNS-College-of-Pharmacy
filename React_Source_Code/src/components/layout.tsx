@@ -280,13 +280,7 @@ export const Layout = (content: string, title: string, activePage: string = 'hom
             </a>
         </div>
         
-        <!-- Floating CTA Button (Mobile) -->
-        <div class="fixed bottom-6 left-6 z-50 lg:hidden">
-            <a href="/admissions" class="bg-primary-500 hover:bg-primary-600 text-white px-6 py-4 rounded-full shadow-2xl flex items-center space-x-2 pulse-slow">
-                <i class="fas fa-pen-to-square"></i>
-                <span class="font-bold">Apply Now</span>
-            </a>
-        </div>
+        <!-- Floating CTA Button removed on mobile to avoid redundancy with bottom nav -->
 
         <!-- Navigation -->
         <nav class="bg-white shadow-md sticky top-0 z-40">
@@ -543,27 +537,29 @@ export const Layout = (content: string, title: string, activePage: string = 'hom
         </a>
 
         <!-- Mobile Bottom Navigation -->
-        <div class="fixed bottom-0 left-0 w-full bg-white shadow-[0_-4px_15px_rgba(0,0,0,0.08)] z-[100] md:hidden rounded-t-xl transition-all">
+        <div id="mobile-bottom-nav" class="fixed bottom-0 left-0 w-full bg-white shadow-[0_-4px_15px_rgba(0,0,0,0.08)] z-[9999] md:hidden transition-all pointer-events-auto">
             <div class="flex justify-around items-center h-[70px] px-1 pb-1">
-                <a href="/" class="flex flex-col items-center justify-center w-full h-full ${activePage === 'home' ? 'text-[#eab308]' : 'text-gray-400 hover:text-gray-600'} transition-colors">
-                    <i class="fas fa-house text-[22px] mb-1"></i>
+                <a href="/" class="flex flex-col items-center justify-center w-full h-full ${activePage === 'home' ? 'text-primary-600' : 'text-gray-400'} transition-colors">
+                    <i class="fas fa-home text-[22px] mb-1"></i>
                     <span class="text-[10px] font-semibold">Home</span>
                 </a>
-                <a href="/success-stories" class="flex flex-col items-center justify-center w-full h-full ${activePage === 'success-stories' ? 'text-[#eab308]' : 'text-gray-400 hover:text-gray-600'} transition-colors">
-                    <i class="fas fa-arrow-trend-up text-[22px] mb-1"></i>
+                <a href="https://iipc.snsgroups.com" target="_blank" class="flex flex-col items-center justify-center w-full h-full text-gray-400 transition-colors">
+                    <i class="fas fa-chart-line text-[22px] mb-1"></i>
                     <span class="text-[10px] font-semibold">Placements</span>
                 </a>
-                <a href="/academics/b-pharm" class="flex flex-col items-center justify-center w-full h-full ${activePage.startsWith('academics') ? 'text-[#eab308]' : 'text-gray-400 hover:text-gray-600'} transition-colors">
-                    <i class="fas fa-graduation-cap text-[22px] mb-1"></i>
+                <a href="/academics/" class="nav-item elevated ${activePage.startsWith('academics') ? 'active' : ''}" id="nav-programs">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-graduation-cap text-[22px] mb-1"></i>
+                    </div>
                     <span class="text-[10px] font-semibold">Programs</span>
                 </a>
-                <a href="/innovation" class="flex flex-col items-center justify-center w-full h-full ${activePage === 'innovation' ? 'text-[#eab308]' : 'text-gray-400 hover:text-gray-600'} transition-colors">
-                    <i class="fas fa-lightbulb text-[22px] mb-1"></i>
-                    <span class="text-[10px] font-semibold">Innovation</span>
+                <a href="/about/" class="flex flex-col items-center justify-center w-full h-full ${activePage === 'about' ? 'text-primary-600' : 'text-gray-400'} transition-colors">
+                    <i class="fas fa-info-circle text-[22px] mb-1"></i>
+                    <span class="text-[10px] font-semibold">About Us</span>
                 </a>
-                <a href="#" class="flex flex-col items-center justify-center w-full h-full text-gray-400 hover:text-gray-600 transition-colors">
-                    <i class="fas fa-grip text-[22px] mb-1"></i>
-                    <span class="text-[10px] font-semibold">Portals</span>
+                <a href="/apply-now/" class="flex flex-col items-center justify-center w-full h-full ${activePage === 'apply' ? 'text-primary-600' : 'text-gray-400'} transition-colors">
+                    <i class="fas fa-pen-to-square text-[22px] mb-1"></i>
+                    <span class="text-[10px] font-semibold">Apply</span>
                 </a>
             </div>
         </div>

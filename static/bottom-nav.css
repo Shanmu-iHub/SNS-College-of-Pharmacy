@@ -16,9 +16,10 @@
 }
 
 /* Show only on small screens (mobile-first) */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     #mobile-bottom-nav {
         display: flex;
+        pointer-events: auto;
     }
     
     /* Adjust existing floating buttons to not overlap */
@@ -107,6 +108,13 @@
 /* Tap-friendly spacing */
 @media (pointer: coarse) {
     .nav-item {
-        min-width: 44px;
+        min-width: 60px;
+        min-height: 48px;
     }
+}
+
+/* Ensure z-index and visibility */
+#mobile-bottom-nav {
+    z-index: 9999 !important;
+    pointer-events: auto !important;
 }
