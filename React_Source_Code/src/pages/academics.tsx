@@ -90,7 +90,7 @@ export const BPharmPage = () => ProgramPage({
     headerCrumb: 'B. Pharm',
 
     overviewParagraphs: [
-        'The Bachelor of Pharmacy (B.Pharm) is an undergraduate academic program in the field of pharmacy. The students learn the methods and process of preparing drugs and how the dispensing of drugs and medicines takes place.',
+        'The Bachelor of Pharmacy (B. Pharm) is an undergraduate academic program in the field of pharmacy. The students learn the methods and process of preparing drugs and how the dispensing of drugs and medicines takes place.',
         'At SNSCPHS, we integrate Design Thinking into the curriculum, encouraging students to empathize with patient needs and ideate innovative drug delivery systems.',
         'The program spans 4 years and is approved by the Pharmacy Council of India (PCI), ensuring that graduates meet national standards for pharmaceutical practice.',
     ],
@@ -123,7 +123,7 @@ export const DPharmPage = () => ProgramPage({
     overviewParagraphs: [
         'The Diploma in Pharmacy (D.Pharm) is a foundation-level course in the field of pharmacy. It covers the basics of pharmacy education including the application of chemistry in the pharmaceutical industry and pharmacy practice.',
         'This 2-year program is ideal for students who want to enter the workforce quickly as certified pharmacy technicians or use it as a stepping stone towards the B.Pharm program.',
-        'At SNSCPHS, the D.Pharm curriculum emphasizes hands-on learning with regular hospital visits, lab sessions, and patient interaction exercises.',
+        'At SNSCPHS, the D. Pharm curriculum emphasizes hands-on learning with regular hospital visits, lab sessions, and patient interaction exercises.',
     ],
     highlights: [
         'PCI Approved Curriculum',
@@ -131,7 +131,7 @@ export const DPharmPage = () => ProgramPage({
         'Patient Counseling Skills',
         'Inventory & Drug Management',
         'Direct Industry Exposure',
-        'Pathway to B.Pharm Lateral Entry',
+        'Pathway to B. Pharm Lateral Entry',
     ],
     careerOpportunities: [
         { icon: 'fas fa-clinic-medical', title: 'Hospital Pharmacy', desc: 'Work as a pharmacy technician in government and private hospitals.' },
@@ -140,7 +140,7 @@ export const DPharmPage = () => ProgramPage({
         { icon: 'fas fa-graduation-cap', title: 'Further Education', desc: 'Pursue lateral entry into B.Pharm for advanced qualifications.' },
     ],
     ctaTitle: 'Begin Your Pharmacy Journey',
-    ctaSubtitle: 'The D.Pharm program at SNSCPHS is your gateway to a fulfilling career in the healthcare and pharmacy sector.',
+    ctaSubtitle: 'The D. Pharm program at SNSCPHS is your gateway to a fulfilling career in the healthcare and pharmacy sector.',
 });
 
 // ── M. Pharm ──────────────────────────────────────────────────────────────────
@@ -154,7 +154,7 @@ export const MPharmPage = () => ProgramPage({
     overviewParagraphs: [
         'The Master of Pharmacy (M.Pharm) in Pharmaceutics is a postgraduate research-driven program that equips students with in-depth knowledge of advanced drug formulation, delivery systems, and pharmaceutical analysis.',
         'Students engage in cutting-edge research projects, guided by experienced faculty, in areas such as novel drug delivery, nanotechnology, and biopharmaceutics.',
-        'At SNSCPHS, the M.Pharm program provides access to state-of-the-art research laboratories and collaboration opportunities with leading pharmaceutical companies.',
+        'At SNSCPHS, the M. Pharm program provides access to state-of-the-art research laboratories and collaboration opportunities with leading pharmaceutical companies.',
     ],
     highlights: [
         'Advanced Drug Delivery Research',
@@ -171,7 +171,7 @@ export const MPharmPage = () => ProgramPage({
         { icon: 'fas fa-file-medical', title: 'Regulatory Affairs', desc: 'Manage drug approvals and compliance with national and global agencies.' },
     ],
     ctaTitle: 'Advance Your Research Career',
-    ctaSubtitle: 'Become a pharmaceutical innovator with the M.Pharm program at SNS College of Pharmacy.',
+    ctaSubtitle: 'Become a pharmaceutical innovator with the M. Pharm program at SNS College of Pharmacy.',
 });
 
 // ── Pharm. D ──────────────────────────────────────────────────────────────────
@@ -185,7 +185,7 @@ export const PharmDPage = () => ProgramPage({
     overviewParagraphs: [
         'The Doctor of Pharmacy (Pharm.D) is a 6-year professional doctorate program (5 years of study + 1 year of internship) that trains pharmacists for clinical roles in hospitals, patient care management, and therapeutic decision-making.',
         'Pharm.D students participate in active ward rounds, direct patient consultations, and collaborative healthcare team meetings, gaining hands-on clinical exposure unlike any other pharmacy program.',
-        'At SNSCPHS, the Pharm.D program is the flagship course built to produce clinical pharmacists who can make meaningful impacts on patient outcomes at every level of healthcare.',
+        'At SNSCPHS, the Pharm. D program is the flagship course built to produce clinical pharmacists who can make meaningful impacts on patient outcomes at every level of healthcare.',
     ],
     highlights: [
         'PCI Approved 6-Year Doctorate Program',
@@ -202,5 +202,5 @@ export const PharmDPage = () => ProgramPage({
         { icon: 'fas fa-chalkboard-teacher', title: 'Clinical Research', desc: 'Conduct clinical trials and pharmacovigilance studies with pharma giants.' },
     ],
     ctaTitle: 'Become a Clinical Pharmacy Leader',
-    ctaSubtitle: "Pharm.D at SNSCPHS prepares you to be at the heart of patient care — India's most comprehensive clinical pharmacy program.",
+    ctaSubtitle: "Pharm. D at SNSCPHS prepares you to be at the heart of patient care — India's most comprehensive clinical pharmacy program.",
 });

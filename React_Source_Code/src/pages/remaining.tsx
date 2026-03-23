@@ -377,7 +377,7 @@ export const ContactPage = () => {
 export const AdmissionsPage = () => {
     return `
     ${PageHeader(
-        'Admissions 2024-25',
+        'Admissions 2025-26',
         'Begin your journey towards a specialized career in Pharmacy',
         '/static/images/sns-college-building.png',
         'Admissions'

@@ -243,17 +243,20 @@ export const Layout = (content: string, title: string, activePage: string = 'hom
             }
 
             @media screen and (max-width: 768px) {
+                body {
+                    padding-bottom: 70px;
+                }
                 .whatsapp-float {
                     width: 50px;
                     height: 50px;
-                    bottom: 25px;
+                    bottom: 85px;
                     right: 25px;
                     font-size: 28px;
                 }
                 .instagram-float {
                     width: 50px;
                     height: 50px;
-                    bottom: 85px;
+                    bottom: 145px;
                     right: 25px;
                     font-size: 28px;
                 }
@@ -500,8 +503,8 @@ export const Layout = (content: string, title: string, activePage: string = 'hom
                 </div>
                 
                 <div class="border-t border-gray-800 pt-8 text-center text-sm">
-                    <p>&copy; 2026 SNS College of Pharmacy and Health Science. All rights reserved.</p>
-                    <p class="mt-2 text-primary-400 font-semibold">We trigger the curiosity in the young minds to explore the world needs.</p>
+                    <p>&copy; 2025 SNS College of Pharmacy and Health Science. All rights reserved.</p>
+                    <p class="mt-2 text-primary-400 font-semibold">We trigger the curiosity in the young minds to explore the world's needs.</p>
                     <p class="mt-1 text-xs">SNS Institutions: Sincerity, Nobility, Service</p>
                     <p class="mt-3 text-primary-400 font-bold"><i class="fas fa-headset mr-2"></i>Admission Enquiry: 75503 16701</p>
                 </div>
@@ -538,6 +541,32 @@ export const Layout = (content: string, title: string, activePage: string = 'hom
             title="Chat with us on WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
+
+        <!-- Mobile Bottom Navigation -->
+        <div class="fixed bottom-0 left-0 w-full bg-white shadow-[0_-4px_15px_rgba(0,0,0,0.08)] z-[100] md:hidden rounded-t-xl transition-all">
+            <div class="flex justify-around items-center h-[70px] px-1 pb-1">
+                <a href="/" class="flex flex-col items-center justify-center w-full h-full ${activePage === 'home' ? 'text-[#eab308]' : 'text-gray-400 hover:text-gray-600'} transition-colors">
+                    <i class="fas fa-house text-[22px] mb-1"></i>
+                    <span class="text-[10px] font-semibold">Home</span>
+                </a>
+                <a href="/success-stories" class="flex flex-col items-center justify-center w-full h-full ${activePage === 'success-stories' ? 'text-[#eab308]' : 'text-gray-400 hover:text-gray-600'} transition-colors">
+                    <i class="fas fa-arrow-trend-up text-[22px] mb-1"></i>
+                    <span class="text-[10px] font-semibold">Placements</span>
+                </a>
+                <a href="/academics/b-pharm" class="flex flex-col items-center justify-center w-full h-full ${activePage.startsWith('academics') ? 'text-[#eab308]' : 'text-gray-400 hover:text-gray-600'} transition-colors">
+                    <i class="fas fa-graduation-cap text-[22px] mb-1"></i>
+                    <span class="text-[10px] font-semibold">Programs</span>
+                </a>
+                <a href="/innovation" class="flex flex-col items-center justify-center w-full h-full ${activePage === 'innovation' ? 'text-[#eab308]' : 'text-gray-400 hover:text-gray-600'} transition-colors">
+                    <i class="fas fa-lightbulb text-[22px] mb-1"></i>
+                    <span class="text-[10px] font-semibold">Innovation</span>
+                </a>
+                <a href="#" class="flex flex-col items-center justify-center w-full h-full text-gray-400 hover:text-gray-600 transition-colors">
+                    <i class="fas fa-grip text-[22px] mb-1"></i>
+                    <span class="text-[10px] font-semibold">Portals</span>
+                </a>
+            </div>
+        </div>
     </body>
     </html>
   `;

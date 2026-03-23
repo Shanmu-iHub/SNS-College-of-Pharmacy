@@ -37,7 +37,7 @@ export const HomePage = () => {
                     
                     <div class="flex flex-col sm:flex-row gap-4 mb-10">
                         <a href="/admissions" class="bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:shadow-primary-500/30 transition transform hover:-translate-y-1 flex items-center justify-center">
-                            Apply for 2026-27
+                            Apply for 2025-26
                             <i class="fas fa-arrow-right ml-2 text-sm"></i>
                         </a>
                         <a href="/about" class="bg-white/10 hover:bg-white/20 backdrop-blur border border-white/30 text-white px-8 py-4 rounded-xl font-bold text-lg transition flex items-center justify-center">
@@ -151,7 +151,7 @@ export const HomePage = () => {
                     <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
                         <i class="fas fa-user-graduate text-3xl text-green-600"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">10:1 Personalized Care</h3>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">1:10 Personalized Care</h3>
                     <p class="text-gray-600 leading-relaxed">
                         Ultra-low student-teacher ratio ensures every student receives individual attention. <strong>60% of our faculty</strong> have 10+ years of experience.
                     </p>
@@ -289,9 +289,9 @@ export const HomePage = () => {
             <h2 class="text-4xl lg:text-5xl font-bold mb-4">
                 Ready to Join the Future of Healthcare?
             </h2>
-            <p class="text-xl opacity-90 mb-8">
-                Admissions open for Academic Year 2026-27. Secure your future in Pharmacy.
-            </p>
+                <p class="text-xl text-white/80 mb-8 max-w-2xl">
+                    Admissions open for Academic Year 2025-26. Secure your future in Pharmacy.
+                </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="/admissions" class="bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 rounded-xl font-bold text-lg transition shadow-xl">
                     <i class="fas fa-pen-to-square mr-2"></i>

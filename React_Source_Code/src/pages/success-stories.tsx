@@ -39,14 +39,14 @@ export const SuccessStoriesPage = () => {
                     </div>
                     <div class="p-8 flex-grow flex flex-col">
                         <h3 class="text-xl font-bold text-gray-900 mb-4 leading-snug hover:text-primary-600 transition cursor-pointer">
-                            Indo–US International Conference 2026
+                            Indo–US International Conference 2025
                         </h3>
                         <p class="text-gray-600 text-sm mb-6 leading-relaxed flex-grow">
-                            SNS College of Pharmacy and Health Science successfully hosted an Indo–US International Conference on “Global Trends and Challenges in Pharmaceutical Sciences and Nanotechnology” on 5 February 2026, in collaboration with APP – bringing global experts and researchers onto our campus.
+                            SNS College of Pharmacy and Health Science successfully hosted an Indo–US International Conference on “Global Trends and Challenges in Pharmaceutical Sciences and Nanotechnology” on 5 February 2025, in collaboration with APP – bringing global experts and researchers onto our campus.
                         </p>
                         <div class="mt-auto">
                             <div class="flex items-center text-xs text-gray-500 font-medium mb-4">
-                                <i class="far fa-calendar-alt mr-2 text-gray-400 text-sm"></i> February 2026
+                                <i class="far fa-calendar-alt mr-2 text-gray-400 text-sm"></i> February 2025
                             </div>
                             <span class="text-primary-600 font-bold inline-flex items-center text-sm">
                                 Conference Highlight

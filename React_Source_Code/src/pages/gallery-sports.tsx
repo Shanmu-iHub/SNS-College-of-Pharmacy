@@ -49,9 +49,9 @@ export const GalleryPage = () => {
             </div>
             <div class="grid md:grid-cols-3 gap-8 mb-10">
                 ${[
-            { icon: 'fas fa-building', color: 'bg-primary-50 text-primary-600', title: 'A Block', desc: 'Primary academic block with smart classrooms and undergraduate pharmacy labs.', tags: ['Reception', 'Smart Classrooms', 'B.Pharm Labs'] },
-            { icon: 'fas fa-flask', color: 'bg-blue-50 text-blue-600', title: 'B Block', desc: 'Research wing with advanced pharmaceutical analysis and drug formulation labs.', tags: ['Research Labs', 'Analytical Lab', 'M.Pharm Wing'] },
-            { icon: 'fas fa-hospital', color: 'bg-green-50 text-green-600', title: 'C Block', desc: 'Clinical pharmacy training block with simulation labs and administrative offices.', tags: ['Clinical Wing', 'Admin Office', 'Pharm.D Training'] },
+            { icon: 'fas fa-building', color: 'bg-primary-50 text-primary-600', title: 'A Block', desc: 'Primary academic block with smart classrooms and undergraduate pharmacy labs.', tags: ['Reception', 'Smart Classrooms', 'B. Pharm Labs'] },
+            { icon: 'fas fa-flask', color: 'bg-blue-50 text-blue-600', title: 'B Block', desc: 'Research wing with advanced pharmaceutical analysis and drug formulation labs.', tags: ['Research Labs', 'Analytical Lab', 'M. Pharm Wing'] },
+            { icon: 'fas fa-hospital', color: 'bg-green-50 text-green-600', title: 'C Block', desc: 'Clinical pharmacy training block with simulation labs and administrative offices.', tags: ['Clinical Wing', 'Admin Office', 'Pharm. D Training'] },
         ].map(b => `
                 <div class="bg-white border border-gray-100 rounded-2xl p-7 hover:-translate-y-1 transition duration-300 shadow-sm hover:shadow-md">
                     <div class="w-16 h-16 ${b.color} rounded-full flex items-center justify-center mb-5">
