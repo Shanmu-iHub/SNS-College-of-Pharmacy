@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="../images/Favicon%20-%20Pharmacy.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | SNS College of Pharmacy and Health Science - Design Thinking Pharmacy Coimbatore</title>
+    <title>About Us | SNS College of Pharmacy and Health Sciences - Design Thinking Pharmacy Coimbatore</title>
     <meta name="description"
-        content="SNS College of Pharmacy and Health Science (SNSCPHS) - India's first Design Thinking Pharmacy college in Coimbatore. B. Pharm, D. Pharm with world-class labs.">
+        content="SNS College of Pharmacy and Health Sciences (SNSCPHS) - India's first Design Thinking Pharmacy college in Coimbatore. B. Pharm, D. Pharm with world-class labs.">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -735,7 +735,7 @@
                     class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 flex flex-col items-center text-left">
                     <div class="flex items-center space-x-4 mb-6 w-full">
                         <img src="/static/images/piiii/nalin_sns_new.png" alt="Director"
-                            class="w-16 h-16 rounded-lg object-contain ring-2 ring-primary-50">
+                            class="w-20 h-20 rounded-full object-cover object-top mr-4">
                         <div>
                             <h4 class="font-bold text-gray-900 text-sm">Nalin SNS</h4>
                             <p class="text-[10px] text-gray-500">Technical Director</p>
@@ -756,7 +756,7 @@
             <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
                 <div class="bg-primary-600 py-10 px-8 text-center text-white">
                     <h2 class="text-3xl font-bold mb-2">Admission and Enquiry Form</h2>
-                    <p class="text-primary-50">Join SNS College of Pharmacy and Health Science</p>
+                    <p class="text-primary-50">Join SNS College of Pharmacy and Health Sciences</p>
                 </div>
 
                 <div class="p-8 lg:p-12">
@@ -786,7 +786,7 @@
                         <img src="https://cdn.bitrix24.com/b11752903/landing/b31/b31cec6857f938bf2d1a7b4f140588c0/sdsd_1x.png"
                             alt="SNS Pharmacy Logo" class="h-12 w-auto bg-white rounded p-1">
                         <div>
-                            <h3 class="text-white font-bold">SNS College of Pharmacy and Health Science</h3>
+                            <h3 class="text-white font-bold">SNS College of Pharmacy and Health Sciences</h3>
                         </div>
                     </div>
                     <p class="text-sm leading-relaxed">
@@ -859,7 +859,7 @@
             </div>
 
             <div class="border-t border-gray-800 pt-8 text-center text-sm">
-                <p>&copy; 2025 SNS College of Pharmacy and Health Science. All rights reserved.</p>
+                <p>&copy; 2026 SNS College of Pharmacy and Health Sciences. All rights reserved.</p>
                 <p class="mt-2 text-primary-400 font-semibold">We trigger the curiosity in the young minds to explore the world's needs.</p>
                 <p class="mt-1 text-xs">SNS Institutions: Sincerity, Nobility, Service</p>
                 <p class="mt-3 text-primary-400 font-bold"><i class="fas fa-headset mr-2"></i>Admission Enquiry: +91
@@ -901,7 +901,7 @@
                 if (el.children.length === 0 || el.tagName === 'LABEL') {
                     // Replace SNS College of Pharmacy
                     if (el.textContent.includes('SNS College of Pharmacy')) {
-                        el.textContent = el.textContent.replace(/SNS College of Pharmacy/g, 'SNS College of Pharmacy and Health Science');
+                        el.textContent = el.textContent.replace(/SNS College of Pharmacy(?! and Health Sciences?)/g, 'SNS College of Pharmacy and Health Sciences');
                     }
                     // Replace Name of the Child
                     if (el.textContent.includes('Name of the Child')) {
@@ -938,7 +938,7 @@
 
                         const options = [
                             'Choose College',
-                            'SNS College of Pharmacy and Health Science',
+                            'SNS College of Pharmacy and Health Sciences',
                             'SNS College of Technology',
                             'SNS College of Nursing',
                             'SNS College of Physiotherapy',
