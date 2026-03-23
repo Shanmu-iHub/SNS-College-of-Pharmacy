@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="/images/Favicon%20-%20Pharmacy.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs | SNS College of Pharmacy and Health Science</title>
+    <meta name="description" content="Explore our undergraduate, diploma, and postgraduate pharmacy programs at SNSCPHS Coimbatore.">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#058D7A',
+                            50: '#f0f9f8',
+                            100: '#d1f0ec',
+                            200: '#a3e1d9',
+                            300: '#6ecec1',
+                            400: '#41b6a7',
+                            500: '#058D7A',
+                            600: '#047a69',
+                            700: '#036154',
+                            800: '#02483f',
+                            900: '#01302b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Poppins', sans-serif; }
+        html { scroll-behavior: smooth; }
+        
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(5, 141, 122, 0.25);
+        }
+
+        /* Mobile Bottom Nav Inline */
+        #mobile-bottom-nav {
+            display: flex;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background: #ffffff;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 99999;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        @media screen and (min-width: 769px) {
+            #mobile-bottom-nav { display: none; }
+        }
+
+        @media screen and (max-width: 768px) {
+            .whatsapp-float { bottom: 95px !important; }
+            .instagram-float { bottom: 155px !important; }
+        }
+
+        .nav-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #9CA3AF;
+            transition: all 0.2s ease;
+            height: 100%;
+        }
+        .nav-item i { font-size: 20px; margin-bottom: 4px; }
+        .nav-item span { font-size: 10px; font-weight: 500; }
+        .nav-item.active { color: #058D7A; }
+        .nav-item.active i { transform: scale(1.1); }
+        .nav-item.active span { font-weight: 700; }
+
+        .nav-item.elevated { position: relative; z-index: 10001; }
+        .nav-item.elevated .icon-wrapper {
+            width: 55px; height: 55px;
+            background: #ffffff; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin-top: -35px; box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+            border: 4px solid #ffffff;
+        }
+        .nav-item.elevated.active .icon-wrapper { background: #058D7A; color: #ffffff; }
+        .nav-item.elevated i { font-size: 22px; margin-bottom: 0; }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed; width: 60px; height: 60px;
+            bottom: 40px; right: 40px;
+            background-color: #25d366; color: #FFF;
+            border-radius: 50%; text-align: center; font-size: 32px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 1000; display: flex; align-items: center; justify-content: center;
+            text-decoration: none; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .instagram-float {
+            position: fixed; width: 60px; height: 60px;
+            bottom: 110px; right: 40px;
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: #FFF; border-radius: 50%; text-align: center; font-size: 32px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 1000; display: flex; align-items: center; justify-content: center;
+            text-decoration: none; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @media screen and (max-width: 768px) {
+            .whatsapp-float { width: 50px; height: 50px; bottom: 25px; right: 25px; font-size: 28px; }
+            .instagram-float { width: 50px; height: 50px; bottom: 85px; right: 25px; font-size: 28px; }
+        }
+    </style>
+</head>
+
+<body class="antialiased bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="/" class="flex items-center space-x-3">
+                    <img src="https://cdn.bitrix24.com/b11752903/landing/b31/b31cec6857f938bf2d1a7b4f140588c0/sdsd_1x.png" alt="SNS Pharmacy Logo" class="h-16 w-auto">
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-900 leading-tight">SNS College of Pharmacy <br /><span class="text-sm font-semibold text-primary-600">& Health Science</span></h1>
+                    </div>
+                </a>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="/" class="text-gray-700 hover:text-primary-500 font-medium">Home</a>
+                    <a href="/academics/" class="text-primary-600 font-bold">Programs</a>
+                    <a href="/about/" class="text-gray-700 hover:text-primary-500 font-medium">About Us</a>
+                    <a href="/success-stories/" class="text-gray-700 hover:text-primary-500 font-medium">Placements</a>
+                    <a href="/admissions" class="bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-bold transition">Apply Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-[40vh] min-h-[400px] flex items-center justify-center text-white overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="/static/images/pharm-building.jpg" alt="Academic Programs" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/30"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
+            <h1 class="text-4xl lg:text-7xl font-extrabold mb-4 leading-tight">Academic Programs</h1>
+            <p class="text-xl lg:text-2xl text-white/90 max-w-3xl mx-auto">India's First Design Thinking Pharmacy College Shaping Future-Ready Pharmacists</p>
+        </div>
+    </header>
+
+    <!-- Programs Grid -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                
+                <!-- B. Pharm -->
+                <a href="/academics/b-pharm/" class="group card-hover bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 flex flex-col">
+                    <div class="h-72 overflow-hidden relative">
+                        <img src="/static/images/7.JPG" alt="B. Pharm" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute top-4 left-4 bg-primary-600 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">UG Program</div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="text-3xl font-bold text-gray-900 mb-2">B. Pharm</h3>
+                        <p class="text-primary-600 font-semibold mb-4 text-lg">Bachelor of Pharmacy (4 Years)</p>
+                        <p class="text-gray-600 leading-relaxed mb-6">A comprehensive 4-year undergraduate degree focusing on drug discovery, pharmaceutical formulation, and clinical pharmacy practices integrated with Design Thinking.</p>
+                        <div class="mt-auto flex items-center text-primary-600 font-bold group-hover:translate-x-2 transition-transform">
+                            Explore Details <i class="fas fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- D. Pharm -->
+                <a href="/academics/d-pharm/" class="group card-hover bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 flex flex-col">
+                    <div class="h-72 overflow-hidden relative">
+                        <img src="/static/images/8.JPG" alt="D. Pharm" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute top-4 left-4 bg-orange-500 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">Diploma</div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="text-3xl font-bold text-gray-900 mb-2">D. Pharm</h3>
+                        <p class="text-primary-600 font-semibold mb-4 text-lg">Diploma in Pharmacy (2 Years)</p>
+                        <p class="text-gray-600 leading-relaxed mb-6">A foundational 2-year diploma program designed to train professionals in pharmacy practices, drug preparation, and dispensing.</p>
+                        <div class="mt-auto flex items-center text-primary-600 font-bold group-hover:translate-x-2 transition-transform">
+                            Explore Details <i class="fas fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- M. Pharm -->
+                <a href="/academics/m-pharm/" class="group card-hover bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 flex flex-col">
+                    <div class="h-72 overflow-hidden relative">
+                        <img src="/static/images/10.JPG" alt="M. Pharm" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute top-4 left-4 bg-blue-600 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">PG Program</div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="text-3xl font-bold text-gray-900 mb-2">M. Pharm</h3>
+                        <p class="text-primary-600 font-semibold mb-4 text-lg">Master of Pharmacy (2 Years)</p>
+                        <p class="text-gray-600 leading-relaxed mb-6">An advanced 2-year postgraduate program specializing in Pharmaceutics, focusing on advanced research and industrial applications.</p>
+                        <div class="mt-auto flex items-center text-primary-600 font-bold group-hover:translate-x-2 transition-transform">
+                            Explore Details <i class="fas fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Pharm. D -->
+                <a href="/academics/pharm-d/" class="group card-hover bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 flex flex-col">
+                    <div class="h-72 overflow-hidden relative">
+                        <img src="/static/images/sns-pharm.png" alt="Pharm. D" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                        <div class="absolute top-4 left-4 bg-purple-600 text-white px-4 py-2 rounded-full font-bold text-sm shadow-lg">Doctorate</div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="text-3xl font-bold text-gray-900 mb-2">Pharm. D</h3>
+                        <p class="text-primary-600 font-semibold mb-4 text-lg">Doctor of Pharmacy (6 Years)</p>
+                        <p class="text-gray-600 leading-relaxed mb-6">A prestigious 6-year professional doctorate degree focusing on clinical pharmacy, hospital practices, and patient care management.</p>
+                        <div class="mt-auto flex items-center text-primary-600 font-bold group-hover:translate-x-2 transition-transform">
+                            Explore Details <i class="fas fa-arrow-right ml-2"></i>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <img src="https://cdn.bitrix24.com/b11752903/landing/b31/b31cec6857f938bf2d1a7b4f140588c0/sdsd_1x.png" alt="SNS Pharmacy Logo" class="h-12 w-auto bg-white rounded p-1 mx-auto mb-4">
+            <p class="text-white font-bold mb-2">SNS College of Pharmacy and Health Science</p>
+            <p class="text-sm border-t border-gray-800 pt-8">&copy; 2026 SNSCPHS Coimbatore. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp/Instagram Floating Icons -->
+    <a href="https://www.instagram.com/snsinstitutions/" class="instagram-float" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/917550316701" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav id="mobile-bottom-nav">
+        <a href="/" class="nav-item" id="nav-home"><i class="fas fa-home"></i><span>Home</span></a>
+        <a href="/success-stories/" class="nav-item" id="nav-placements"><i class="fas fa-chart-line"></i><span>Placements</span></a>
+        <a href="/academics/" class="nav-item elevated active" id="nav-programs"><div class="icon-wrapper"><i class="fas fa-graduation-cap"></i></div><span>Programs</span></a>
+        <a href="/about/" class="nav-item" id="nav-about"><i class="fas fa-info-circle"></i><span>About Us</span></a>
+        <a href="/apply-now/" class="nav-item" id="nav-apply"><i class="fas fa-pen-to-square"></i><span>Apply</span></a>
+    </nav>
+
+</body>
+
+</html>

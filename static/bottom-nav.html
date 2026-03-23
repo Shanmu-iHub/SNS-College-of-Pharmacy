@@ -1,0 +1,56 @@
+<!-- Mobile Bottom Navigation -->
+<nav id="mobile-bottom-nav">
+    <!-- Home -->
+    <a href="/" class="nav-item active" id="nav-home">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+    </a>
+
+    <!-- Placements -->
+    <a href="/success-stories/" class="nav-item" id="nav-placements">
+        <i class="fas fa-chart-line"></i>
+        <span>Placements</span>
+    </a>
+
+    <!-- Programs (Elevated) -->
+    <a href="/academics/" class="nav-item elevated" id="nav-programs">
+        <div class="icon-wrapper">
+            <i class="fas fa-graduation-cap"></i>
+        </div>
+        <span>Programs</span>
+    </a>
+
+    <!-- About Us -->
+    <a href="/about/" class="nav-item" id="nav-about">
+        <i class="fas fa-info-circle"></i>
+        <span>About Us</span>
+    </a>
+
+    <!-- Apply -->
+    <a href="/apply-now/" class="nav-item" id="nav-apply">
+        <i class="fas fa-pen-to-square"></i>
+        <span>Apply</span>
+    </a>
+</nav>
+
+<script>
+    // Simple script to handle active state based on URL
+    document.addEventListener('DOMContentLoaded', () => {
+        const currentPath = window.location.pathname;
+        const navItems = document.querySelectorAll('.nav-item');
+        
+        navItems.forEach(item => {
+            item.classList.remove('active');
+            const href = item.getAttribute('href');
+            if (currentPath === href || (href !== '/' && currentPath.startsWith(href))) {
+                item.classList.add('active');
+            }
+        });
+        
+        // Default to Home if no match
+        if (!document.querySelector('.nav-item.active') && (currentPath === '/' || currentPath === '/index.html')) {
+            const home = document.getElementById('nav-home');
+            if (home) home.classList.add('active');
+        }
+    });
+</script>

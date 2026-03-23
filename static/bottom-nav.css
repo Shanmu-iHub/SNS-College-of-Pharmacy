@@ -1,0 +1,112 @@
+/* Mobile Bottom Navigation Styles */
+
+/* Base visibility */
+#mobile-bottom-nav {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: #ffffff;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Show only on small screens (mobile-first) */
+@media screen and (max-width: 480px) {
+    #mobile-bottom-nav {
+        display: flex;
+    }
+    
+    /* Adjust existing floating buttons to not overlap */
+    .whatsapp-float {
+        bottom: 95px !important; /* 70px (nav) + 25px (original) */
+    }
+    
+    .instagram-float {
+        bottom: 155px !important; /* 70px (nav) + 85px (original) */
+    }
+
+    /* Hide the original mobile Apply Now button if it overlaps */
+    .fixed.bottom-6.left-6.z-50.lg\:hidden {
+        bottom: 85px !important;
+    }
+}
+
+.nav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #9CA3AF;
+    transition: all 0.2s ease;
+    height: 100%;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.nav-item i {
+    font-size: 20px;
+    margin-bottom: 4px;
+    transition: transform 0.2s ease;
+}
+
+.nav-item span {
+    font-size: 10px;
+    font-weight: 500;
+}
+
+/* Active State */
+.nav-item.active {
+    color: #058D7A; /* Primary Brand Color */
+}
+
+.nav-item.active i {
+    transform: scale(1.1);
+}
+
+.nav-item.active span {
+    font-weight: 700;
+}
+
+/* Elevated "Programs" Item */
+.nav-item.elevated {
+    position: relative;
+    z-index: 10000;
+}
+
+.nav-item.elevated .icon-wrapper {
+    width: 55px;
+    height: 55px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -35px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+    border: 4px solid #ffffff;
+}
+
+.nav-item.elevated.active .icon-wrapper {
+    background: #058D7A;
+    color: #ffffff;
+}
+
+.nav-item.elevated i {
+    font-size: 22px;
+    margin-bottom: 0;
+}
+
+/* Tap-friendly spacing */
+@media (pointer: coarse) {
+    .nav-item {
+        min-width: 44px;
+    }
+}
