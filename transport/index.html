@@ -341,7 +341,7 @@
 
     <!-- Hanging Tag 2: Brochure -->
     <div class="fixed top-[38%] right-0 z-50 swing" style="animation-delay: 0.3s;">
-        <a href="/brochure-viewer"
+        <a href="/pages/brochure-viewer.html" target="_blank"
             class="bg-gradient-to-br from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white px-3 py-8 rounded-l-2xl shadow-2xl flex flex-col items-center space-y-2 group transition-all duration-300 hover:px-5">
             <i class="fas fa-file-pdf text-xl group-hover:scale-110 transition-transform duration-300"></i>
             <span class="font-extrabold text-xs uppercase tracking-widest"
@@ -572,56 +572,64 @@
                     Check if your area is covered before admission!
                 </div>
             </div>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-white rounded-2xl p-7 shadow-sm border-l-4 border-primary-500">
-                    <h4 class="font-bold text-lg text-gray-900 mb-4 flex items-center gap-2">
-                        <i class="fas fa-map-pin text-primary-500"></i> Central Coimbatore
-                    </h4>
-                    <ul class="space-y-2 text-gray-600 text-sm">
-                        <li class="flex items-center gap-2"><i class="fas fa-circle text-primary-400"
-                                style="font-size:6px"></i>RS Puram</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-circle text-primary-400"
-                                style="font-size:6px"></i>Race Course</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-circle text-primary-400"
-                                style="font-size:6px"></i>Town Hall</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-circle text-primary-400"
-                                style="font-size:6px"></i>Gandhipuram</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-circle text-primary-400"
-                                style="font-size:6px"></i>Saibaba Colony</li>
+            <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Blue Card -->
+                <div class="bg-blue-50 rounded-[2rem] p-8 text-center hover:shadow-xl transition-all duration-500 group border border-blue-100">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                        <i class="fas fa-map-marker-alt text-2xl text-blue-500"></i>
+                    </div>
+                    <h4 class="font-bold text-xl text-gray-900 mb-6">Central Coimbatore</h4>
+                    <ul class="space-y-3 text-gray-600 font-medium">
+                        <li>RS Puram</li>
+                        <li>Race Course</li>
+                        <li>Town Hall</li>
+                        <li>Gandhipuram</li>
+                        <li>Saibaba Colony</li>
                     </ul>
                 </div>
-                <div class="bg-white rounded-2xl p-7 shadow-sm border-l-4 border-primary-500">
-                    <h4 class="font-bold text-lg text-gray-900 mb-4 flex items-center gap-2">
-                        <i class="fas fa-map-pin text-primary-500"></i> East Coimbatore
-                    </h4>
-                    <ul class="space-y-2 text-gray-600 text-sm">
-                        <li class="flex items-center gap-2"><i class="fas fa-circle text-primary-400"
-                                style="font-size:6px"></i>Peelamedu</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-circle text-primary-400"
-                                style="font-size:6px"></i>Hopes College</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-circle text-primary-400"
-                                style="font-size:6px"></i>Singanallur</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-circle text-primary-400"
-                                style="font-size:6px"></i>Ramanathapuram</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-circle text-primary-400"
-                                style="font-size:6px"></i>Ganapathy</li>
+
+                <!-- Red Card -->
+                <div class="bg-red-50 rounded-[2rem] p-8 text-center hover:shadow-xl transition-all duration-500 group border border-red-100">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                        <i class="fas fa-location-arrow text-2xl text-red-500"></i>
+                    </div>
+                    <h4 class="font-bold text-xl text-gray-900 mb-6">East Coimbatore</h4>
+                    <ul class="space-y-3 text-gray-600 font-medium">
+                        <li>Peelamedu</li>
+                        <li>Hopes College</li>
+                        <li>Singanallur</li>
+                        <li>Ramanathapuram</li>
+                        <li>Ganapathy</li>
                     </ul>
                 </div>
-                <div class="bg-white rounded-2xl p-7 shadow-sm border-l-4 border-green-500">
-                    <h4 class="font-bold text-lg text-gray-900 mb-4 flex items-center gap-2">
-                        <i class="fas fa-map-pin text-green-500"></i> Outer Areas & Border
-                    </h4>
-                    <ul class="space-y-2 text-gray-600 text-sm">
-                        <li class="flex items-center gap-2"><i class="fas fa-circle text-green-400"
-                                style="font-size:6px"></i>Mettupalayam</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-circle text-green-400"
-                                style="font-size:6px"></i>Sathyamangalam</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-circle text-green-400"
-                                style="font-size:6px"></i>Tiruppur</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-circle text-green-400"
-                                style="font-size:6px"></i>Vadavalli & Border Areas</li>
-                        <li class="flex items-center gap-2"><i class="fas fa-circle text-green-400"
-                                style="font-size:6px"></i>Kuniyamuthur</li>
+
+                <!-- Purple Card -->
+                <div class="bg-purple-50 rounded-[2rem] p-8 text-center hover:shadow-xl transition-all duration-500 group border border-purple-100">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                        <i class="fas fa-compass text-2xl text-purple-500"></i>
+                    </div>
+                    <h4 class="font-bold text-xl text-gray-900 mb-6">Outer Areas</h4>
+                    <ul class="space-y-3 text-gray-600 font-medium">
+                        <li>Mettupalayam</li>
+                        <li>Sathyamangalam</li>
+                        <li>Tiruppur</li>
+                        <li>Palladam</li>
+                        <li>Annur</li>
+                    </ul>
+                </div>
+
+                <!-- Green Card -->
+                <div class="bg-green-50 rounded-[2rem] p-8 text-center hover:shadow-xl transition-all duration-500 group border border-green-100">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-sm group-hover:scale-110 transition-transform">
+                        <i class="fas fa-route text-2xl text-green-500"></i>
+                    </div>
+                    <h4 class="font-bold text-xl text-gray-900 mb-6">North & South</h4>
+                    <ul class="space-y-3 text-gray-600 font-medium">
+                        <li>Vadavalli</li>
+                        <li>Kuniyamuthur</li>
+                        <li>Thudiyalur</li>
+                        <li>Kovaipudur</li>
+                        <li>Eachanari</li>
                     </ul>
                 </div>
             </div>

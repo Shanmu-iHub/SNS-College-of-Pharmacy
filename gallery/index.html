@@ -336,8 +336,8 @@
 
     <!-- Hanging Tag 2: Brochure -->
     <div class="fixed top-[38%] right-0 z-50 swing" style="animation-delay: 0.3s;">
-        <a href="/brochure-viewer"
-            class="bg-gradient-to-br from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white px-4 py-8 rounded-l-2xl shadow-2xl flex flex-col items-center space-y-3 group transition-all">
+        <a href="/pages/brochure-viewer.html" target="_blank"
+            class="bg-gradient-to-br from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white px-3 py-8 rounded-l-2xl shadow-2xl flex flex-col items-center space-y-2 group transition-all duration-300 hover:px-5">
             <i class="fas fa-file-pdf text-2xl group-hover:scale-110 transition-transform duration-300"></i>
             <span class="font-extrabold text-sm uppercase tracking-widest"
                 style="writing-mode: vertical-rl; text-orientation: mixed; letter-spacing: 0.2em;">BROCHURE</span>
@@ -558,51 +558,57 @@
     <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <span class="text-primary-600 font-bold tracking-wider uppercase text-sm mb-2 block">Campus
-                    Experience</span>
-                <h2 class="text-4xl font-bold text-gray-900 mb-3">Life at SNS College of Pharmacy</h2>
-                <p class="text-xl text-gray-600">Research-driven learning, design thinking projects, and a vibrant
-                    campus environment.</p>
+                <span class="text-primary-600 font-bold tracking-wider uppercase text-sm mb-2 block">Our Campus</span>
+                <h2 class="text-4xl font-bold text-gray-900 mb-3">College Campus</h2>
+                <div class="w-20 h-1.5 bg-primary-600 mx-auto rounded-full"></div>
             </div>
             <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
 
-                <div
-                    class="group rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition duration-500 bg-white">
-                    <div class="h-56 overflow-hidden relative">
-                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition z-10"></div>
+                <!-- Card 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100">
+                    <div class="relative h-64 overflow-hidden">
                         <img src="/static/images/gallery/research-learning.png" alt="Research Oriented Learning"
-                            class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                            class="w-full h-full object-cover transform hover:scale-110 transition duration-700">
+                        <!-- Icon Overlay -->
+                        <div class="absolute bottom-4 left-4 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg z-20">
+                            <i class="fas fa-microscope text-primary-600"></i>
+                        </div>
                     </div>
-                    <div class="p-5">
-                        <h4 class="font-bold text-gray-900 mb-2">Research Oriented Learning</h4>
-                        <p class="text-gray-600 text-sm leading-relaxed">Students engaged in real-time pharmaceutical
-                            research, seminars, and collaborative discussions.</p>
+                    <div class="p-6">
+                        <h4 class="font-bold text-xl text-gray-900 mb-2">Research Oriented Learning</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">Students engaged in real-time pharmaceutical research, seminars, and collaborative discussions.</p>
                     </div>
                 </div>
-                <div
-                    class="group rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition duration-500 bg-white">
-                    <div class="h-56 overflow-hidden relative">
-                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition z-10"></div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100">
+                    <div class="relative h-64 overflow-hidden">
                         <img src="/static/images/gallery/design-thinking-projects.png" alt="Design Thinking Projects"
-                            class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                            class="w-full h-full object-cover transform hover:scale-110 transition duration-700">
+                        <!-- Icon Overlay -->
+                        <div class="absolute bottom-4 left-4 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg z-20">
+                            <i class="fas fa-lightbulb text-primary-600"></i>
+                        </div>
                     </div>
-                    <div class="p-5">
-                        <h4 class="font-bold text-gray-900 mb-2">Design Thinking Projects</h4>
-                        <p class="text-gray-600 text-sm leading-relaxed">Hands-on projects using GenAI-powered Design
-                            Thinking to solve healthcare challenges.</p>
+                    <div class="p-6">
+                        <h4 class="font-bold text-xl text-gray-900 mb-2">Design Thinking Projects</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">Hands-on projects using GenAI-powered Design Thinking to solve healthcare challenges.</p>
                     </div>
                 </div>
-                <div
-                    class="group rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition duration-500 bg-white">
-                    <div class="h-56 overflow-hidden relative">
-                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition z-10"></div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100">
+                    <div class="relative h-64 overflow-hidden">
                         <img src="/static/images/gallery/vibrant-campus-life.png" alt="Vibrant Campus Life"
-                            class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                            class="w-full h-full object-cover transform hover:scale-110 transition duration-700">
+                        <!-- Icon Overlay -->
+                        <div class="absolute bottom-4 left-4 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg z-20">
+                            <i class="fas fa-users text-primary-600"></i>
+                        </div>
                     </div>
-                    <div class="p-5">
-                        <h4 class="font-bold text-gray-900 mb-2">Vibrant Campus Life</h4>
-                        <p class="text-gray-600 text-sm leading-relaxed">Dynamic classroom interactions, peer learning,
-                            and an energetic academic atmosphere.</p>
+                    <div class="p-6">
+                        <h4 class="font-bold text-xl text-gray-900 mb-2">Vibrant Campus Life</h4>
+                        <p class="text-gray-500 text-sm leading-relaxed">Experiencing the best of college life with cultural events, clubs, and sports activities.</p>
                     </div>
                 </div>
             </div>

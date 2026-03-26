@@ -340,7 +340,7 @@
 
     <!-- Hanging Tag 2: Brochure -->
     <div class="fixed top-[38%] right-0 z-50 swing" style="animation-delay: 0.3s;">
-        <a href="/brochure-viewer"
+        <a href="/pages/brochure-viewer.html" target="_blank"
             class="bg-gradient-to-br from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white px-3 py-8 rounded-l-2xl shadow-2xl flex flex-col items-center space-y-2 group transition-all duration-300 hover:px-5">
             <i class="fas fa-file-pdf text-xl group-hover:scale-110 transition-transform duration-300"></i>
             <span class="font-extrabold text-xs uppercase tracking-widest"
@@ -553,8 +553,54 @@
                 <div class="w-24 h-1 bg-primary rounded-full"></div>
             </div>
         </div>
+    </section>
 
 
+    <!-- Featured Story (SNS Academy Refined) -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-[3rem] overflow-hidden shadow-2xl flex flex-col md:flex-row max-w-6xl mx-auto border border-[#fae8db]">
+                <!-- Image Side -->
+                <div class="md:w-[45%] relative h-[300px] md:h-auto overflow-hidden">
+                    <img src="../static/images/success/indo-us-conference.png" alt="Featured Story" class="absolute inset-0 w-full h-full object-cover">
+                    <!-- Subtle overlay text like screenshot -->
+                    <div class="absolute bottom-6 left-6 text-white bg-black/30 backdrop-blur-md px-3 py-1.5 rounded-lg text-[10px] flex items-center gap-2">
+                        <i class="fas fa-award text-yellow-400"></i>
+                        <span>SNS Institution & Dinamalar Pattam Event</span>
+                    </div>
+                </div>
+                
+                <!-- Content Side -->
+                <div class="md:w-[55%] p-10 md:p-14 flex flex-col justify-center relative bg-[#fdf5f3]">
+                    <div class="mb-4">
+                        <span class="inline-flex items-center gap-2 px-4 py-1.5 bg-[#7C3AED] text-white rounded-full text-[10px] font-bold shadow-lg uppercase tracking-wider">
+                            <i class="fas fa-star text-[10px]"></i>
+                            Featured Story
+                        </span>
+                    </div>
+
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-[#1a1a1a] mb-6 leading-tight">
+                        Book of Record Achievement
+                    </h2>
+                    
+                    <p class="text-gray-600 text-[15px] leading-relaxed mb-8 max-w-lg">
+                        The Dinamalar Pattam - Final Round was successfully held at SNS College of Pharmacy. The event concluded on a high note with prizes presented to outstanding students, along with Dr. Nalin, Technical Director, SNS Institutions.
+                    </p>
+
+                    <div class="flex items-center gap-2 text-[11px] text-gray-500 font-medium mb-8">
+                        <span>SNS Academy</span>
+                        <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+                        <span>Award Ceremony</span>
+                        <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+                        <span>Jan 2026</span>
+                    </div>
+
+                    <a href="#" class="text-primary-600 font-bold text-sm flex items-center hover:translate-x-1 transition-transform group">
+                        Read Full Story <i class="fas fa-arrow-right ml-2 text-xs group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
 
 
@@ -576,149 +622,105 @@
     </section>
 
     <!-- Success Stories Grid -->
-    <section class="pb-24 pt-16 bg-gray-50">
+    <section class="pb-24 pt-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="stories-grid">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10" id="stories-grid">
 
-                <!-- Card 1: Indo–US International Conference (Academic / Innovation) -->
-                <div class="story-card bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden transform hover:-translate-y-1 hover:shadow-xl transition duration-300 flex flex-col group"
-                    data-category="academic">
-                    <div class="h-64 relative overflow-hidden">
-                        <img src="/static/images/success/indo-us-conference.png"
-                            alt="Indo–US International Conference at SNSCPHS"
-                            class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
-                        <span
-                            class="absolute top-5 left-5 bg-primary-500 text-white text-xs font-bold px-3 py-1.5 rounded-full z-10 shadow-sm uppercase tracking-wide">
+                <!-- Card 1: Indo–US International Conference -->
+                <div class="story-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group" data-category="academic">
+                    <div class="h-60 relative overflow-hidden">
+                        <img src="../static/images/success/indo-us-conference.png" alt="Card Image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 bg-primary-600 text-white text-[10px] px-3 py-1 rounded-full font-bold uppercase">
                             Academic
                         </span>
                     </div>
-                    <div class="p-8 flex-grow flex flex-col">
-                        <h3
-                            class="text-xl font-bold text-gray-900 mb-4 leading-snug hover:text-primary-500 transition cursor-pointer">
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-lg font-bold text-gray-900 mb-3 leading-tight group-hover:text-primary-600 transition-colors">
                             Indo–US International Conference 2026
                         </h3>
-                        <p class="text-gray-600 text-sm mb-6 leading-relaxed flex-grow">
-                            SNS College of Pharmacy and Health Sciences successfully hosted an Indo–US International
-                            Conference on “Global Trends and Challenges in Pharmaceutical Sciences and Nanotechnology”
-                            on 5 February 2026, in collaboration with APP – bringing global experts and researchers onto
-                            our campus.
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed line-clamp-3">
+                            SNS College of Pharmacy and Health Sciences successfully hosted an Indo–US International Conference on “Global Trends and Challenges in Pharmaceutical Sciences and Nanotechnology”.
                         </p>
-                        <div class="mt-auto">
-                            <div class="flex items-center text-xs text-gray-500 font-medium mb-4">
-                                <i class="far fa-calendar-alt mr-2 text-gray-400 text-sm"></i> February 2026
-                            </div>
-                            <span class="text-primary-600 font-bold inline-flex items-center text-sm">
-                                Conference Highlight
-                            </span>
+                        <div class="mt-auto pt-4 border-t border-gray-50">
+                            <a href="#" class="text-primary-600 font-bold text-sm flex items-center group/link">
+                                Read More <i class="fas fa-chevron-right ml-1 text-[10px] group-hover/link:translate-x-1 transition-transform"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 2: Intramurals’22 Sports Prize Distribution (Sports) -->
-                <div class="story-card bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden transform hover:-translate-y-1 hover:shadow-xl transition duration-300 flex flex-col group"
-                    data-category="sports">
-                    <div class="h-64 relative overflow-hidden">
-                        <img src="/static/images/success/intramurals-sports.png"
-                            alt="Intramurals’22 Sports Prize Distribution at SNSCPHS"
-                            class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
-                        <span
-                            class="absolute top-5 left-5 bg-green-500 text-white text-xs font-bold px-3 py-1.5 rounded-full z-10 shadow-sm uppercase tracking-wide">
+                <!-- Card 2: Intramurals’22 -->
+                <div class="story-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group" data-category="sports">
+                    <div class="h-60 relative overflow-hidden">
+                        <img src="../static//images/success/intramurals-sports.png" alt="Card Image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 bg-green-500 text-white text-[10px] px-3 py-1 rounded-full font-bold uppercase">
                             Sports
                         </span>
                     </div>
-                    <div class="p-8 flex-grow flex flex-col">
-                        <h3
-                            class="text-xl font-bold text-gray-900 mb-4 leading-snug hover:text-primary-500 transition cursor-pointer">
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-lg font-bold text-gray-900 mb-3 leading-tight group-hover:text-primary-600 transition-colors">
                             Intramurals’22 – Sports Prize Distribution
                         </h3>
-                        <p class="text-gray-600 text-sm mb-6 leading-relaxed flex-grow">
-                            Glimpses into SNSCPHS Intramurals’22, where our students were honoured for their outstanding
-                            performance and team spirit during the campus sports events and athletics competitions.
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed line-clamp-3">
+                            Glimpses into SNSCPHS Intramurals’22, where our students were honoured for their outstanding performance and team spirit during the campus sports events.
                         </p>
-                        <div class="mt-auto">
-                            <div class="flex items-center text-xs text-gray-500 font-medium mb-4">
-                                <i class="far fa-calendar-alt mr-2 text-gray-400 text-sm"></i> 2022–23
-                            </div>
-                            <span class="text-primary-600 font-bold inline-flex items-center text-sm">
-                                Campus Sports Success
-                            </span>
+                        <div class="mt-auto pt-4 border-t border-gray-50">
+                            <a href="#" class="text-primary-600 font-bold text-sm flex items-center group/link">
+                                Read More <i class="fas fa-chevron-right ml-1 text-[10px] group-hover/link:translate-x-1 transition-transform"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 3: National Pharmacy Education Day – ANVESHAN 2024 (Academic) -->
-                <div class="story-card bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden transform hover:-translate-y-1 hover:shadow-xl transition duration-300 flex flex-col group"
-                    data-category="academic">
-                    <div class="h-64 relative overflow-hidden">
-                        <img src="/static/images/success/national-pharmacy-education-day.png"
-                            alt="National Pharmacy Education Day ANVESHAN 2024 at SNSCPHS"
-                            class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
-                        <span
-                            class="absolute top-5 left-5 bg-purple-500 text-white text-xs font-bold px-3 py-1.5 rounded-full z-10 shadow-sm uppercase tracking-wide">
+                <!-- Card 3: ANVESHAN 2024 -->
+                <div class="story-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group" data-category="academic">
+                    <div class="h-60 relative overflow-hidden">
+                        <img src="../static//images/success/national-pharmacy-education-day.png" alt="Card Image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 bg-primary-600 text-white text-[10px] px-3 py-1 rounded-full font-bold uppercase">
                             Academic
                         </span>
                     </div>
-                    <div class="p-8 flex-grow flex flex-col">
-                        <h3
-                            class="text-xl font-bold text-gray-900 mb-4 leading-snug hover:text-primary-500 transition cursor-pointer">
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-lg font-bold text-gray-900 mb-3 leading-tight group-hover:text-primary-600 transition-colors">
                             National Pharmacy Education Day – ANVESHAN 2024
                         </h3>
-                        <p class="text-gray-600 text-sm mb-6 leading-relaxed flex-grow">
-                            SNS College of Pharmacy and Health Sciences celebrated National Pharmacy Education Day
-                            “ANVESHAN 2024”, commemorating the birth anniversary of the father of Pharmacy. Dr. K.
-                            Manisenthilkumar, COO of Royal Care Super Specialty Hospital, addressed our students with an
-                            inspiring session on emerging opportunities in pharmacy.
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed line-clamp-3">
+                            SNS College of Pharmacy and Health Sciences celebrated National Pharmacy Education Day “ANVESHAN 2024”, commemorating the birth anniversary of the father of Pharmacy.
                         </p>
-                        <div class="mt-auto">
-                            <div class="flex items-center text-xs text-gray-500 font-medium mb-4">
-                                <i class="far fa-calendar-alt mr-2 text-gray-400 text-sm"></i> 2024
-                            </div>
-                            <span class="text-primary-600 font-bold inline-flex items-center text-sm">
-                                Academic Milestone
-                            </span>
+                        <div class="mt-auto pt-4 border-t border-gray-50">
+                            <a href="#" class="text-primary-600 font-bold text-sm flex items-center group/link">
+                                Read More <i class="fas fa-chevron-right ml-1 text-[10px] group-hover/link:translate-x-1 transition-transform"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Card 4: Kho-Kho Runner-Up Achievement (Sports) -->
-                <div class="story-card bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden transform hover:-translate-y-1 hover:shadow-xl transition duration-300 flex flex-col group"
-                    data-category="sports">
-                    <div class="h-64 relative overflow-hidden">
-                        <img src="/static/images/success/kho-kho-runner-up.png" alt="Kho-Kho Runner-Up team of SNSCPHS"
-                            class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
-                        <span
-                            class="absolute top-5 left-5 bg-emerald-600 text-white text-xs font-bold px-3 py-1.5 rounded-full z-10 shadow-sm uppercase tracking-wide">
+                <!-- Card 4: Kho-Kho Runner-Up -->
+                <div class="story-card bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group" data-category="sports">
+                    <div class="h-60 relative overflow-hidden">
+                        <img src="../static//images/success/kho-kho-runner-up.png" alt="Card Image" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-4 left-4 bg-green-500 text-white text-[10px] px-3 py-1 rounded-full font-bold uppercase">
                             Sports
                         </span>
                     </div>
-                    <div class="p-8 flex-grow flex flex-col">
-                        <h3
-                            class="text-xl font-bold text-gray-900 mb-4 leading-snug hover:text-primary-500 transition cursor-pointer">
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-lg font-bold text-gray-900 mb-3 leading-tight group-hover:text-primary-600 transition-colors">
                             Kho-Kho Runner-Up – State-Level Meet
                         </h3>
-                        <p class="text-gray-600 text-sm mb-6 leading-relaxed flex-grow">
-                            We are proud to announce that the SNSCPHS girls’ Kho-Kho team secured the Runner-Up position
-                            at the 3rd State-Level Inter-Collegiate Sports Meet hosted by The United College of
-                            Pharmacy, Periyanaickenpalayam, Coimbatore.
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed line-clamp-3">
+                            We are proud to announce that the SNSCPHS girls’ Kho-Kho team secured the Runner-Up position at the 3rd State-Level Inter-Collegiate Sports Meet.
                         </p>
-                        <div class="mt-auto">
-                            <div class="flex items-center text-xs text-gray-500 font-medium mb-4">
-                                <i class="far fa-calendar-alt mr-2 text-gray-400 text-sm"></i> Recent Achievement
-                            </div>
-                            <span class="text-primary-600 font-bold inline-flex items-center text-sm">
-                                Sports Achievement
-                            </span>
+                        <div class="mt-auto pt-4 border-t border-gray-50">
+                            <a href="#" class="text-primary-600 font-bold text-sm flex items-center group/link">
+                                Read More <i class="fas fa-chevron-right ml-1 text-[10px] group-hover/link:translate-x-1 transition-transform"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-
-
             </div>
+        </div>
+    </section>  </div>
         </div>
     </section>
 
