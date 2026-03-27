@@ -41,7 +41,7 @@
 - **Nav Dropdowns**: Programs, Infrastructure, Life at SNS, and Meet Us.
 - **Quick Links**: Updated for Pharmacy Academic programs.
 - **Social Integration**: linked to `@sns.cphs` on Instagram and SNS Institutions handles.
-- **Contact**: Helpline numbers (+91 75503 16701, 16702) and pharmacy-specific address.
+- **Contact**: Helpline numbers (+91 90036 55855, 75503 16702) and pharmacy-specific address.
 
 ## 📂 Deployment & Development
 ### Local Setup

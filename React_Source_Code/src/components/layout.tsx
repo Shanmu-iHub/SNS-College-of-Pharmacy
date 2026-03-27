@@ -474,7 +474,7 @@ export const Layout = (content: string, title: string, activePage: string = 'hom
                         <h4 class="text-white font-bold mb-4">Connect</h4>
                         <ul class="space-y-2 text-sm mb-4">
                             <li><i class="fas fa-map-marker-alt mr-2"></i>SNS Kalvi Nagar, Sathy Main Road (NH-209),<br />Vazhiyampalayam, Saravanampatti,<br />Coimbatore - 641035.</li>
-                            <li><a href="tel:+917550316701" class="hover:text-white transition"><i class="fas fa-phone mr-2"></i>Admission: +91 75503 16701</a></li>
+                            <li><a href="tel:+919003655855" class="hover:text-white transition"><i class="fas fa-phone mr-2"></i>Admission Helpline: +91 90036 55855</a></li>
                             <li><a href="tel:+917550316702" class="hover:text-white transition"><i class="fas fa-phone mr-2"></i>Helpline: +91 75503 16702</a></li>
                             <li><a href="mailto:college@snscphs.org" class="hover:text-white transition"><i class="fas fa-envelope mr-2"></i>college@snscphs.org</a></li>
                             <li><a href="mailto:snsct@snsgroups.com" class="hover:text-white transition"><i class="fas fa-briefcase mr-2"></i>Trust: snsct@snsgroups.com</a></li>
@@ -500,7 +500,7 @@ export const Layout = (content: string, title: string, activePage: string = 'hom
                     <p>&copy; 2025 SNS College of Pharmacy and Health Sciences. All rights reserved.</p>
                     <p class="mt-2 text-primary-400 font-semibold">We trigger the curiosity in the young minds to explore the world's needs.</p>
                     <p class="mt-1 text-xs">SNS Institutions: Sincerity, Nobility, Service</p>
-                    <p class="mt-3 text-primary-400 font-bold"><i class="fas fa-headset mr-2"></i>Admission Enquiry: 75503 16701</p>
+                    <p class="mt-3 text-primary-400 font-bold"><i class="fas fa-headset mr-2"></i>Admission Enquiry: +91 90036 55855</p>
                 </div>
             </div>
         </footer>
@@ -531,7 +531,7 @@ export const Layout = (content: string, title: string, activePage: string = 'hom
             <i class="fab fa-instagram"></i>
         </a>
         <!-- WhatsApp Floating Icon -->
-        <a href="https://wa.me/917550316701" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
+        <a href="https://wa.me/919003655855" class="whatsapp-float" target="_blank" rel="noopener noreferrer"
             title="Chat with us on WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
