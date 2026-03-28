@@ -16,7 +16,7 @@ const routes = [
   { route: '/admissions', file: 'admissions/index.html' },
   { route: '/gallery', file: 'gallery/index.html' },
   { route: '/sports-clubs', file: 'sports-clubs/index.html' },
-  { route: '/brochure', file: 'brochure/index.html' },
+  { route: '/brochure-viewer', file: 'brochure/index.html' },
   { route: '/transport', file: 'transport/index.html' },
   { route: '/events', file: 'events/index.html' },
   { route: '/success-stories', file: 'success-stories/index.html' },

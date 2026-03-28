@@ -95,7 +95,7 @@ app.get('/sports-clubs', (c) => {
 })
 
 // Brochure Page
-app.get('/brochure', (c) => {
+app.get('/brochure-viewer', (c) => {
     return c.html(Layout(BrochurePage(), 'Digital Brochure', 'brochure'))
 })
 

@@ -31,7 +31,7 @@ const routes = [
     { path: '/admissions.html', html: Layout(AdmissionsPage(), 'Admissions', 'admissions') },
     { path: '/gallery.html', html: Layout(GalleryPage(), 'Campus Gallery', 'gallery') },
     { path: '/sports-clubs.html', html: Layout(SportsClubsPage(), 'SPINE & 100+ Clubs', 'sports-clubs') },
-    { path: '/brochure.html', html: Layout(BrochurePage(), 'Digital Brochure', 'brochure') },
+    { path: '/brochure-viewer.html', html: Layout(BrochurePage(), 'Digital Brochure', 'brochure') },
     { path: '/transport.html', html: Layout(TransportPage(), 'Transport Services', 'transport') },
     { path: '/events.html', html: Layout(EventsPage(), 'Events', 'events') },
     { path: '/success-stories.html', html: Layout(SuccessStoriesPage(), 'Placements', 'success-stories') },
@@ -55,7 +55,7 @@ function fixLinks(html: string, currentPath: string) {
         '/admissions': 'admissions.html',
         '/gallery': 'gallery.html',
         '/sports-clubs': 'sports-clubs.html',
-        '/brochure': 'brochure.html',
+        '/brochure-viewer': 'brochure.html',
         '/transport': 'transport.html',
         '/events': 'events.html',
         '/success-stories': 'success-stories.html'
