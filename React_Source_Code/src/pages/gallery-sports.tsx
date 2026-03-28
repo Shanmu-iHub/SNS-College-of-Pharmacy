@@ -291,7 +291,7 @@ export const BrochurePage = () => {
                     Explore our programs, world-class labs, and the unique Design Thinking curriculum.
                 </p>
                 
-                <a href="/brochure" target="_blank" class="bg-primary-600 hover:bg-primary-700 text-white px-12 py-5 rounded-2xl font-bold text-xl shadow-xl transition transform hover:scale-105 inline-flex items-center">
+                <a href="https://online.fliphtml5.com/ldlzd/SNS-Institutions-Brochure-2025/#p=1" target="_blank" class="bg-primary-600 hover:bg-primary-700 text-white px-12 py-5 rounded-2xl font-bold text-xl shadow-xl transition transform hover:scale-105 inline-flex items-center">
                     <i class="fas fa-download mr-3"></i>
                     Download Brochure
                 </a>
