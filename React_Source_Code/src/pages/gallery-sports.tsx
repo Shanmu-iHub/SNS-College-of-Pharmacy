@@ -151,7 +151,7 @@ export const SportsClubsPage = () => {
     ${PageHeader(
         'Sports & Clubs',
         'Building champions in sports, wellness, and life skills — beyond pharmaceutical excellence',
-        '/static/images/gym.jpg',
+        '/static/images/SCD-2 (1).jpg',
         'Sports & Clubs'
     )}
 
