@@ -321,10 +321,10 @@ export const Layout = (content: string, title: string, activePage: string = 'hom
                             </div>
                         </div>
                         
-                        <!-- Beyond Academics Dropdown -->
+                        <!-- Beyond Programs Dropdown -->
                         <div class="relative group">
                             <button class="${['sports-clubs', 'innovation', 'events', 'success-stories'].includes(activePage) ? 'text-primary-600 font-bold' : 'text-gray-700 hover:text-primary-600'} font-medium flex items-center">
-                                Beyond Academics <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                                Beyond Programs <i class="fas fa-chevron-down ml-1 text-xs"></i>
                             </button>
                             <div class="absolute hidden group-hover:block bg-white shadow-xl rounded-lg py-2 w-56 mt-0 z-50">
                                 <a href="/sports-clubs" class="block px-4 py-2 hover:bg-primary-50 text-gray-700">Sports &amp; Clubs</a>
@@ -387,10 +387,10 @@ export const Layout = (content: string, title: string, activePage: string = 'hom
                         </div>
                     </div>
                     
-                    <!-- Beyond Academics -->
+                    <!-- Beyond Programs -->
                     <div>
                         <button class="w-full text-left text-gray-700 hover:text-primary-600 font-medium py-2 flex justify-between items-center" onclick="document.getElementById('mobile-beyond').classList.toggle('hidden')">
-                            Beyond Academics <i class="fas fa-chevron-down"></i>
+                            Beyond Programs <i class="fas fa-chevron-down"></i>
                         </button>
                         <div id="mobile-beyond" class="hidden pl-4 space-y-2 mt-2">
                             <a href="/sports-clubs" class="block text-gray-600 hover:text-primary-600 py-1">Sports &amp; Clubs</a>
@@ -474,7 +474,7 @@ export const Layout = (content: string, title: string, activePage: string = 'hom
                         <h4 class="text-white font-bold mb-4">Connect</h4>
                         <ul class="space-y-2 text-sm mb-4">
                             <li><i class="fas fa-map-marker-alt mr-2"></i>SNS Kalvi Nagar, Sathy Main Road (NH-209),<br />Vazhiyampalayam, Saravanampatti,<br />Coimbatore - 641035.</li>
-                            <li><a href="tel:+919003655855" class="hover:text-white transition"><i class="fas fa-phone mr-2"></i>Admission Helpline: +91 90036 55855</a></li>
+
                             <li><a href="tel:+917550316702" class="hover:text-white transition"><i class="fas fa-phone mr-2"></i>Helpline: +91 75503 16702</a></li>
                             <li><a href="mailto:college@snscphs.org" class="hover:text-white transition"><i class="fas fa-envelope mr-2"></i>college@snscphs.org</a></li>
                             <li><a href="mailto:snsct@snsgroups.com" class="hover:text-white transition"><i class="fas fa-briefcase mr-2"></i>Trust: snsct@snsgroups.com</a></li>
