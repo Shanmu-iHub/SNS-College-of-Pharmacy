@@ -20,8 +20,8 @@ export const HomePage = () => {
                     
                     <h1 class="text-5xl lg:text-7xl font-extrabold mb-6 leading-tight font-display">
                         <a href="/academics/b-pharm" class="hover:text-primary-400 transition duration-300">
-                            Triggering Curiosity <br/>
-                            <span class="text-primary-500">to Explore Needs</span>
+                            Precision in Care,<br/>
+                            <span class="text-primary-500">Innovation in Every Dose</span>
                         </a>
                     </h1>
                     
