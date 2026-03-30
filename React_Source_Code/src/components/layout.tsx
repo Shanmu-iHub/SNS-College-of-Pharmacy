@@ -274,7 +274,7 @@ export const Layout = (content: string, title: string, activePage: string = 'hom
         
         <!-- Hanging Tag 2: Brochure -->
         <div class="fixed top-[36%] right-0 z-50 swing" style="animation-delay: 0.3s;">
-            <a href="https://online.fliphtml5.com/ldlzd/SNS-Institutions-Brochure-2025/#p=1" target="_blank" class="bg-gradient-to-br from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white px-4 py-8 rounded-l-2xl shadow-2xl flex flex-col items-center space-y-3 group transition-all">
+            <a href="/brochure/" class="bg-gradient-to-br from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white px-4 py-8 rounded-l-2xl shadow-2xl flex flex-col items-center space-y-3 group transition-all">
                 <i class="fas fa-file-pdf text-2xl group-hover:scale-110 transition-transform duration-300"></i>
                 <span class="font-extrabold text-sm uppercase tracking-widest" style="writing-mode: vertical-rl; text-orientation: mixed; letter-spacing: 0.2em;">BROCHURE</span>
             </a>
@@ -453,7 +453,7 @@ export const Layout = (content: string, title: string, activePage: string = 'hom
                             <li><a href="/success-stories" class="hover:text-white transition">Success Stories</a></li>
                             <li><a href="/transport" class="hover:text-white transition">Transport</a></li>
                             <li><a href="/innovation" class="hover:text-white transition">Innovation Hub</a></li>
-                            <li><a href="/brochure" target="_blank" class="hover:text-white transition">Download Brochure</a></li>
+                            <li><a href="/brochure/" class="hover:text-white transition">Download Brochure</a></li>
                             <li><a href="/admissions" class="hover:text-white transition">Admissions</a></li>
                             <li><a href="/contact" class="hover:text-white transition">Contact</a></li>
                         </ul>
