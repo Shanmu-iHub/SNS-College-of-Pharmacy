@@ -103,22 +103,25 @@ export const FacilitiesPage = () => {
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 ${[
-            { icon: 'fas fa-swimmer', color: 'bg-blue-50 text-blue-600', title: 'Swimming Pool', desc: 'Professional-grade ozonized swimming pool with trained coaches to build physical endurance and reduce stress.' },
-            { icon: 'fas fa-baseball-ball', color: 'bg-green-50 text-green-600', title: 'Indoor Cricket', desc: 'All-weather indoor cricket pitch with bowling machines and nets. Professional coaching available day or night.' },
-            { icon: 'fas fa-dumbbell', color: 'bg-orange-50 text-orange-600', title: 'Fitness Center', desc: 'Fully-equipped gym with treadmills, strength machines, weights, and boxing kits for student health.' },
-            { icon: 'fas fa-music', color: 'bg-purple-50 text-purple-600', title: 'Music Studio', desc: 'Professional music studio with recording equipment and instruments for composition and creative expression.' },
-            { icon: 'fas fa-child', color: 'bg-pink-50 text-pink-600', title: 'Dance Studio', desc: 'Dedicated air-conditioned space for various dance styles—from classical to contemporary.' },
-            { icon: 'fas fa-palette', color: 'bg-cyan-50 text-cyan-600', title: 'Art Studio', desc: 'Creative space for drawing, painting, and sculpting, allowing students to visualize concepts and emotions.' },
-            { icon: 'fas fa-film', color: 'bg-red-50 text-red-600', title: 'Bioskop Theater', desc: 'Compact digital theater with superior sound and 4K projection for educational films and entertainment.' },
-            { icon: 'fas fa-gamepad', color: 'bg-indigo-50 text-indigo-600', title: 'Gaming Arena', desc: 'State-of-the-art gaming space with latest consoles for recreational esports and strategic thinking.' },
-            { icon: 'fas fa-utensils', color: 'bg-yellow-50 text-yellow-600', title: 'Rooftop Dining', desc: 'Fine dining experience with healthy, seasonal meals in a perfect setting for community interaction.' },
+            { img: '/static/images/swimming pool c.webp', title: 'Swimming Pool', desc: 'Professional-grade ozonized swimming pool with trained coaches to build physical endurance and reduce stress.' },
+            { img: '/static/images/indoor cricket.jpg', title: 'Indoor Cricket', desc: 'All-weather indoor cricket pitch with bowling machines and nets. Professional coaching available day or night.' },
+            { img: '/static/images/gym copy.jpg', title: 'Fitness Center', desc: 'Fully-equipped gym with treadmills, strength machines, weights, and boxing kits for student health.' },
+            { img: '/static/images/music copy.jpg', title: 'Music Studio', desc: 'Professional music studio with recording equipment and instruments for composition and creative expression.' },
+            { img: '/static/images/dance std.jpg', title: 'Dance Studio', desc: 'Dedicated air-conditioned space for various dance styles—from classical to contemporary.' },
+            { img: '/static/images/art studio.jpg', title: 'Art Studio', desc: 'Creative space for drawing, painting, and sculpting, allowing students to visualize concepts and emotions.' },
+            { img: '/static/images/facilities/bioskop-theater.jpg', title: 'Bioskop Theater', desc: 'Compact digital theater with superior sound and 4K projection for educational films and entertainment.' },
+            { img: '/static/images/gaming copy.jpg', title: 'Gaming Arena', desc: 'State-of-the-art gaming space with latest consoles for recreational esports and strategic thinking.' },
+            { img: '/static/images/SNS Academy Web/TopRoof Dinning.png', title: 'Rooftop Dining', desc: 'Fine dining experience with healthy, seasonal meals in a perfect setting for community interaction.' },
         ].map(s => `
-                <div class="group bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-xl transition duration-500 hover:-translate-y-2">
-                    <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition duration-300 ${s.color}">
-                        <i class="${s.icon} text-2xl"></i>
+                <div class="group rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 bg-white">
+                    <div class="h-64 overflow-hidden relative">
+                         <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition z-10"></div>
+                        <img src="${s.img}" alt="${s.title}" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-3">${s.title}</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">${s.desc}</p>
+                    <div class="p-8 bg-white relative z-20">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">${s.title}</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">${s.desc}</p>
+                    </div>
                 </div>`).join('')}
             </div>
         </div>
