@@ -48,9 +48,14 @@ export const SuccessStoriesPage = () => {
                             <div class="flex items-center text-xs text-gray-500 font-medium mb-4">
                                 <i class="far fa-calendar-alt mr-2 text-gray-400 text-sm"></i> February 2025
                             </div>
-                            <span class="text-primary-600 font-bold inline-flex items-center text-sm">
-                                Conference Highlight
-                            </span>
+                            <div class="flex items-center justify-between">
+                                <span class="text-primary-600 font-bold items-center text-sm">
+                                    Conference Highlight
+                                </span>
+                                <a href="https://www.instagram.com/p/DUj2BPCk2dn/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank" class="text-primary-600 font-bold text-sm flex items-center group/link hover:translate-x-1 transition-transform">
+                                    Read More <i class="fas fa-chevron-right ml-1 text-[10px] group-hover/link:translate-x-1 transition-transform"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -75,9 +80,14 @@ export const SuccessStoriesPage = () => {
                             <div class="flex items-center text-xs text-gray-500 font-medium mb-4">
                                 <i class="far fa-calendar-alt mr-2 text-gray-400 text-sm"></i> 2022–23
                             </div>
-                            <span class="text-primary-600 font-bold inline-flex items-center text-sm">
-                                Campus Sports Success
-                            </span>
+                            <div class="flex items-center justify-between">
+                                <span class="text-primary-600 font-bold items-center text-sm">
+                                    Campus Sports Success
+                                </span>
+                                <a href="https://www.instagram.com/snsinstitutions/?hl=en" target="_blank" class="text-primary-600 font-bold text-sm flex items-center group/link hover:translate-x-1 transition-transform">
+                                    Read More <i class="fas fa-chevron-right ml-1 text-[10px] group-hover/link:translate-x-1 transition-transform"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -102,9 +112,14 @@ export const SuccessStoriesPage = () => {
                             <div class="flex items-center text-xs text-gray-500 font-medium mb-4">
                                 <i class="far fa-calendar-alt mr-2 text-gray-400 text-sm"></i> 2024
                             </div>
-                            <span class="text-primary-600 font-bold inline-flex items-center text-sm">
-                                Academic Milestone
-                            </span>
+                            <div class="flex items-center justify-between">
+                                <span class="text-primary-600 font-bold items-center text-sm">
+                                    Academic Milestone
+                                </span>
+                                <a href="https://www.instagram.com/snsinstitutions/?hl=en" target="_blank" class="text-primary-600 font-bold text-sm flex items-center group/link hover:translate-x-1 transition-transform">
+                                    Read More <i class="fas fa-chevron-right ml-1 text-[10px] group-hover/link:translate-x-1 transition-transform"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -129,9 +144,14 @@ export const SuccessStoriesPage = () => {
                             <div class="flex items-center text-xs text-gray-500 font-medium mb-4">
                                 <i class="far fa-calendar-alt mr-2 text-gray-400 text-sm"></i> Recent Achievement
                             </div>
-                            <span class="text-primary-600 font-bold inline-flex items-center text-sm">
-                                Sports Achievement
-                            </span>
+                            <div class="flex items-center justify-between">
+                                <span class="text-primary-600 font-bold items-center text-sm">
+                                    Sports Achievement
+                                </span>
+                                <a href="https://www.instagram.com/snsinstitutions/?hl=en" target="_blank" class="text-primary-600 font-bold text-sm flex items-center group/link hover:translate-x-1 transition-transform">
+                                    Read More <i class="fas fa-chevron-right ml-1 text-[10px] group-hover/link:translate-x-1 transition-transform"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
