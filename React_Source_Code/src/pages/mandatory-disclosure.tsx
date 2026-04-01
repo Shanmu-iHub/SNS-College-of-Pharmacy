@@ -42,11 +42,11 @@ export const MandatoryDisclosurePage = () => {
                         </tr>
                         <tr>
                             <td class="px-6 py-4 font-semibold text-gray-700">CAMPUS ADDRESS</td>
-                            <td class="px-6 py-4 text-gray-900">SNS Kalvi Nagar, Sathy Main Road, Saravanampatti (PO), Coimbatore - 641 107.</td>
+                            <td class="px-6 py-4 text-gray-900">SNS Kalvi Nagar, Sathy Main Road, Saravanampatti (PO), Coimbatore - 641035.</td>
                         </tr>
                         <tr>
                             <td class="px-6 py-4 font-semibold text-gray-700">EMAIL ID</td>
-                            <td class="px-6 py-4"><a href="mailto:principal@snsnursing.org" class="text-primary-600 font-bold hover:underline">principal@snsnursing.org</a></td>
+                            <td class="px-6 py-4"><a href="mailto:principal@snscphs.org" class="text-primary-600 font-bold hover:underline">principal@snscphs.org</a></td>
                         </tr>
                         <tr>
                             <td class="px-6 py-4 font-semibold text-gray-700">CONTACT DETAILS</td>

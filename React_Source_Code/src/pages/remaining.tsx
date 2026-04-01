@@ -327,7 +327,7 @@ export const ContactPage = () => {
                             </div>
                             <div>
                                 <h3 class="font-bold text-xl mb-1">Campus Address</h3>
-                                <p class="text-gray-700">SNS Kalvi Nagar, Sathy Main Road, Saravanampatti (PO),<br>Coimbatore - 641 107.</p>
+                                <p class="text-gray-700">SNS Kalvi Nagar, Sathy Main Road, Saravanampatti (PO),<br>Coimbatore - 641035.</p>
                             </div>
                         </div>
                         <div class="flex items-start">
@@ -345,7 +345,7 @@ export const ContactPage = () => {
                             </div>
                             <div>
                                 <h3 class="font-bold text-xl mb-1">Email Address</h3>
-                                <p class="text-gray-700">principal@snsnursing.org</p>
+                                <p class="text-gray-700">principal@snscphs.org</p>
                             </div>
                         </div>
                     </div>
