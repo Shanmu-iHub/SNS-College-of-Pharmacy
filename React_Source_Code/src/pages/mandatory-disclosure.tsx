@@ -42,15 +42,15 @@ export const MandatoryDisclosurePage = () => {
                         </tr>
                         <tr>
                             <td class="px-6 py-4 font-semibold text-gray-700">CAMPUS ADDRESS</td>
-                            <td class="px-6 py-4 text-gray-900">SNS Kalvi Nagar, Sathy Main Road (NH-209), Vazhiyampalayam, Saravanampatti, Coimbatore - 641035.</td>
+                            <td class="px-6 py-4 text-gray-900">SNS Kalvi Nagar, Sathy Main Road, Saravanampatti (PO), Coimbatore - 641 107.</td>
                         </tr>
                         <tr>
                             <td class="px-6 py-4 font-semibold text-gray-700">EMAIL ID</td>
-                            <td class="px-6 py-4"><a href="mailto:college@snscphs.org" class="text-primary-600 font-bold hover:underline">college@snscphs.org</a></td>
+                            <td class="px-6 py-4"><a href="mailto:principal@snsnursing.org" class="text-primary-600 font-bold hover:underline">principal@snsnursing.org</a></td>
                         </tr>
                         <tr>
                             <td class="px-6 py-4 font-semibold text-gray-700">CONTACT DETAILS</td>
-                            <td class="px-6 py-4 font-bold text-gray-900">+91 90036 55855 / 75503 16702</td>
+                            <td class="px-6 py-4 font-bold text-gray-900 font-bold text-gray-900">Admission - +91 90036 55855 / Office - +91 9384823868</td>
                         </tr>
                     </tbody>
                 </table>

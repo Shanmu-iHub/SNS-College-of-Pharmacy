@@ -327,7 +327,7 @@ export const ContactPage = () => {
                             </div>
                             <div>
                                 <h3 class="font-bold text-xl mb-1">Campus Address</h3>
-                                <p class="text-gray-700">SNS Kalvi Nagar, Sathy Main Road (NH-209),<br>Vazhiyampalayam, Saravanampatti,<br>Coimbatore - 641035.</p>
+                                <p class="text-gray-700">SNS Kalvi Nagar, Sathy Main Road, Saravanampatti (PO),<br>Coimbatore - 641 107.</p>
                             </div>
                         </div>
                         <div class="flex items-start">
@@ -336,7 +336,7 @@ export const ContactPage = () => {
                             </div>
                             <div>
                                 <h3 class="font-bold text-xl mb-1">Phone Numbers</h3>
-                                <p class="text-gray-700">Admission: +91 90036 55855<br>Helpline: +91 75503 16702</p>
+                                <p class="text-gray-700">Admission: +91 90036 55855<br>Office: +91 9384823868</p>
                             </div>
                         </div>
                         <div class="flex items-start">
@@ -345,13 +345,13 @@ export const ContactPage = () => {
                             </div>
                             <div>
                                 <h3 class="font-bold text-xl mb-1">Email Address</h3>
-                                <p class="text-gray-700">college@snscphs.org</p>
+                                <p class="text-gray-700">principal@snsnursing.org</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="bg-gray-50 rounded-2xl p-8 border border-gray-200 shadow-xl">
-                    <h3 class="text-2xl font-bold mb-6 text-center">Admission Enquiry</h3>
+                    <h3 class="text-2xl font-bold mb-6 text-center">Admission</h3>
                     <form action="#" class="space-y-4">
                         <input type="text" placeholder="Full Name *" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary-500 outline-none">
                         <input type="email" placeholder="Email Address *" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary-500 outline-none">
@@ -364,7 +364,7 @@ export const ContactPage = () => {
                             <option value="pharmd">Pharm. D</option>
                         </select>
                         <textarea placeholder="Your Message" rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-primary-500 outline-none"></textarea>
-                        <button class="w-full bg-primary-600 hover:bg-primary-700 text-white font-bold py-4 rounded-xl transition shadow-lg">Submit Enquiry</button>
+                        <button class="w-full bg-primary-600 hover:bg-primary-700 text-white font-bold py-4 rounded-xl transition shadow-lg">Submit</button>
                     </form>
                 </div>
             </div>
