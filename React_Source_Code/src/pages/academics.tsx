@@ -86,7 +86,7 @@ ${PageHeader(p.headerTitle, p.headerSubtitle, p.headerImage, p.headerCrumb, 'obj
 export const BPharmPage = () => ProgramPage({
     headerTitle: 'B. Pharm (Bachelor of Pharmacy)',
     headerSubtitle: 'Foundation of Pharmaceutical Science: A 4-year undergraduate program focusing on drug discovery, pharmaceutical formulation, and clinical pharmacy practices',
-    headerImage: '/static/images/7.JPG',
+    headerImage: '/static/images/Pharmacy.jpg.jpeg',
     headerCrumb: 'B. Pharm',
 
     overviewParagraphs: [
@@ -117,7 +117,7 @@ export const BPharmPage = () => ProgramPage({
 export const DPharmPage = () => ProgramPage({
     headerTitle: 'D. Pharm (Diploma in Pharmacy)',
     headerSubtitle: 'Professional Skill Building: A 2-year diploma program designed to produce skilled pharmacy technicians for hospitals and retail pharmacies',
-    headerImage: '/static/images/10.JPG',
+    headerImage: '/static/images/Pharmacy.jpg.jpeg',
     headerCrumb: 'D. Pharm',
 
     overviewParagraphs: [
@@ -148,7 +148,7 @@ export const DPharmPage = () => ProgramPage({
 export const MPharmPage = () => ProgramPage({
     headerTitle: 'M. Pharm (Pharmaceutics)',
     headerSubtitle: 'Advanced Research Excellence: A 2-year postgraduate program focusing on advanced drug delivery systems and pharmaceutical research',
-    headerImage: '/static/images/5.JPG',
+    headerImage: '/static/images/Pharmacy.jpg.jpeg',
     headerCrumb: 'M. Pharm',
 
     overviewParagraphs: [
@@ -179,7 +179,7 @@ export const MPharmPage = () => ProgramPage({
 export const PharmDPage = () => ProgramPage({
     headerTitle: 'Pharm. D (Doctor of Pharmacy)',
     headerSubtitle: 'Clinical Mastery: A 6-year professional doctorate program focusing on clinical pharmacy, ward rounds, and patient-centered care',
-    headerImage: '/static/images/8.JPG',
+    headerImage: '/static/images/Pharmacy.jpg.jpeg',
     headerCrumb: 'Pharm. D',
 
     overviewParagraphs: [
