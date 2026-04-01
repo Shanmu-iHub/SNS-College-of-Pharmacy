@@ -50,7 +50,7 @@ export const MandatoryDisclosurePage = () => {
                         </tr>
                         <tr>
                             <td class="px-6 py-4 font-semibold text-gray-700">CONTACT DETAILS</td>
-                            <td class="px-6 py-4 font-bold text-gray-900 font-bold text-gray-900">Admission - +91 90036 55855 / Office - +91 9384823868</td>
+                            <td class="px-6 py-4 font-bold text-gray-900 font-bold text-gray-900">Admission - +91 90036 55855 / Office - +91 99409 56789</td>
                         </tr>
                     </tbody>
                 </table>

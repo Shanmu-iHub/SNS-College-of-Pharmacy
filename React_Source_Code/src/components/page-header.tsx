@@ -1,7 +1,7 @@
 // Page Header Component with Real Images
 export const PageHeader = (title: string, subtitle: string, backgroundImage: string, breadcrumb?: string) => {
     return `
-    <section class="relative h-[40vh] min-h-[400px] flex items-center justify-center text-white overflow-hidden">
+    <section class="relative h-[35vh] min-h-[350px] flex items-center justify-center text-white overflow-hidden">
         <!-- Background Image -->
         <div class="absolute inset-0 z-0">
             <img src="${backgroundImage}" alt="${title}" class="w-full h-full object-cover">

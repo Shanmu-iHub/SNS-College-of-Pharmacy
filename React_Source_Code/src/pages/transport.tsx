@@ -77,7 +77,7 @@ export const TransportPage = () => {
                 <p class="text-gray-600 mb-6">Contact our transport coordinator to check route availability for your specific location</p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <a href="tel:+919629937861" class="inline-flex items-center gap-2 bg-primary-600 text-white px-7 py-3 rounded-full font-bold hover:bg-primary-700 transition shadow-md">
-                        <i class="fas fa-phone"></i> Call: +91 96299 37861
+                        <i class="fas fa-phone"></i> Call: +91 98655 32528
                     </a>
                     <a href="/contact" class="inline-flex items-center gap-2 border-2 border-primary-600 text-primary-600 px-7 py-3 rounded-full font-bold hover:bg-primary-50 transition">
                         <i class="fas fa-paper-plane"></i> Send Inquiry

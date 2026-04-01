@@ -336,7 +336,7 @@ export const ContactPage = () => {
                             </div>
                             <div>
                                 <h3 class="font-bold text-xl mb-1">Phone Numbers</h3>
-                                <p class="text-gray-700">Admission: +91 90036 55855<br>Office: +91 9384823868</p>
+                                <p class="text-gray-700">Admission: +91 90036 55855<br>Office: +91 99409 56789</p>
                             </div>
                         </div>
                         <div class="flex items-start">
