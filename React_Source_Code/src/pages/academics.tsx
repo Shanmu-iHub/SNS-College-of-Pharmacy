@@ -16,7 +16,7 @@ interface ProgramPageProps {
 }
 
 const ProgramPage = (p: ProgramPageProps) => `
-${PageHeader(p.headerTitle, p.headerSubtitle, p.headerImage, p.headerCrumb)}
+${PageHeader(p.headerTitle, p.headerSubtitle, p.headerImage, p.headerCrumb, 'object-top')}
 
 <!-- Course Overview + Course Highlights -->
 <section class="py-16 bg-white">
