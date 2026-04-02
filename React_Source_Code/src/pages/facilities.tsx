@@ -70,22 +70,19 @@ export const FacilitiesPage = () => {
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 ${[
-            { img: '/static/images/facilities/pharmaceutics-lab.png', alt: 'Pharmaceutics Lab', title: 'Pharmaceutics Lab', desc: 'Focuses on the formulation and development of various dosage forms like tablets, capsules, and liquid orals using modern technology.' },
-            { img: '/static/images/facilities/pharmaceutical-chemistry.png', alt: 'Pharmaceutical Chemistry Lab', title: 'Pharmaceutical Chemistry', desc: 'Equipped for the synthesis and analysis of chemical medicinal substances, fostering expertise in drug composition and behavior.' },
-            { img: '/static/images/facilities/pharmacology-lab.png', alt: 'Pharmacology Lab', title: 'Pharmacology Lab', desc: 'Dedicated to studying the effects of drugs on biological systems, providing critical insights into drug action and safety.' },
-            { img: '/static/images/facilities/pharmacognosy-lab.png', alt: 'Pharmacognosy Lab', title: 'Pharmacognosy Lab', desc: 'Focuses on medicines derived from natural sources, identifying and analyzing medicinal plants and herbal formulations.' },
-            { img: '/static/images/facilities/computer-tech-hub.png', alt: 'Computer & Tech Hub', title: 'Computer & Tech Hub', desc: 'Latest computers with modern pharmaceutical software, drug databases, and complete internet connectivity.' },
-            { img: '/static/images/facilities/central-library.png', alt: 'Central Library', title: 'Central Library', desc: 'A vast collection of pharmaceutical books, journals, and digital resources to support academic excellence and research.' },
+            { icon: 'fas fa-flask', color: 'red', title: 'Pharmaceutics Lab', desc: 'Focuses on the formulation and development of various dosage forms like tablets, capsules, and liquid orals using modern technology.' },
+            { icon: 'fas fa-atom', color: 'blue', title: 'Pharmaceutical Chemistry', desc: 'Equipped for the synthesis and analysis of chemical medicinal substances, fostering expertise in drug composition and behavior.' },
+            { icon: 'fas fa-heartbeat', color: 'teal', title: 'Pharmacology Lab', desc: 'Dedicated to studying the effects of drugs on biological systems, providing critical insights into drug action and safety.' },
+            { icon: 'fas fa-leaf', color: 'emerald', title: 'Pharmacognosy Lab', desc: 'Focuses on medicines derived from natural sources, identifying and analyzing medicinal plants and herbal formulations.' },
+            { icon: 'fas fa-laptop-code', color: 'purple', title: 'Computer & Tech Hub', desc: 'Latest computers with modern pharmaceutical software, drug databases, and complete internet connectivity.' },
+            { icon: 'fas fa-book-open', color: 'orange', title: 'Central Library', desc: 'A vast collection of pharmaceutical books, journals, and digital resources to support academic excellence and research.' },
         ].map(l => `
-                <div class="group rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 bg-white">
-                    <div class="h-56 overflow-hidden relative">
-                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition z-10"></div>
-                        <img src="${l.img}" alt="${l.alt}" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                <div class="bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 group text-center">
+                    <div class="w-20 h-20 bg-${l.color}-50 rounded-3xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition duration-500">
+                        <i class="${l.icon} text-3xl text-${l.color}-600"></i>
                     </div>
-                    <div class="p-7">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">${l.title}</h3>
-                        <p class="text-gray-600 leading-relaxed text-sm">${l.desc}</p>
-                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-primary-600 transition-colors">${l.title}</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">${l.desc}</p>
                 </div>`).join('')}
             </div>
         </div>
