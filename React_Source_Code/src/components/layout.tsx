@@ -265,12 +265,7 @@ export const Layout = (content: string, title: string, activePage: string = 'hom
     </head>
     <body class="antialiased bg-gray-50">
         
-        <!-- Hanging Tag 1: PCI -->
-        <div class="fixed top-[22%] right-0 z-50 swing">
-            <div class="bg-gradient-to-br from-primary-600 to-primary-700 text-white px-4 py-6 rounded-l-2xl shadow-2xl">
-                <span class="font-extrabold text-sm uppercase tracking-widest" style="writing-mode: vertical-rl; text-orientation: mixed; letter-spacing: 0.2em;">PCI APPROVED</span>
-            </div>
-        </div>
+
         
         <!-- Hanging Tag 2: Brochure -->
         <div class="fixed top-[36%] right-0 z-50 swing" style="animation-delay: 0.3s;">

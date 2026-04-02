@@ -6,7 +6,7 @@ export const SuccessStoriesPage = () => {
     ${PageHeader(
         'Success Stories',
         'Celebrating the professional breakthroughs of SNSCPHS graduates',
-        '/static/images/success/success-bg.png',
+        '/static/images/Pharmacy.jpg.jpeg',
         'Success Stories'
     )}
 
