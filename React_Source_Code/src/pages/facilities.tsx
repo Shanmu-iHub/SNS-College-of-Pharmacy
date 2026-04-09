@@ -108,7 +108,7 @@ export const FacilitiesPage = () => {
             { img: '/static/images/6.Art Room .jpg.jpeg', title: 'Art Studio', desc: 'Creative space for drawing, painting, and sculpting, allowing students to visualize concepts and emotions.' },
             { img: '/static/images/theater.png', title: 'Bioskop Theater', desc: 'Compact digital theater with superior sound and 4K projection for educational films and entertainment.' },
             { img: '/static/images/gaming copy.jpg', title: 'Gaming Arena', desc: 'State-of-the-art gaming space with latest consoles for recreational esports and strategic thinking.' },
-            { img: '/static/images/SNS Academy Web/TopRoof Dinning.png', title: 'Rooftop Dining', desc: 'Fine dining experience with healthy, seasonal meals in a perfect setting for community interaction.' },
+            { img: '/static/images/rooftop dining.png', title: 'Rooftop Dining', desc: 'Fine dining experience with healthy, seasonal meals in a perfect setting for community interaction.' },
         ].map(s => `
                 <div class="group rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 bg-white">
                     <div class="h-64 overflow-hidden relative">
