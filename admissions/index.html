@@ -212,6 +212,209 @@
             line-height: 1.4;
         }
 
+        /* ================= BITRIX FORM RESET ================= */
+        .b24-form-wrapper {
+            background: transparent !important;
+            border: none !important;
+            padding: 0 !important;
+            box-shadow: none !important;
+            margin: 0 !important;
+        }
+
+        .b24-form-header {
+            display: none !important;
+        }
+
+        .b24-form-field {
+            margin-bottom: 24px !important;
+            position: relative !important;
+        }
+
+        /* Remove Bitrix auto separators and double lines */
+        .b24-form-separator,
+        .b24-form-field-separator,
+        .b24-form-field-shadow,
+        .b24-form-control-shadow,
+        .b24-form-field-line,
+        .b24-form-control-line,
+        .b24-form-field-line-1,
+        .b24-form-field-line-2,
+        .b24-form-field-line-3,
+        [class*="b24-form-field-line"],
+        [class*="b24-form-control-line"],
+        .b24-form-field::before,
+        .b24-form-field::after,
+        .b24-form-control::before,
+        .b24-form-control::after {
+            display: none !important;
+            content: none !important;
+            height: 0 !important;
+            border: none !important;
+            position: absolute !important;
+            opacity: 0 !important;
+            visibility: hidden !important;
+            pointer-events: none !important;
+            z-index: -1 !important;
+        }
+
+        /* ================= LABEL HANDLING ================= */
+        .b24-form-control-label {
+            position: absolute !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+
+        /* ================= INPUT & SELECT FIELDS ================= */
+        .b24-form-control,
+        select.b24-form-control {
+            width: 100% !important;
+            background: #f7fafc !important;
+            border: 2px solid #e2e8f0 !important;
+            border-radius: 12px !important;
+            padding: 14px 18px !important;
+            font-size: 15px !important;
+            font-family: 'Poppins', sans-serif !important;
+            color: #1a202c !important;
+            box-shadow: none !important;
+            transition: all 0.3s ease !important;
+            appearance: none !important;
+            -webkit-appearance: none !important;
+            -moz-appearance: none !important;
+        }
+
+        .b24-form-control::placeholder {
+            color: #a0aec0 !important;
+            font-weight: 400 !important;
+        }
+
+        .b24-form-control:focus {
+            border-color: #00A0E3 !important;
+            background: #ffffff !important;
+            outline: none !important;
+            box-shadow: 0 0 0 3px rgba(0, 160, 227, 0.1) !important;
+        }
+
+        /* ================= DROPDOWN ================= */
+        .b24-form-dropdown {
+            border-radius: 12px !important;
+            border: 2px solid #ff000000  !important;
+            box-shadow: 0 10px 25px rgba(253, 251, 251, 0) !important;
+             background: white !important;
+        }
+
+        .b24-form-dropdown-item {
+            padding: 12px 18px !important;
+            font-size: 15px !important;
+            font-family: 'Poppins', sans-serif !important;
+            color: #4d7399 !important;
+            transition: all 0.2s ease !important;
+        }
+
+        .b24-form-dropdown-item:hover {
+            background: #f7fafc !important;
+            color: #00A0E3 !important;
+        }
+
+        /* ================= SUBMIT BUTTON ================= */
+        .b24-form-btn {
+            width: 100% !important;
+            margin-top: 28px !important;
+            padding: 16px 24px !important;
+            border-radius: 12px !important;
+            background: #00A0E3 !important;
+            color: #ffffff !important;
+            font-size: 16px !important;
+            font-weight: 600 !important;
+            border: none !important;
+            font-family: 'Poppins', sans-serif !important;
+            cursor: pointer !important;
+            transition: all 0.3s ease !important;
+            box-shadow: 0 4px 15px rgba(0, 160, 227, 0.4) !important;
+        }
+
+        .b24-form-btn:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0 6px 20px rgba(0, 160, 227, 0.5) !important;
+            background: #0284c7 !important;
+        }
+
+        .b24-form-btn:active {
+            transform: translateY(0) !important;
+        }
+
+        /* Bitrix form container visibility */
+        #form-container {
+            position: relative;
+            z-index: 1000;
+        }
+
+        /* Target all yellow/amber Bitrix elements */
+        .b24-form-header, 
+        .b24-form-control-required-symbol,
+        .b24-form-field-icon,
+        .b24-form-question-icon {
+            color: #00A0E3 !important;
+        }
+
+        .b24-form-control-required-symbol {
+            color: #ff4d4d !important;
+        }
+        
+        /* Remove any double lines or shadows below fields */
+        [class*="line"],
+        [class*="shadow"] {
+            box-shadow: none !important;
+            border: none !important;
+        }
+
+        .b24-form-control-shadow,
+        .b24-form-field-shadow,
+        .b24-form-shadow,
+        .b24-form-field-line,
+        .b24-form-control-line,
+        .b24-form-field-line-1,
+        .b24-form-field-line-2 {
+            display: none !important;
+            height: 0 !important;
+            overflow: hidden !important;
+        }
+
+        /* Ensure no extra padding at top of form */
+        .b24-form {
+            padding-top: 0 !important;
+            margin-top: 0 !important;
+        }
+
+        /* ================= FOOTER TEXT ================= */
+        .b24-form-sign {
+            margin-top: 24px !important;
+            font-size: 12px !important;
+            color: #a0aec0 !important;
+            text-align: center !important;
+        }
+
+        /* ================= LOADING ANIMATION ================= */
+        .loading {
+            text-align: center;
+            padding: 10px;
+            color: #718096;
+        }
+
+        .spinner {
+            border: 3px solid #f3f4f6;
+            border-top: 3px solid #00A0E3;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 16px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
         /* WhatsApp Floating Button */
         .whatsapp-float {
             position: fixed;
@@ -724,55 +927,55 @@
     </section>
 
     <!-- Combined Process and Admission Form Section -->
-    <section class="py-20 bg-gray-50 border-t border-gray-100" id="admission-process-form">
+    <section class="py-20 bg-white" id="admission-process-form">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
                 
                 <!-- Left: Admission Process -->
                 <div>
-                    <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-12">Admission Process</h2>
+                    <h2 class="text-2xl font-extrabold text-gray-900 mb-10">Admission Process</h2>
                     
                     <div class="space-y-10 relative">
                         <!-- Step 1 -->
                         <div class="flex items-start gap-6 relative">
-                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-pink-100 text-pink-600 font-bold text-xl flex items-center justify-center relative z-10 shadow-sm">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-pink-100 text-pink-600 font-bold text-lg flex items-center justify-center relative z-10">
                                 1
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-2">Enquiry &amp; Registration</h3>
-                                <p class="text-gray-600 leading-relaxed text-sm">Submit your enquiry through our website or visit the campus to register for the B.Pharm/D.Pharm programs.</p>
+                                <h3 class="text-lg font-extrabold text-gray-900 mb-1">Enquiry &amp; Registration</h3>
+                                <p class="text-gray-600 leading-relaxed text-sm">Submit your enquiry through our website or visit the campus to register for the B.Sc. Nursing program.</p>
                             </div>
                         </div>
 
                         <!-- Step 2 -->
                         <div class="flex items-start gap-6 relative">
-                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-blue-100 text-blue-500 font-bold text-xl flex items-center justify-center relative z-10 shadow-sm">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-100 text-blue-500 font-bold text-lg flex items-center justify-center relative z-10">
                                 2
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-2">Eligibility Verification</h3>
-                                <p class="text-gray-600 leading-relaxed text-sm">Our admissions team will verify your 10+2 marks (PCB/PCM aggregate) based on the Tamil Nadu Dr. M.G.R. Medical University norms.</p>
+                                <h3 class="text-lg font-extrabold text-gray-900 mb-1">Eligibility Verification</h3>
+                                <p class="text-gray-600 leading-relaxed text-sm">Our admissions team will verify your 10+2 marks (PCB aggregate) based on the Tamil Nadu Dr. M.G.R. Medical University norms.</p>
                             </div>
                         </div>
 
                         <!-- Step 3 -->
                         <div class="flex items-start gap-6 relative">
-                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-green-100 text-green-500 font-bold text-xl flex items-center justify-center relative z-10 shadow-sm">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-green-100 text-green-500 font-bold text-lg flex items-center justify-center relative z-10">
                                 3
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-2">Counseling &amp; Interview</h3>
+                                <h3 class="text-lg font-extrabold text-gray-900 mb-1">Counseling &amp; Interview</h3>
                                 <p class="text-gray-600 leading-relaxed text-sm">Shortlisted candidates will be called for a personal interview and counseling session to discuss career goals.</p>
                             </div>
                         </div>
 
                         <!-- Step 4 -->
                         <div class="flex items-start gap-6 relative">
-                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-pink-100 text-pink-500 font-bold text-xl flex items-center justify-center relative z-10 shadow-sm">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-pink-100 text-pink-500 font-bold text-lg flex items-center justify-center relative z-10">
                                 4
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold text-gray-900 mb-2">Final Admission</h3>
+                                <h3 class="text-lg font-extrabold text-gray-900 mb-1">Final Admission</h3>
                                 <p class="text-gray-600 leading-relaxed text-sm">Upon successful completion of the interview and verification, final seats are allocated based on merit and university regulations.</p>
                             </div>
                         </div>
@@ -780,9 +983,15 @@
                 </div>
 
                 <!-- Right: Admission Form -->
-                <div id="admission-form" class="bg-white rounded-[2rem] shadow-2xl p-8 lg:p-10 border border-gray-100 relative w-full overflow-hidden">
-                    <div class="text-center mb-6">
-                        <h2 class="text-3xl font-extrabold text-gray-900">Admission and Enquiry <br/>Form</h2>
+                <div id="admission-form" class="bg-[#fbfcff] rounded-[2rem] shadow-[0_4px_30px_rgb(0,0,0,0.04)] border border-gray-100 p-8 lg:p-10 relative w-full max-w-[640px] mx-auto overflow-hidden">
+                    <div class="text-center mb-8">
+                        <h2 class="text-2xl font-extrabold text-gray-900">Admission and Enquiry Form</h2>
+                    </div>
+
+                    <!-- Loading State -->
+                    <div class="loading" id="loading">
+                        <div class="spinner"></div>
+                        <p class="text-sm">Loading form...</p>
                     </div>
                     
                     <div class="w-full min-h-[400px]" id="form-container">
@@ -911,12 +1120,20 @@
             });
         });
 
+        // Hide loading spinner when form loads
+        setTimeout(function () {
+            var loading = document.getElementById('loading');
+            if (loading) {
+                loading.style.display = 'none';
+            }
+        }, 3000);
+
         // Advanced Form Fixer for Bitrix24
         const snsColleges = [
             "SNS College of Technology",
             "SNS College of Engineering",
             "Dr. SNS Rajalakshmi College of Arts and Science",
-            "SNS College of Allied Health Sciences",
+            "SNS College of Allied Health Science",
             "SNS College of Pharmacy",
             "SNS College of Nursing",
             "SNS College of Physiotherapy",
@@ -930,51 +1147,47 @@
                 const input = field.querySelector('.b24-form-control');
                 const container = field;
 
+                // 1. Force-hide any lines Bitrix injects
+                field.querySelectorAll('[class*="line"]').forEach(line => {
+                    line.style.setProperty('display', 'none', 'important');
+                    line.style.setProperty('opacity', '0', 'important');
+                    line.style.setProperty('height', '0', 'important');
+                });
+
                 if (label) {
                     const text = label.textContent.trim();
 
-                    // Hide loading spinner when form loads
-                    const loading = document.getElementById('loading-bitrix');
-                    if (loading && document.querySelector('.b24-form')) {
-                        loading.style.display = 'none';
-                    }
-
-                    // 1. Remove "Admission To Grade"
+                    // Remove Admission To Grade
                     if (text.includes('Admission To Grade')) {
                         container.style.display = 'none';
                         return;
                     }
 
-                    // 2. Replace Academy field with "Choose College" Dropdown
-                    if (text.includes('SNSACD') || text.includes('SNS College of Pharmacy') || text.includes('CBSE SCHOOL')) {
+                    // Replace Academy field with "Choose College" Dropdown
+                    if (text.includes('SNSACD') || text.includes('SNS Academy') || text.includes('CBSE SCHOOL') || text.includes('SNS College of Pharmacy')) {
                         label.textContent = "Choose College *";
 
-                        // Safer approach: Hide the original input and use a proxy select
                         if (input && input.tagName !== 'SELECT' && !input.dataset.replaced) {
-                            input.style.display = 'none';
                             const select = document.createElement('select');
                             select.className = input.className;
-                            select.required = input.required || true;
+                            select.name = input.name;
+                            select.required = true;
                             select.dataset.replaced = "true";
+
                             select.innerHTML = '<option value="">Choose College *</option>' +
                                 snsColleges.map(c => `<option value="${c}">${c}</option>`).join('');
 
-                            input.parentNode.insertBefore(select, input.nextSibling);
+                            input.parentNode.replaceChild(select, input);
 
-                            select.addEventListener('change', () => {
-                                input.value = select.value;
-                                // Dispatch multiple events to ensure Bitrix notices the change
-                                ['input', 'change', 'blur'].forEach(evtName => {
-                                    const event = new Event(evtName, { bubbles: true });
-                                    input.dispatchEvent(event);
-                                });
+                            select.addEventListener('change', (e) => {
+                                const event = new Event('input', { bubbles: true });
+                                select.dispatchEvent(event);
                             });
-                            if (input.value) select.value = input.value;
                         }
                         return;
                     }
 
-                    // 3. Rename "Name of the Child" -> "Name of the Candidate"
+                    // Rename Name of the Child -> Name of the Candidate
                     if (text.includes('Name of the Child')) {
                         label.textContent = text.replace('Name of the Child', 'Name of the Candidate');
                         if (input && input.tagName !== 'SELECT') {
@@ -983,7 +1196,7 @@
                         }
                     }
 
-                    // 4. Rename "Parent Name" -> "Parent / Guardian Name"
+                    // Rename Parent Name -> Parent / Guardian Name
                     if (text.includes('Parent Name')) {
                         label.textContent = text.replace('Parent Name', 'Parent / Guardian Name');
                         if (input && input.tagName !== 'SELECT') {
@@ -992,7 +1205,7 @@
                         }
                     }
 
-                    // Generic Placeholder Fix for other fields
+                    // Generic Placeholder Fix
                     if (input && input.tagName !== 'SELECT' && !input.placeholder) {
                         let cleanText = text.replace(/\s*\*$/, '').trim();
                         let required = text.includes('*');
@@ -1002,34 +1215,17 @@
             });
         }
 
-        // Use MutationObserver for robust dynamic loading handling
-        const bitrixObserver = new MutationObserver((mutations) => {
+        const observer = new MutationObserver((mutations) => {
             mutations.forEach((mutation) => {
-                if (mutation.addedNodes.length) {
-                    applyFormFixes();
-                }
+                if (mutation.addedNodes.length) applyFormFixes();
             });
         });
 
-        const bitrixTarget = document.getElementById('bitrix-form-container');
-        if (bitrixTarget) {
-            bitrixObserver.observe(bitrixTarget, { childList: true, subtree: true });
-        }
+        const target = document.getElementById('form-container');
+        if (target) observer.observe(target, { childList: true, subtree: true });
 
-        // Initial apply just in case
         applyFormFixes();
-
-        // Backup periodic check
-        const fixInterval = setInterval(() => {
-            applyFormFixes();
-            if (document.querySelector('.b24-form')) {
-                const loading = document.getElementById('loading-bitrix');
-                if (loading) loading.style.display = 'none';
-            }
-        }, 1000);
-
-        // Stop interval after 15 seconds
-        setTimeout(() => clearInterval(fixInterval), 15000);
+        setInterval(applyFormFixes, 1000);
     </script>
     <!-- Instagram Floating Icon -->
     <a href="https://www.instagram.com/snsinstitutions/" class="instagram-float" target="_blank" rel="noopener noreferrer"
